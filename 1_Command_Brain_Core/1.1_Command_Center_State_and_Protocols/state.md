@@ -20,6 +20,7 @@
 - VCOS now has a recursive self-improvement protocol so Mini Intern failures, wins, and repeated patterns can update skills, policies, project manifests, trackers, and employee guides.
 - VCOS HQ now has a canonical two-layer architecture: **Second Brain remembers** and **AI OS acts**. See `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/ai-os-second-brain-architecture.md`.
 - AgentOSync daily execution should use the AgentOSync ClickUp space/view as the first operating surface whenever ClickUp is discussed: `https://app.clickup.com/9017760195/v/s/90175689274`. Main team async activity folders are `https://app.clickup.com/9017760195/v/f/90178817003/90175689274` and `https://app.clickup.com/9017760195/v/f/90178817004/90175689274`. The strategic goal is to compound daily task orchestration, proof demos, lead funnel progress, and delivery assets toward 100k MRR.
+- VCOS HQ is now initialized as a private GitHub-backed repo at `git@github.com:WEB3X100/vcos-hq.git`; first pushed backup is on `main` at merge commit `893577a` with backup commit `e902826`.
 - AgentOSync lean revenue execution now treats the barbershop live demo loop as a parked proof/demo asset while Dealership OS owns the current real-client MVP sprint and Amax QuickBooks cleanup owns the immediate CFO-proof lane.
 - GBrain has been cloned into the Arsenal, CLI-linked locally, and initialized for conservative text-first HQ retrieval as an Infrastructure evaluation candidate; it is not yet a VCOS system of record.
 - GStack has been cloned into the Arsenal as a shared project-workspace methodology repo for office-hours critique, planning reviews, QA, browser testing, spec generation, and ship discipline.
@@ -85,7 +86,7 @@
 - Legacy references still need a careful merge and archive pass.
 - Telegram/Slack integration path for approval workflows needs selection and test.
 - Context Mode, Codex adversarial review, and Claude `/ultra review` availability need verification in this environment.
-- VCOS HQ has not yet been initialized/pushed as a private GitHub repo.
+- GitHub connector access to private `WEB3X100/vcos-hq` still needs verification; local git over SSH can push successfully.
 - Read-first ClickUp, Drive, GitHub, calendar, and approval-surface integrations still need verification.
 - Airtable connector/base access is not available in this session; local Airtable import package has been prepared, but the actual `NeuralSync ClickUp Preservation Snapshot` base still needs to be created/imported.
 - `4_Reusable_Systems_and_Skills/4.1_VCOS_Employee_OS_Template` needs a cleanup/refactor pass before it becomes the polished master template.
@@ -113,7 +114,7 @@
 - Test Employee 01 dealership workflow internally with a mock missed-call lead and approval gate.
 - Execute dealership Inception Demo in Plan Approval Mode.
 - Open VCOS HQ as an Obsidian vault and use `Home.md` as the home note.
-- Initialize VCOS HQ as a private GitHub-backed repo after human approval.
+- Run separate backup passes for `VCOS-Project-Workspaces` and `VCOS-Employee` after human review of their dirty working trees.
 - Run the first Four C audit and update `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/four-c-audit.md`.
 - Open a `4_Reusable_Systems_and_Skills/4.1_VCOS_Employee_OS_Template` GitHub issue for refactoring the repo into the generic employee OS template.
 - Add `AGENTS.md`, `CLAUDE.md`, and `TEMPLATE_MANIFEST.md` to `4_Reusable_Systems_and_Skills/4.1_VCOS_Employee_OS_Template` during the template cleanup pass.
