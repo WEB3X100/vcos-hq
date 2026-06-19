@@ -1,0 +1,12 @@
+folder_id,folder_name,space_id,space_name,current_status,target_folder_name,migration_action,archive_candidate,notes
+90175880464,✨ Template Guide,90173622282,NeuralSync Agency,live,,archive,yes,Empty folder from audit; archive only after snapshot.
+90175880476,1. CRM,90173622282,NeuralSync Agency,live,04 · LEADS — Pipeline and Outreach,replace_after_task_migration,yes,Enterprise-style CRM folder; useful lead/deal context moves to LEADS before archive.
+90176062358,2. Verticle Playbook,90173622282,NeuralSync Agency,live,02 · BUILD — Systems, Automations, AI Employees,archive_after_review,yes,Duplicate vertical intent; tasks if any should route by build/client/content intent.
+90175880467,3. Production Systems,90173622282,NeuralSync Agency,live,02 · BUILD — Systems, Automations, AI Employees,rename,no,Primary build workhorse.
+90175880478,4. Client Delivery,90173622282,NeuralSync Agency,live,03 · CLIENTS — Active Delivery and Accounts,rename,no,Primary client delivery workhorse.
+90175880465,2. Client Onboarding,90173622282,NeuralSync Agency,live,,archive,yes,Dead/near-empty onboarding structure from audit.
+90175880474,5. Billing & Invoicing,90173622282,NeuralSync Agency,live,06 · OPS — Team, Finance, and Admin,archive_after_review,yes,Finance intent moves to OPS if active tasks exist.
+90175880469,6. Client Feedback & Testimonials,90173622282,NeuralSync Agency,live,05 · CONTENT — Social, Media, and Proof,archive_after_review,yes,Proof/testimonial intent moves to CONTENT if active tasks exist.
+90175881336,7. Internal Operations,90173622282,NeuralSync Agency,live,06 · OPS — Team, Finance, and Admin,rename,no,Contains Q3 Command Center and personal/day-job tasks requiring private-space handling.
+90175881352,8. SOPs & Documentation,90173622282,NeuralSync Agency,live,02 · BUILD — Systems, Automations, AI Employees,archive_after_review,yes,SOP/template intent moves to BUILD Templates and Reference if active tasks exist.
+90175880466,Scope of Work,90173622282,NeuralSync Agency,live,,archive,yes,Empty folder from audit; archive only after snapshot.

@@ -1,0 +1,144 @@
+# VCOS HQ State
+
+## Current State
+
+- VCOS HQ is being upgraded from loose references into a token-friendly command brain.
+- HQ folders now use a purpose-described chronological sequence: `1_Command_Brain_Core`, `2_Domain_Packs`, `3_Project_Workspaces`, `4_Reusable_Systems_and_Skills`, and `5_Legacy_Reference_Archive`.
+- `5_Legacy_Reference_Archive/5.1_Legacy_Reference_Singular/` and `5_Legacy_Reference_Archive/5.2_Legacy_References_Plural/` both exist and contain overlapping legacy material.
+- The new fast-path architecture is now the preferred agent interface.
+- The AIOS layer now has explicit operating, connection, audit, automation, and Obsidian navigation files.
+- `4_Reusable_Systems_and_Skills/4.1_VCOS_Employee_OS_Template` exists as the candidate reusable employee OS template repo.
+- The long-term paid product wedge remains `Employee 01: Front Desk` for dealerships; the immediate AgentOSync proof wedge is the barbershop live demo loop.
+- Open Claw Automation Agency now has a v3 Mini Intern game plan for SMB department-specific agent kits.
+- NeuralSync Agency ClickUp restructure is approved in principle but gated: Airtable preservation snapshot must be imported and reviewed before any live ClickUp folder/list/task rename, move, merge, archive, or deletion.
+- VCOS HQ now has a power-user operating layer for strategic prompting, Claude Code discipline, token hygiene, and reusable workflow-broker architecture.
+- VCOS now tracks managed-agent/runtime selection as an explicit architecture decision rather than assuming every agent runs in the same environment.
+- VCOS reusable systems now include a Skill Foundry structure: skill registry, weekly skill harvest, department capability map, promotion rules, department skill packs, and validated marketplace skill staging.
+- Claude Code Superpowers is tracked as an Infrastructure evaluation candidate for medium/complex builds, not a mandatory default for quick tasks.
+- VCOS now has a session context discipline protocol for rewind/clear/compact/handoff/sub-agent decisions and file-backed state.
+- AgentOSync now has a Replit-ready Mini Intern Capability Dashboard scaffold for showing prospects the department map, capability pipeline, maturity stages, proof lanes, and approval gates.
+- VCOS now has a recursive self-improvement protocol so Mini Intern failures, wins, and repeated patterns can update skills, policies, project manifests, trackers, and employee guides.
+- VCOS HQ now has a canonical two-layer architecture: **Second Brain remembers** and **AI OS acts**. See `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/ai-os-second-brain-architecture.md`.
+- AgentOSync daily execution should use the AgentOSync ClickUp space/view as the first operating surface whenever ClickUp is discussed: `https://app.clickup.com/9017760195/v/s/90175689274`. Main team async activity folders are `https://app.clickup.com/9017760195/v/f/90178817003/90175689274` and `https://app.clickup.com/9017760195/v/f/90178817004/90175689274`. The strategic goal is to compound daily task orchestration, proof demos, lead funnel progress, and delivery assets toward 100k MRR.
+- AgentOSync lean revenue execution now treats the barbershop live demo loop as a parked proof/demo asset while Dealership OS owns the current real-client MVP sprint and Amax QuickBooks cleanup owns the immediate CFO-proof lane.
+- GBrain has been cloned into the Arsenal, CLI-linked locally, and initialized for conservative text-first HQ retrieval as an Infrastructure evaluation candidate; it is not yet a VCOS system of record.
+- GStack has been cloned into the Arsenal as a shared project-workspace methodology repo for office-hours critique, planning reviews, QA, browser testing, spec generation, and ship discipline.
+- Meetily has been cloned into the Arsenal as a privacy-first meeting intelligence evaluation candidate; use pointer-first and inspect the Tauri app path, not the legacy backend, before any adoption.
+- AIS-OS has been cloned into the Arsenal and activated pointer-first as the VCOS weekly operating pattern: onboard compactly, audit Four Cs weekly, level up one workflow weekly, and ship one artifact at a time. See `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/ais-os-activation.md`.
+- Graphify has been cloned into the Arsenal and installed locally as `graphify 0.8.36`. VCOS now has a conservative Graphify + Obsidian + light RAG architecture with quarantined graph imports under `1_Command_Brain_Core/1.3_Knowledge_Graphs/`.
+- The older VCOS v4 Chief of Staff architecture has been decomposed into the new HQ architecture: principles stay in memory, roles become Mini Interns, relationships live in Graphify, recall lives in GBrain, and Hermes starts as read-only night-shift review. See `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/chief-of-staff-os-optimization.md`.
+- Caveman, CodeBurn, Impeccable, Design Extract, Career Ops, Browser Harness, and QMD have been cloned into the Arsenal and activated as pointer-first AI-native company/software-factory candidates. Use the curated activation map at `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/ai-native-company-arsenal-activation.md`; do not import their raw repos into GBrain or Graphify by default.
+- Dealership OS, Amax/Travel OS, Content Intel, AgentOSync GTM, and Trading Coach now share an AI-native company activation packet at `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/ai-native-company-activation-agentosync-amax-dealership-trading.md`.
+- VCOS AI-native activation has been battle-tested with a revenue-first constraint: do not treat the Arsenal as operational until live loops produce artifacts. Claude Code routines now start with `content-intel-routine`, then `sprint-closer`, then `skeptic-review`; `morning-cockpit` is deferred until one focused lane needs it.
+- VCOS now has a revenue readiness audit at `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/revenue-readiness-audit.md` to force honest answers before adding new tools, routines, lanes, or docs.
+- Latest readiness correction: focus allocation, not architecture, is the main bottleneck. Dealership OS is the primary lane if paid/closest to paid proof; Amax proof is second; content-intel is the first Claude Code routine; barbershop is parked as a proof/demo asset until pricing/packaging is diagnosed.
+- Content-intel activation is blocked on Umair's voice calibration: 10 approved posts/drafts, 5 rejected or never-say examples, and 3-5 tone rules. Do not automate with n8n before 5 manual runs and feedback logging.
+- VCOS now has a Claude Project context shelf at `1_Command_Brain_Core/1.4_Agent_Context_Packets/claude-project/` for curated Markdown packets and Claude Code automation prompts. Use it to prevent stale Claude weekly reviews: latest Sunday Office Hours/session briefs and current state outrank old project files.
+
+## Active Decisions
+
+- VCOS HQ is the brain; domain packs are limbs.
+- Root navigation is `HEADQUARTERS_MAP.md`, `Home.md`, `README.md`, `AGENTS.md`, and `CLAUDE.md`.
+- Use progressive context loading.
+- Domains follow the deep module rule.
+- SOPs become skills only after repeated value.
+- ClaudeMem remains an evaluation candidate, not default memory.
+- Context Mode is preferred first for session hygiene if available.
+- Barbershops are the first paid proof wedge for the AgentOSync live callable demo loop.
+- Dealerships remain the second wedge and long-term Employee 01 commercial direction after barber proof produces inbound or a pilot.
+- Slack or Telegram is the first mobile approval surface.
+- Human approval gates are mandatory for external sends, publishing, CRM mutation, destructive actions, and capital deployment.
+- Agent Teams require strict file ownership before work begins.
+- Context Mode or manual output compression is required for noisy tool outputs.
+- Domain implementations require adversarial review before Gate 3 Human Approval.
+- Daily heartbeat should produce an 8:00 AM America/Toronto briefing when automation is configured.
+- VCOS operator mindset follows the Three Ms framework: **Mindset** (decision-making discipline), **Method** (repeatable workflow), **Machine** (tooling + automation). See AIS-OS repo for full framework.
+- VCOS AIOS maturity follows the Four C sequence: **Context** (what you know), **Connections** (what you can reach), **Capabilities** (what you can do), **Cadence** (when you act without prompting).
+- VCOS architecture is two layers, one system: the Second Brain owns Context + Connections; the AI OS owns Capabilities + Cadence.
+- Obsidian should open VCOS HQ itself as the vault, with `Home.md` as the navigation note.
+- GitHub should become the private issue, diff, PR, and remote-routine source for VCOS HQ, with secrets excluded.
+- `4_Reusable_Systems_and_Skills/4.1_VCOS_Employee_OS_Template` should be the generic deployable employee OS template; VCOS HQ remains the command brain.
+- Open Claw Mini Interns stay separate by default and follow least privilege across tools, secrets, memory, schedules, and context.
+- Amax is the Open Claw internal proof lab; AgentOSync is the public acquisition and proof engine.
+- AgentOSync ClickUp space/view is the execution source for AgentOSync task reading/updating; NeuralSync Agency is legacy/mirrored context unless explicitly requested.
+- GitHub and Hugging Face trust assets for AgentOSync remain private/draft until the first paid pilot is live and proof claims are reviewed.
+- LinkedIn vertical video is the first public funnel for the Open Claw Marketing Ops proof of concept.
+- VCOS should use business-service-broker thinking for client workflows: define input channels, state store, worker layer, agents, output packet, approval gate, success metric, and failure mode before automation.
+- Claude Code should be used as a configurable agent runtime: command surface, memory, permissions, MCP/tools, task decomposition, reviews, and context hygiene matter as much as prompt wording.
+- `session-handoff` is a skill candidate for structured end-of-session context handoff (HQ infrastructure ownership)
+- Front-end design follows the B.R.A.N.D. framework: brand system foundation, pitch deck, landing page, mobile prototype, launch video, guidelines one-pager.
+- VCOS recursive improvement follows: sensor -> policy -> tools -> quality gate -> output -> feedback -> learning update -> re-test.
+- **Project workspace repos stay lean:** No HQ duplication. Use SKILLS_MANIFEST.md + pointers. Pointer-first approach. Vendor skills only when project must run outside VCOS HQ. Each project declares its Mini Interns and required HQ skills. Agents commit progress + leave handoff notes. Skills promote back to HQ after 3+ uses. See `WEB3X100/VCOS-Project-Workspaces` for implementation pattern.
+- GBrain activation is pointer-first and approval-gated: no client/private data import, API key setup, external connector, recurring job, public MCP server, or project-wide rollout without human approval and search-mode selection.
+- GStack usage is pointer-first across project workspaces: reference `6_Arsenal/repos/gstack`, do not vendor it into every project, and only pin/copy it into standalone client repos when documented in that project's skill manifest.
+- AIS-OS usage is pointer-first: adapt `/onboard`, `/audit`, and `/level-up` into VCOS-native notes, Four C audits, and Skill Foundry artifacts. Do not overwrite HQ fast-path files or create a competing OS folder.
+- Graphify usage is graph-first but quarantine-first: build/query `graphify-out/graph.json` for large project/domain scopes, export wiki/Obsidian files into `1.3_Knowledge_Graphs/imports/<source-slug>/`, and promote only curated summaries into active HQ memory.
+- Hermes + SuperGrok (via OAuth, no API key) with Hermes Desktop is the primary persistent agent runtime for VCOS HQ (multi-channel + cron + memory). Profiles (separate agents with own skills/soul.md/memories) and native sessions/folders are the mechanism for context hygiene, cost control, and role specialization (aligns with Mini Interns and least privilege). Hermes starts at Phase 0 read-only night brief / sensor mode (approved sources, Graphify/GBrain queries, summaries, draft actions/briefs). Advance only per explicit phase gates in the hermes-supergrok-vcos-playbook.md. No external sends, CRM mutation, publishing, spending, deletion, or deployment until later phases + human approval. Desktop is preferred surface over Telegram/CLI for organization (sessions, artifacts as second brain, skills toggle, visible crons, easy model/profile switch). SuperGrok brings Grok 4.3 reasoning + Imagine (images/videos) + TTS (voice notes) inside the same persistent agent. See 1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/hermes-supergrok-vcos-playbook.md and managed-agent-runtime-evaluation.md.
+- AI-native company Arsenal usage is capsule-first: clone repos into `6_Arsenal/repos/`, summarize roles into HQ memory, query the `AI Native Company Arsenal` graph before adoption, and install/connect tools only when a specific workflow requires them.
+- QMD should sit between Obsidian and agents as a fast local context router. Obsidian remains the vault and human navigation layer; QMD indexes approved collections for keyword, vector, and reranked retrieval.
+- Claude Projects should use curated packets from `1_Command_Brain_Core/1.4_Agent_Context_Packets/claude-project/` rather than broad folder uploads or stale project dumps.
+- Grok Build CLI is available locally as a coding/build runtime evaluation candidate (`grok 0.2.54` stable). Use it as the Neural Sync builder/subagent layer in plan mode first, not as a parallel HQ or unsupervised production actor. See `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/xai-grok-build-neural-sync-activation-plan.md`.
+
+## Active Blockers
+
+- External plugin installation status for Context Mode, Superpowers, GSD, ClaudeMem, and official Skill Creator is not yet verified in this environment.
+- Legacy references still need a careful merge and archive pass.
+- Telegram/Slack integration path for approval workflows needs selection and test.
+- Context Mode, Codex adversarial review, and Claude `/ultra review` availability need verification in this environment.
+- VCOS HQ has not yet been initialized/pushed as a private GitHub repo.
+- Read-first ClickUp, Drive, GitHub, calendar, and approval-surface integrations still need verification.
+- Airtable connector/base access is not available in this session; local Airtable import package has been prepared, but the actual `NeuralSync ClickUp Preservation Snapshot` base still needs to be created/imported.
+- `4_Reusable_Systems_and_Skills/4.1_VCOS_Employee_OS_Template` needs a cleanup/refactor pass before it becomes the polished master template.
+- Open Claw stack components still need validation before implementation: Trigger.dev/Modal, Higgsfield, n8n, Firecrawl/SERP, and public-channel publishing flow.
+- Power-user routines still need operational testing in live sessions: status/context checks, compaction discipline, direct API vs MCP choice, screenshots/browser checks, and worktree-based parallel builds.
+- Managed Agents, Agent SDK + Trigger.dev, OpenClaw/Hermes, n8n, and local Claude Code need a runtime-selection rubric before being used for client-facing workflows.
+- **NEW:** Trading Coach project decision needed: Should Phase 1 focus on Coach Mode (behavioral coaching), Bot Mode (strategy building/execution), or Hybrid? Impacts Mini Intern architecture, approval gates, and data pipeline design. See `3_Project_Workspaces/3.4_Workplace_AI_Trading_Coach/README.md`.
+- GBrain semantic activation is pending embedding credential strategy and a clean source/sync design; current HQ brain is text-first, conservative mode, and includes some noisy Arsenal/vendor docs from the initial whole-HQ import.
+- AIS-OS activation still needs raw Umair voice samples and the first saved VCOS Four C audit baseline.
+- AgentOSync now has a seed Graphify-compatible morning cockpit graph at `3_Project_Workspaces/3.1_AgentOSync_Revenue_Pipeline/graphify-out/graph.json`, plus the first Daily Command Brief at `1_Command_Brain_Core/1.3_Knowledge_Graphs/summaries/agentosync-daily-command-brief-2026-06-10.md`.
+- AgentOSync Graphify semantic extraction path has been validated on a 4-doc real project subset using `claude-cli`; output is saved at `3_Project_Workspaces/3.1_AgentOSync_Revenue_Pipeline/graphify-out/semantic-subset-2026-06-10.json`. The full 31-doc semantic graph still needs batched `claude-cli` extraction or a direct API backend.
+- GBrain imports do not currently respect `.graphifyignore`; a broad AgentOSync refresh pulled `_external/` vendor Markdown into GBrain. Future GBrain syncs need explicit source scopes instead of project-root imports.
+- AI-native company Arsenal activation is cloned and seeded, but the individual tools remain uninstalled or unvalidated in live workflows. CodeBurn, Browser Harness, Impeccable, Design Extract, Caveman, Career Ops, and QMD each need one scoped proof run before promotion beyond `cloned-evaluation`.
+- Revenue readiness is not yet fully answered: shipped artifacts from the last 30 days, exact paid-pilot sentence, daily breakdown point, and highest variance risk need Umair confirmation.
+- Barbershop pricing failure needs diagnosis: pricing, packaging, buyer fit, or segment fit. Amax proof is now QuickBooks/CFO-cleanup centered and has a draft before/after artifact.
+- Content-intel routine has scaffold files, but `voice-calibration/tone-rules.md`, `approved-posts.md`, and `rejected-patterns.md` still require Umair's real examples before quality automation.
+- **2026-06-19:** Agent browser-control incident — `gstack/bin/chrome-cdp` force-quit Chrome and symlinked the real profile; user logged out across browsers. Higgsfield CLI auth may need re-run (`higgsfield auth login`). Prevention rules added to `AGENTS.md` and `03_gtm_campaigns/higgsfield/browser-session-incident-2026-06-19.md`. Agents must not run `chrome-cdp` or browser kill/quit flows without explicit approval.
+
+## Next Actions
+
+- Finish reference migration index.
+- Add domain interfaces for travel, dealerships, clinics, and content.
+- Keep local `vcos-command-router` skill aligned with numbered HQ paths.
+- Create ClickUp task for plugin evaluation/install decisions.
+- Test Employee 01 dealership workflow internally with a mock missed-call lead and approval gate.
+- Execute dealership Inception Demo in Plan Approval Mode.
+- Open VCOS HQ as an Obsidian vault and use `Home.md` as the home note.
+- Initialize VCOS HQ as a private GitHub-backed repo after human approval.
+- Run the first Four C audit and update `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/four-c-audit.md`.
+- Open a `4_Reusable_Systems_and_Skills/4.1_VCOS_Employee_OS_Template` GitHub issue for refactoring the repo into the generic employee OS template.
+- Add `AGENTS.md`, `CLAUDE.md`, and `TEMPLATE_MANIFEST.md` to `4_Reusable_Systems_and_Skills/4.1_VCOS_Employee_OS_Template` during the template cleanup pass.
+- Implement Open Claw ClickUp list triage around Mini Intern categories and structured handoff packets.
+- Apply the business-service-broker pattern to Amax Forms + WhatsApp Insights and the barber shop AVAPI booking demo.
+- Use the primary AgentOSync ClickUp view and the two main async folders for daily AgentOSync progress reviews; extract owners, blockers, approval gates, and next actions before doing any broad search.
+- Use `managed-agent-runtime-evaluation.md` before choosing managed agents, Trigger.dev, OpenClaw/Hermes, n8n, or local Claude Code for a new workflow.
+- Convert repeated power-user workflows into skill candidates only after three successful uses or clear cross-client leverage.
+- Use the Skill Foundry before installing new Mini Intern capabilities: register the workflow, assign one department owner, define handoff packet, set approval gates, and promote only after validation.
+- For GBrain, choose search mode and approved local markdown import scope before running `gbrain init` or importing project/client memory.
+- Evaluate Superpowers on one non-client medium build before deciding whether to install globally or only per project.
+- Use `session-context-discipline.md` when a session grows long, feels polluted, or needs a fresh handoff before continuing.
+- Run AIS-OS style onboarding cleanup by adding raw voice samples, then save the first Four C audit baseline and one weekly Three Ms level-up artifact.
+- For AgentOSync full semantic Graphify, choose between batched `claude-cli` extraction or a direct API backend: Gemini, Claude API, OpenAI, Kimi, DeepSeek, or local Ollama. The NVIDIA/NVCR key validated for Docker/model listing but returned 401 for NVIDIA chat completions.
+- Use the AgentOSync seed graph and Daily Command Brief as the first practical Chief of Staff workflow before granting Hermes any draft/write responsibilities.
+- Run the first AI-native software-factory proof loop on AgentOSync: GStack/GSD spec, Browser Harness or browser QA, Impeccable UI review, CodeBurn cost review, Caveman-style concise handoff, and Graphify/GBrain learning update.
+- Use the AI-native activation packet for routing across Dealership OS, Amax/Travel OS, Content Intel, AgentOSync GTM, and Trading Coach.
+- Validate the first Claude Code routine in this order: `content-intel-routine`, then `sprint-closer`, then `skeptic-review`. Defer `morning-cockpit` until one focused lane needs a daily brief.
+- Answer the revenue readiness audit before expanding Arsenal infrastructure. If shipped-output status is unclear, ship one narrow artifact before further architecture work.
+- Fill the content-intel voice calibration files before building any content scraper, n8n trigger, Telegram approval bot, or auto-posting integration.
+- Validate and polish `3_Project_Workspaces/3.1_AgentOSync_Revenue_Pipeline/mini-intern-dashboard/` before sharing with prospects or deploying to Replit.
+- Add recursive loop sections to high-priority Mini Intern department packs after the first Amax/AgentOSync validation run.
+- Import Airtable preservation package from `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/clickup/airtable-preservation-snapshot/` into Airtable base `NeuralSync ClickUp Preservation Snapshot`.
+- After Airtable verification, execute NeuralSync ClickUp restructure in hybrid/manual-safe mode.
+- **2026-06-14 Sunday Office Hours:** First canonical `sunday-office-hours-2026-06-14.md` produced following `VCOS_SUNDAY_OFFICE_HOURS_TEMPLATE.md`. Key shipped: AMAX pillar reorg (01-05) + ClickUp structure package (2026-06-13), QB COA battle-tested (87 accounts, upgraded xlsx target + close checklist), Dealership listing demo now real + sales lead manager spec sharpened to one owner morning brief. Personal constraints added (namaz consistency; health actions: dental/physio booking + walk-in clinic for hair/scalp + Pakistan meds sequencing + knee allergy cream). Top 3 needle-movers for week of 06-14: (1) sanitized Dealership one-day sales packet + 4-min owner rehearsal, (2) AMAX CFO approval on COA/deferred revenue/TICO (unblock mapping), (3) Umair voice calibration pack + first manual content-intel run. All external/CRM/QB mutation/publishing remains Draft-Only. Brief at `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/sunday-office-hours-2026-06-14.md`. Update this state with outcomes after human review of the brief.
+- Use Hermes Desktop + SuperGrok profiles and adapted opportunity/challenge scanner cron (local or low-cost profile preferred for frequency) to surface real SMB/dealership/travel/barbershop challenges that map to AgentOSync Mini Intern kits, Employee 01 Front Desk, or domain packs. Feed findings into Content Intel, GTM, and Dealership OS lanes (draft-only, human review in Desktop or Telegram/Slack). See hermes-supergrok-vcos-playbook.md.
+- Provision and harden a first low-cost Linux VPS (Ubuntu 24.04, dedicated non-root user, SSH keys + ufw + fail2ban) as the persistent executor for Hermes Phase 0 (gateway service via `hermes gateway install --system`, `~/.hermes/` backups, SuperGrok OAuth with headless caveats handled via local-first + transfer or fallbacks). Run night briefs and scanner crons only (read-only sensors, draft handoffs). Prioritize after revenue-readiness confirmation and one Desktop-validated cron. Track in Production Control Room; all per expanded VPS section in hermes-supergrok-vcos-playbook.md. Reference AgentOSync view https://app.clickup.com/9017760195/v/s/90175689274 for any related orchestration.
+- Run first Grok Build Neural Sync session in `--permission-mode plan` to design a local-only Integration Registry, then review with Skeptic before approving any edits. Use `xai-grok-build-neural-sync-activation-plan.md`.

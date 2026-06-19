@@ -1,0 +1,76 @@
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.secret
+*token*
+*credentials*
+*.p12
+*.sqlite
+*.db
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.cache/
+
+# Logs and raw runtime output
+*.log
+logs/
+tmp/
+temp/
+
+# Local dependency folders
+node_modules/
+**/node_modules/
+.venv/
+.*venv*/
+venv/
+**/.venv/
+**/venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+dist/
+build/
+.next/
+.nuxt/
+.turbo/
+
+# Obsidian local workspace state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache/
+
+# Local agent/editor state
+.claude/settings.local.json
+**/settings.local.json
+.codex/
+.agents/cache/
+.grok/
+
+# Generated knowledge graph outputs
+graphify-out/
+**/graphify-out/
+1_Command_Brain_Core/1.3_Knowledge_Graphs/imports/
+
+# Pointer-first cloned/vendor repos and duplicated project checkouts.
+# These should stay recoverable from their own remotes or explicit install docs,
+# not embedded into the HQ backup commit.
+3_Project_Workspaces/
+4_Reusable_Systems_and_Skills/4.1_VCOS_Employee_OS_Template/
+6_Arsenal/repos/
+3_Project_Workspaces/Project repos/
+3_Project_Workspaces/VibeVoice/
+3_Project_Workspaces/3.4_Workplace_AI_Trading_Coach/VibeVoice/
+3_Project_Workspaces/gbrain copy/
+3_Project_Workspaces/3.1_AgentOSync_Revenue_Pipeline/_external/
+3_Project_Workspaces/01_Client_Workspaces_Delivery_Truth/ethnic-apparel-gem/3.3.2_Marketplace_MVP_Build/Ethnic-Gems/
+3_Project_Workspaces/01_Client_Workspaces_Delivery_Truth/ethnic-apparel-gem/3.3.2_Marketplace_MVP_Build/texbridge-demo/
+3_Project_Workspaces/01_Client_Workspaces_Delivery_Truth/ethnic-apparel-gem/3.3.2_Marketplace_MVP_Build/PakTextile-Marketplace/

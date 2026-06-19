@@ -1,0 +1,2 @@
+verification_record_id,batch_name,object_type,object_id,object_name,pre_move_snapshot_present,description_verified,tags_verified,assignees_verified,dates_verified,subtasks_verified,checklists_verified,comments_verified,attachments_links_verified,custom_fields_verified,verified_by,verified_at,result,notes
+gate-001,Preflight snapshot gate,workspace,90173622282,NeuralSync Agency,no,no,no,no,no,no,no,no,no,no,Sentinel,,blocked,Airtable base import and task snapshot review required before live ClickUp restructure.

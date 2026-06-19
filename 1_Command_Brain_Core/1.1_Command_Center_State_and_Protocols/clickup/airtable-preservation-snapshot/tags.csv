@@ -1,0 +1,32 @@
+tag_record_id,task_id,task_url,tag_name,tag_type,canonical,additive_only,notes
+canonical-client-amax,,,amax,client,yes,yes,Amax Travel and internal proof lab work
+canonical-client-agentosync,,,agentosync,client,yes,yes,AgentOSync GTM and public proof engine
+canonical-client-sameer,,,sameer,client,yes,yes,Sameer client/prospect work
+canonical-client-usman,,,usman,client,yes,yes,Usman proposal/business development work
+canonical-client-cellmart,,,cellmart,client,yes,yes,Cellmart work
+canonical-client-alex-reed,,,alex-reed,client,yes,yes,Alex Reed work
+canonical-vertical-dealership,,,dealership,vertical,yes,yes,Dealership workflows and Employee 01 wedge
+canonical-vertical-clinic,,,clinic,vertical,yes,yes,Clinic/receptionist workflows
+canonical-vertical-restaurant,,,restaurant,vertical,yes,yes,Restaurant workflows
+canonical-vertical-travel,,,travel,vertical,yes,yes,Travel agency/GDS/Systrix workflows
+canonical-vertical-real-estate,,,real-estate,vertical,yes,yes,Real estate workflows
+canonical-type-build,,,build,type,yes,yes,System build work
+canonical-type-automation,,,automation,type,yes,yes,n8n Vapi Make workflow automation
+canonical-type-client-delivery,,,client-delivery,type,yes,yes,Named client delivery work
+canonical-type-lead,,,lead,type,yes,yes,Lead deal prospect proposal outreach
+canonical-type-content,,,content,type,yes,yes,Posts videos proof assets calendars
+canonical-type-ops,,,ops,type,yes,yes,Internal operations
+canonical-type-approval,,,approval,type,yes,yes,Human approval required or recorded
+canonical-type-blocked,,,blocked,type,yes,yes,Blocked task
+canonical-agent-sentinel,,,sentinel,agent,yes,yes,Routing approvals handoffs decisions
+canonical-agent-builder,,,builder,agent,yes,yes,Implementation owner
+canonical-agent-skeptic,,,skeptic,agent,yes,yes,Review validation adversarial QA
+canonical-agent-kingmaker,,,kingmaker,agent,yes,yes,Content proof narrative
+canonical-system-n8n,,,n8n,system,yes,yes,n8n workflows
+canonical-system-vapi,,,vapi,system,yes,yes,Vapi voice workflows
+canonical-system-odoo,,,odoo,system,yes,yes,Odoo CRM/accounting
+canonical-system-airtable,,,airtable,system,yes,yes,Airtable bases and control tables
+canonical-system-github,,,github,system,yes,yes,GitHub repo issue PR work
+canonical-system-higgsfield,,,higgsfield,system,yes,yes,Higgsfield media generation
+canonical-system-claude,,,claude,system,yes,yes,Claude workflows prompts projects
+canonical-system-gpt,,,gpt,system,yes,yes,GPT/OpenAI workflows prompts projects

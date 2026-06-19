@@ -1,0 +1,45 @@
+# VCOS HQ Graphify ignore rules
+#
+# Default stance: graph only curated HQ/project context. Do not graph noisy,
+# generated, vendored, credentialed, or legacy material unless a task explicitly
+# narrows to it.
+
+.git/
+.obsidian/
+.codex/
+.agents/cache/
+
+node_modules/
+**/node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.turbo/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+graphify-out/
+**/graphify-out/
+
+# Quarantine generated graph imports from root-level HQ graphs.
+1_Command_Brain_Core/1.3_Knowledge_Graphs/imports/
+
+# Legacy archives are not part of the default operating graph.
+5_Legacy_Reference_Archive/
+
+# Vendor/tool repos are indexed individually when needed, never as part of HQ.
+6_Arsenal/repos/
+
+# Local secrets and machine files.
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.sqlite
+*.db
+*.log
+
