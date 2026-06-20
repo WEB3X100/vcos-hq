@@ -19,6 +19,7 @@ Only then decide what deeper interface is needed.
 
 ## Routing
 
+- Office hours / GBrain grill / dual-laptop Hermes / 7pm brief / NeuralSync intern -> `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/README.md` first, then matched subject file (usually `session-briefs/dual-laptop-hermes/plan.md`). Do not laptop-search.
 - HQ/cross-client/strategy -> VCOS HQ 1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols or 1_Command_Brain_Core/1.2_Headquarters_Memory files.
 - ClickUp execution -> `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/clickup/protocol.md`.
 - Drive/file-backed work -> `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/drive/sync-sop.md`.

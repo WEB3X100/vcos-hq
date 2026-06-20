@@ -13,6 +13,20 @@ Before executing any task, read these files in order:
 
 Then route the task through the smallest relevant interface. If the task belongs to a domain, read only that domain's `README.md` before deciding whether deeper context is needed.
 
+## Office Hours Fast Path
+
+When the human says `office hours`, `GBrain office hours`, `grill this plan`, `dual-laptop Hermes`, `7pm brief setup`, or `NeuralSync intern activation`:
+
+1. Read `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/README.md` (router — do not search the laptop).
+2. Open only the matched subject file from the router table.
+3. For dual-laptop Hermes work, read in order:
+   - `session-briefs/dual-laptop-hermes/plan.md`
+   - `session-briefs/gbrain-office-hours-dual-laptop-hermes-2026-06-19.md` (latest OH critique)
+4. Run `4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/gbrain-office-hours/SKILL.md` or gstack `/office-hours` on the subject plan.
+5. Save new critique packets under `session-briefs/` and update the router README latest-files table.
+
+Do not start with repo-wide grep or filesystem search for office hours artifacts.
+
 ClickUp routing rule: whenever ClickUp is discussed, first reference the AgentOSync space view at `https://app.clickup.com/9017760195/v/s/90175689274`. The main team async activity folders are:
 
 - `https://app.clickup.com/9017760195/v/f/90178817003/90175689274`

@@ -11,6 +11,14 @@ Default cadence:
 - Output: Daily Briefing
 - Destination: Slack, Telegram, ClickUp, or current thread
 
+## Office Hours Router
+
+Before weekly office hours, GBrain grills, or activation plan reviews, read:
+
+`1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/README.md`
+
+Dual-laptop Hermes activation: `session-briefs/dual-laptop-hermes/plan.md`
+
 ## Daily Heartbeat Inputs
 
 Read only:
@@ -18,7 +26,8 @@ Read only:
 1. `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state.md`
 2. `1_Command_Brain_Core/1.2_Headquarters_Memory/active-context.md`
 3. `1_Command_Brain_Core/1.2_Headquarters_Memory/key-workspaces.md`
-4. Relevant command-room task summaries from ClickUp, if connector access is available
+4. Latest weekly plan when running 7pm work-start brief: `session-briefs/weekly-office-hours-plan-*.md` (see `session-briefs/README.md`)
+5. Relevant command-room task summaries from ClickUp, if connector access is available
 
 Do not read raw references or domain implementation files during the heartbeat unless a blocker explicitly requires it.
 

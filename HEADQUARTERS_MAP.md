@@ -122,6 +122,8 @@ Live operational control layer.
 | `managed-agent-runtime-evaluation.md` | Runtime selection rubric. | Use before choosing local Claude, managed agents, Trigger.dev, OpenClaw/Hermes, n8n, etc. |
 | `clickup/` | ClickUp planning and preservation material. | Store ClickUp restructure plans, IDs, import snapshots, and task-system decisions. |
 | `drive/` | Drive routing notes. | Store Drive folder/file routing notes, not full Drive exports. |
+| `session-briefs/README.md` | Office hours router index. | **Read first** for weekly OH, GBrain critiques, and activation plans (e.g. dual-laptop Hermes). Do not laptop-search for briefs. |
+| `session-briefs/dual-laptop-hermes/plan.md` | Dual-laptop Hermes activation plan. | Active infrastructure activation; pair with latest `gbrain-office-hours-dual-laptop-hermes-*.md`. |
 
 ### `1.3_Knowledge_Graphs/`
 

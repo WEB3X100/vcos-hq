@@ -24,6 +24,8 @@ Start with:
 4. `1_Command_Brain_Core/1.2_Headquarters_Memory/active-context.md`
 5. `1_Command_Brain_Core/1.2_Headquarters_Memory/key-workspaces.md`
 
+**Dual-laptop Hermes (Approved):** `session-briefs/dual-laptop-hermes/plan.md` + `interactive-office-hours-dual-laptop-hermes-2026-06-19.md` + `mission-control/` | ClickUp: https://app.clickup.com/9017760195/v/li/901713786845
+
 ## Current Architecture
 
 - VCOS HQ is the command brain.

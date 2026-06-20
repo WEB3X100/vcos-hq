@@ -81,6 +81,23 @@ Rule: do not rename, move, merge, archive, or delete ClickUp folders/lists/tasks
 | PakTextile Marketplace GitHub | `https://github.com/WEB3X100/PakTextile-Marketplace` |
 | Premium FDE / AI-Native ERP Consultant project | `/Users/umairkhalid/_VCOS_Headquarters/3_Project_Workspaces/3.8_Premium_FDE_Applied_AI_Target` (brand + AI-Native Consultant OS build + FDE evidence lane; see root README.md and 00_Game_Plan_and_Brand_Strategy/) |
 
+## Office Hours Router
+
+Read before any laptop-wide search for session briefs, weekly plans, or activation critiques:
+
+`1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/README.md`
+
+| Topic | Canonical path |
+| --- | --- |
+| Dual-laptop Hermes plan (Approved) | `.../session-briefs/dual-laptop-hermes/plan.md` |
+| Interactive OH finalized (2026-06-19) | `.../session-briefs/interactive-office-hours-dual-laptop-hermes-2026-06-19.md` |
+| Mission Control dashboard | `.../mission-control/state.json` |
+| Hermes ClickUp tasks | https://app.clickup.com/9017760195/v/li/901713786845 |
+| Latest Sunday office hours recap | `.../session-briefs/sunday-office-hours-*.md` (newest date) |
+| Latest weekly plan draft | `.../session-briefs/weekly-office-hours-plan-*.md` (newest date) |
+
+HQ absolute base: `/Users/umairkhalid/_VCOS_Headquarters`
+
 ## Rule
 
 Use this file before ClickUp or repo search. Search only when the needed ID or repo is missing.
