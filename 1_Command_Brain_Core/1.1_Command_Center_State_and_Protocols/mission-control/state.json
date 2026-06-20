@@ -1,12 +1,14 @@
 {
-  "updated_at": "2026-06-20T22:30:00-04:00",
+  "updated_at": "2026-06-20T23:15:00-04:00",
   "week": 1,
   "flywheel": {
-    "delegation_level": "L0",
+    "delegation_level": "L1",
     "brief_score_last": 5,
     "brief_score_7pm_cron": 4,
     "brief_delivery_streak": 2,
-    "dealership_demo_score": 5
+    "dealership_demo_score": 5,
+    "week1_git_collab_test": "passed",
+    "week1_git_collab_merged_at": "2026-06-20T23:15:00-04:00"
   },
   "cubicle_l1": {
     "name": "Chief of Staff Hermes",
@@ -14,13 +16,13 @@
     "channel": "whatsapp",
     "profile": "vcos-brain-grok",
     "status": "active",
-    "last_session": "2026-06-20 — Week 1: pushed git collab test mission to GitHub for L2",
+    "last_session": "2026-06-20 — L2 collab test reviewed; merged l2/collab-test-2026-06-20 to main; delegation L0→L1",
     "local_repos_touched": [
       "_VCOS_Headquarters",
       "github.com/WEB3X100/vcos-hq"
     ],
     "pending_decisions_for_umair": [
-      "After L2 push: approve merge l2/collab-test-2026-06-20 to main (Y/N)"
+      "Create neuralsync-intern-builder Hermes profile on L2 (l2-soul-seed.md)"
     ]
   },
   "cubicle_l2": {
@@ -29,12 +31,11 @@
     "channel": "telegram",
     "profile": "neuralsync-intern-builder",
     "status": "active",
-    "active_mission": "week1-git-collab-test",
-    "active_branch": "l2/collab-test-2026-06-20",
+    "active_mission": null,
+    "active_branch": null,
     "last_push": "2026-06-20T22:30:00-04:00",
-    "last_session": "L2 collab test — pulled HQ, wrote response handoff, pushed branch",
+    "last_session": "Week 1 git collab test complete — branch merged to main by L1",
     "pending_decisions_for_umair": [
-      "Merge l2/collab-test-2026-06-20 to main? (Y/N)",
       "Create neuralsync-intern-builder profile on L2 (l2-soul-seed.md)"
     ]
   },
@@ -42,9 +43,8 @@
     "coordination_repo": "https://github.com/WEB3X100/vcos-hq",
     "local_path_recommended": "~/VCOS-Coordination/vcos-hq",
     "open_prs": [],
-    "open_branches": [
-      "l2/collab-test-2026-06-20 (pushed by L2 2026-06-20)"
-    ]
+    "open_branches": [],
+    "last_merge": "l2/collab-test-2026-06-20 → main @ 3155d04 (2026-06-20)"
   },
   "client_lanes": {
     "dealership": {
@@ -52,7 +52,7 @@
       "bullets": [
         "Morning-brief demo PASSED 5/5 — ready for Sameer/Uzair walkthrough",
         "Sample packet: sample-lead-set-v2-2026-06-19.md",
-        "L2 not assigned Dealership work until git collab test passes"
+        "L2 unblocked for bounded missions after Week 1 git collab test merge"
       ]
     },
     "amax": {
@@ -66,11 +66,11 @@
   },
   "tonight_chunk": {
     "lane": "Dual-Hermes Week 1",
-    "task": "L2 git collaboration test — clone, branch, handoff, push",
-    "done_means": "l2-collab-test-response-2026-06-20.md on branch l2/collab-test-2026-06-20",
+    "task": "Week 1 git collaboration test",
+    "done_means": "l2-collab-test-response merged to main; delegation L1",
     "status": "complete",
-    "l1_complete": "Mission pushed to GitHub main",
-    "l2_complete": "Branch pushed; handoff written; awaiting Umair merge approval"
+    "l1_complete": "Reviewed L2 handoff; merged branch; updated state",
+    "l2_complete": "Branch pushed; handoff merged to main"
   },
   "parking_lot": [
     "AMAX API/Postgres until Rooshan Phase 0 gate + reports loaded",
