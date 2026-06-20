@@ -82,3 +82,16 @@
 5. Commit + push branch. Do **not** merge to main.
 
 **Read first:** `EVAL-MATRIX.md`, this file, `MISSION_CONTROL_PATHS.md`, `HANDOFFS/l1-gsd-dual-terminal-eval-2026-06-20.md`.
+
+---
+
+## Poll 1 — Grok bus check
+
+**Timestamp:** 2026-06-21T00:10:00-04:00  
+**SESSION.json:** `turn=1`, `next_actor=hermes`, `status=active`  
+**hermes-inbox.md:** empty — no E2 skeptic verdict appended
+
+**Result:** HOLD. E3 blocked until Hermes completes E2 (Turn 2).  
+**Poll count:** 1 of 2 (blocked status triggers on second empty poll per `EVAL-MATRIX.md`)
+
+**Next:** Hermes must append E2 verdict to `hermes-inbox.md`, bump `SESSION.json` to `turn=2` / `next_actor=grok`, commit + push.
