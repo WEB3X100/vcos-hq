@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T10:00:00-04:00",
+  "updated_at": "2026-06-20T22:30:00-04:00",
   "week": 1,
   "flywheel": {
     "delegation_level": "L0",
@@ -20,7 +20,6 @@
       "github.com/WEB3X100/vcos-hq"
     ],
     "pending_decisions_for_umair": [
-      "Provision L2 and run l2-collab-test-prompt.md on second laptop",
       "After L2 push: approve merge l2/collab-test-2026-06-20 to main (Y/N)"
     ]
   },
@@ -29,14 +28,14 @@
     "device": "second_laptop",
     "channel": "telegram",
     "profile": "neuralsync-intern-builder",
-    "status": "queued",
+    "status": "active",
     "active_mission": "week1-git-collab-test",
     "active_branch": "l2/collab-test-2026-06-20",
-    "last_push": null,
-    "last_session": null,
+    "last_push": "2026-06-20T22:30:00-04:00",
+    "last_session": "L2 collab test — pulled HQ, wrote response handoff, pushed branch",
     "pending_decisions_for_umair": [
-      "Clone https://github.com/WEB3X100/vcos-hq to ~/VCOS-Coordination/vcos-hq",
-      "Run mission per l1-week1-git-collab-test-2026-06-20.md"
+      "Merge l2/collab-test-2026-06-20 to main? (Y/N)",
+      "Create neuralsync-intern-builder profile on L2 (l2-soul-seed.md)"
     ]
   },
   "github": {
@@ -44,7 +43,7 @@
     "local_path_recommended": "~/VCOS-Coordination/vcos-hq",
     "open_prs": [],
     "open_branches": [
-      "l2/collab-test-2026-06-20 (queued — not yet pushed by L2)"
+      "l2/collab-test-2026-06-20 (pushed by L2 2026-06-20)"
     ]
   },
   "client_lanes": {
@@ -69,8 +68,9 @@
     "lane": "Dual-Hermes Week 1",
     "task": "L2 git collaboration test — clone, branch, handoff, push",
     "done_means": "l2-collab-test-response-2026-06-20.md on branch l2/collab-test-2026-06-20",
-    "status": "queued",
-    "l1_complete": "Mission pushed to GitHub main"
+    "status": "complete",
+    "l1_complete": "Mission pushed to GitHub main",
+    "l2_complete": "Branch pushed; handoff written; awaiting Umair merge approval"
   },
   "parking_lot": [
     "AMAX API/Postgres until Rooshan Phase 0 gate + reports loaded",

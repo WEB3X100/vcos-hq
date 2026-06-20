@@ -11,7 +11,7 @@
 | **Priority** | P0 — Week 1 proof |
 | **Assignment** | `l1-week1-git-collab-test-2026-06-20.md` |
 | **Branch** | `l2/collab-test-2026-06-20` |
-| **Status** | `queued` — waiting for L2 pull |
+| **Status** | `complete` — L2 pushed `l2/collab-test-2026-06-20`; awaiting Umair merge |
 | **Assigned by** | L1 Chief of Staff |
 
 ## Queue (after active mission)
