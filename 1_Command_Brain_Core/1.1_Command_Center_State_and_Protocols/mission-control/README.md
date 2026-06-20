@@ -35,6 +35,8 @@ After every L1 or L2 session:
 | `dashboard.md` | Human-readable live dashboard |
 | `git-coordination-sop.md` | Branch/PR rules |
 | `l2-setup-guide.md` | Second laptop provisioning steps |
+| `dual-hermes-collaboration-protocol.md` | How L1 + L2 share work via GitHub |
+| `session-briefs/handoffs/MISSION-QUEUE.md` | L2 mission queue (poll every session) |
 | `briefs/` | Daily 7pm brief archive |
 | `hermes/` | Cron prompts, dream cycle, L2 soul seed |
 | `README.md` | This file |
