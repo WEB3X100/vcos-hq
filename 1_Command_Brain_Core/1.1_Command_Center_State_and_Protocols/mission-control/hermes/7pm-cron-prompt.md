@@ -63,7 +63,7 @@ Do NOT read `/home/user/VCOS-Employee/` paths. VCOS HQ is the brain.
 ## After composing the brief
 
 1. Write the brief to `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control/briefs/YYYY-MM-DD-7pm-brief.md`
-2. Update `mission-control/state.json`: set `updated_at`, refresh `client_lanes`, `tonight_chunk`, `cubicle_l1.last_session`
+2. Update `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control/state.json`: set `updated_at`, refresh `client_lanes`, `tonight_chunk`, `cubicle_l1.last_session`
 3. Your **final response** = the brief text only (system delivers to WhatsApp)
 
 ## Rules

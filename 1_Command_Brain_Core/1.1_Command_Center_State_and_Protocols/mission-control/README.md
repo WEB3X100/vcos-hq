@@ -3,6 +3,11 @@
 **Status:** Week 1 scaffold — created by Interactive OH 2026-06-19  
 **Purpose:** Single visibility surface for Laptop 1 (Chief of Staff / WhatsApp) and Laptop 2 (NeuralSync Intern / Telegram).
 
+**Path constants** (Hermes `--workdir` = repo root):
+
+- `MC=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control` (this folder)
+- `HANDOFFS=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/handoffs`
+
 ## Two Cubicles
 
 | Cubicle | Device | Channel | Role |
@@ -16,14 +21,14 @@ GitHub is the coordination layer:
 
 - L2 pushes feature branches only
 - L1 pulls, reviews, merges
-- Every mission ends with handoff packet in `session-briefs/handoffs/`
-- `state.json` in this folder is the live dashboard state
+- Every mission ends with handoff packet in `HANDOFFS/`
+- `MC/state.json` is the live dashboard state
 
 ## Update Protocol
 
 After every L1 or L2 session:
 
-1. Update `state.json` (agent or human)
+1. Update `MC/state.json` (agent or human)
 2. Write handoff packet if mission complete
 3. Post draft ClickUp comment on list https://app.clickup.com/9017760195/v/li/901713786845
 
@@ -36,9 +41,9 @@ After every L1 or L2 session:
 | `git-coordination-sop.md` | Branch/PR rules |
 | `l2-setup-guide.md` | Second laptop provisioning steps |
 | `dual-hermes-collaboration-protocol.md` | How L1 + L2 share work via GitHub |
-| `session-briefs/handoffs/MISSION-QUEUE.md` | L2 mission queue (poll every session) |
+| `HANDOFFS/MISSION-QUEUE.md` | L2 mission queue (poll every session) |
 | `briefs/` | Daily 7pm brief archive |
 | `hermes/` | Cron prompts, dream cycle, L2 soul seed |
 | `README.md` | This file |
 
-See `session-briefs/interactive-office-hours-dual-laptop-hermes-2026-06-19.md` for locked 7pm brief template.
+See `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/interactive-office-hours-dual-laptop-hermes-2026-06-19.md` for locked 7pm brief template.

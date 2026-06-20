@@ -7,7 +7,13 @@
 ## Manual trigger prompt
 
 ```
-Dream Cycle lite for VCOS. Read today's Hermes sessions, mission-control/briefs/ latest, and any handoffs in session-briefs/handoffs/.
+Dream Cycle lite for VCOS.
+
+PATH PREFIX:
+MC=1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control
+HANDOFFS=1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/handoffs
+
+Read today's Hermes sessions, MC/briefs/ latest, and any handoffs in HANDOFFS/.
 
 Output exactly these 3 fields + optional soul draft:
 
@@ -20,7 +26,7 @@ Output exactly these 3 fields + optional soul draft:
 Optional DRAFT soul.md tweak (do not apply):
 - [proposed change or "none"]
 
-Write to mission-control/dream-cycles/YYYY-MM-DD-dream-cycle-lite.md
+Write to MC/dream-cycles/YYYY-MM-DD-dream-cycle-lite.md
 Do not mutate ClickUp, GitHub main, or client systems.
 ```
 

@@ -1,7 +1,12 @@
 # Git Coordination SOP — Dual-Hermes Mission Control
 
 **Status:** Week 1 active  
-**Coordination repo:** VCOS HQ (`/Users/umairkhalid/_VCOS_Headquarters`)
+**Coordination repo:** VCOS HQ (`~/VCOS-Coordination/vcos-hq` on both laptops)
+
+**Path constants** (Hermes `--workdir` = repo root):
+
+- `MC=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control`
+- `HANDOFFS=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/handoffs`
 
 ## Branch rules
 
@@ -25,7 +30,7 @@ L1 encodes plan in HQ → git push main (or PR)
 
 ## Handoff packet (required)
 
-Path: `session-briefs/handoffs/YYYY-MM-DD-mission-name.md`
+Path: `HANDOFFS/YYYY-MM-DD-mission-name.md`
 
 ```markdown
 # Handoff — [mission name]
@@ -51,7 +56,7 @@ Path: `session-briefs/handoffs/YYYY-MM-DD-mission-name.md`
 
 ## state.json update (both cubicles)
 
-After every session, update `mission-control/state.json`:
+After every session, update `MC/state.json`:
 
 - `updated_at` (ISO 8601)
 - Relevant cubicle `last_session` / `last_push` / `pending_decisions_for_umair`

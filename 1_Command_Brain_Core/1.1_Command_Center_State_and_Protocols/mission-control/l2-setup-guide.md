@@ -3,6 +3,11 @@
 **Time:** ~45–60 min  
 **Outcome:** L2 pulls VCOS HQ, runs first handoff-sync mission, posts to Telegram
 
+**Path constants** (Hermes `--workdir` = repo root):
+
+- `MC=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control`
+- `HANDOFFS=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/handoffs`
+
 ## Prerequisites
 
 - [ ] GitHub access to VCOS HQ repo
@@ -24,7 +29,7 @@ hermes model   # pick xAI Grok OAuth
 hermes profile create neuralsync-intern-builder --description "24/7 VCOS HQ builder — feature branches only, Telegram channel"
 ```
 
-Paste soul seed from `mission-control/hermes/l2-soul-seed.md` as first message. Confirm branch rules.
+Paste soul seed from `MC/hermes/l2-soul-seed.md` as first message. Confirm branch rules.
 
 ## Step 3 — Activate Telegram
 
@@ -37,12 +42,14 @@ L2 posts handoffs here. L1 stays on WhatsApp.
 ## Step 4 — Clone VCOS HQ
 
 ```bash
-git clone <vcos-hq-repo-url> _VCOS_Headquarters
-cd _VCOS_Headquarters
+mkdir -p ~/VCOS-Coordination
+cd ~/VCOS-Coordination
+git clone https://github.com/WEB3X100/vcos-hq.git vcos-hq
+cd vcos-hq
 git pull origin main
 ```
 
-Workdir for all L2 missions: `_VCOS_Headquarters`
+Workdir for all L2 missions: `~/VCOS-Coordination/vcos-hq`
 
 ## Step 5 — First mission (handoff sync)
 
@@ -50,18 +57,18 @@ Workdir for all L2 missions: `_VCOS_Headquarters`
 git checkout -b l2/handoff-sync-2026-06-20
 ```
 
-1. Verify `mission-control/`, `session-briefs/handoffs/` exist
-2. Read `mission-control/state.json` + `git-coordination-sop.md`
-3. Write `session-briefs/handoffs/l2-vcos-hq-sync-2026-06-20.md`
-4. Update `state.json` cubicle_l2 fields
+1. Verify `MC/` and `HANDOFFS/` exist
+2. Read `MC/state.json` + `MC/git-coordination-sop.md`
+3. Write `HANDOFFS/l2-vcos-hq-sync-2026-06-20.md`
+4. Update `MC/state.json` cubicle_l2 fields
 5. Commit, push, open draft PR (do not merge)
 6. Post Telegram summary with branch + decisions needed
 
 ## Step 6 — Idle behavior
 
-When `state.json` shows no active mission:
+When `MC/state.json` shows no active mission:
 
-- Poll `mission-control/state.json` every 30 min OR wait for Telegram mission from L1
+- Poll `MC/state.json` every 30 min OR wait for Telegram mission from L1
 - Report idle — do not invent greenfield work
 - Parking lot items are off-limits
 
@@ -70,5 +77,5 @@ When `state.json` shows no active mission:
 - [ ] `hermes profile list` shows `neuralsync-intern-builder`
 - [ ] Telegram bot responds to ping
 - [ ] Branch `l2/handoff-sync-*` pushed to GitHub
-- [ ] Handoff packet exists in `session-briefs/handoffs/`
-- [ ] `state.json` cubicle_l2.status = `active`
+- [ ] Handoff packet exists in `HANDOFFS/`
+- [ ] `MC/state.json` cubicle_l2.status = `active`

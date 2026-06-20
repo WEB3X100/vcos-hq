@@ -1,97 +1,60 @@
 # Grok Inbox — GSD Dual-Terminal Eval
 
 **Actor:** Grok Build (L2)  
-**Turn:** 1  
-**Timestamp:** 2026-06-20T23:45:00-04:00
+**Latest turn:** 3  
+**Timestamp:** 2026-06-21T01:00:00-04:00
 
 ---
 
-## E1 — Path hygiene audit (submitted)
+## E3 — P0 path patch (Grok Turn 3) — COMPLETE
 
-**Method:** `rg -l "mission-control/|session-briefs/" --glob "*.md"` on repo root (excl. `6_Arsenal`).
+**Method:** Applied `MC=` / `HANDOFFS=` alias block per `l2-collab-test-prompt.md` and Hermes locked P0 list.
 
-**Rule:** Bare `mission-control/` or `session-briefs/` in agent-facing instructions are wrong when Hermes `--workdir` = repo root. Correct pattern: `MC=` / `HANDOFFS=` aliases per `MISSION_CONTROL_PATHS.md` and `l2-collab-test-prompt.md`.
+### Files patched (8/8)
 
-### Exempt (do not patch)
+| # | File | Changes |
+| --- | --- | --- |
+| 1 | `MC/dual-hermes-collaboration-protocol.md` | Path constants block; diagram + tables + mission loop + context sharing → `MC/` / `HANDOFFS/` |
+| 2 | `MC/l2-setup-guide.md` | Path constants; clone path → `~/VCOS-Coordination/vcos-hq`; all agent refs → `MC/` / `HANDOFFS/` |
+| 3 | `MC/git-coordination-sop.md` | Path constants; handoff path + `MC/state.json` |
+| 4 | `MC/README.md` | Path constants; `HANDOFFS/MISSION-QUEUE.md`; OH doc full path |
+| 5 | `MC/hermes/l2-soul-seed.md` | PATH PREFIX in soul seed; all agent refs → `MC/` / `HANDOFFS/` |
+| 6 | `MC/hermes/l1-post-push-prompt.md` | PATH PREFIX in paste block; `HANDOFFS/` + `MC/state.json` |
+| 7 | `MC/hermes/7pm-cron-prompt.md` | Bare `mission-control/state.json` → full qualified path |
+| 8 | `MC/hermes/dream-cycle-lite.md` | PATH PREFIX in prompt; `MC/briefs/`, `HANDOFFS/`, `MC/dream-cycles/` |
 
-| File | Reason |
-| --- | --- |
-| `MISSION_CONTROL_PATHS.md` | Canonical path constants doc |
-| `mission-control/hermes/l2-collab-test-prompt.md` | Already uses `MC=` / `HANDOFFS=` |
-| `mission-control/hermes/l2-path-fix-recovery-prompt.md` | Recovery doc; mentions wrong paths intentionally |
+### Post-patch grep (P0 set only)
 
-### P0 — Hermes prompts + MC ops (fix first)
+- Bare `mission-control/` as agent instruction: **0** (1 intentional meta line in dual-hermes path constants warning)
+- Bare `session-briefs/` as agent instruction: **0**
 
-| File | Sample wrong refs |
-| --- | --- |
-| `mission-control/dual-hermes-collaboration-protocol.md` | `mission-control/state.json`, `session-briefs/handoffs/` throughout diagram + tables |
-| `mission-control/l2-setup-guide.md` | `mission-control/`, `session-briefs/handoffs/`, `mission-control/state.json` |
-| `mission-control/git-coordination-sop.md` | `session-briefs/handoffs/`, `mission-control/state.json` |
-| `mission-control/README.md` | `session-briefs/handoffs/MISSION-QUEUE.md` |
-| `mission-control/hermes/l2-soul-seed.md` | `session-briefs/handoffs/`, `mission-control/` (mixed — item 2 uses full path) |
-| `mission-control/hermes/l1-post-push-prompt.md` | `session-briefs/handoffs/`, `mission-control/state.json` |
-| `mission-control/hermes/7pm-cron-prompt.md` | `mission-control/state.json` (line 66 bare short path) |
-| `mission-control/hermes/dream-cycle-lite.md` | `mission-control/briefs/`, `session-briefs/handoffs/` |
-| `session-briefs/handoffs/MISSION-QUEUE.md` | `mission-control/state.json` |
-| `session-briefs/handoffs/l1-week1-git-collab-test-2026-06-20.md` | `mission-control/state.json`, `session-briefs/handoffs/` |
+### Deferred (E3b per Hermes)
 
-### P1 — Routers + entry docs
-
-| File | Notes |
-| --- | --- |
-| `AGENTS.md` | `session-briefs/` paths without HQ prefix |
-| `session-briefs/README.md` | `mission-control/state.json`, `session-briefs/` self-refs |
-| `cadence-hooks.md` | `session-briefs/` short paths |
-| `HEADQUARTERS_MAP.md` | `session-briefs/README.md` short path |
-
-### P2 — Memory / historical (lower urgency)
-
-| File | Notes |
-| --- | --- |
-| `1.2_Headquarters_Memory/active-context.md` | `session-briefs/`, `mission-control/` |
-| `1.2_Headquarters_Memory/decisions.md` | `mission-control/`, `session-briefs/` |
-| `1.2_Headquarters_Memory/key-workspaces.md` | mixed `.../mission-control/` and `.../session-briefs/` (partially qualified) |
-| `session-briefs/dual-laptop-hermes/plan.md` | historical plan refs |
-| `session-briefs/interactive-office-hours-dual-laptop-hermes-2026-06-19.md` | OH artifact |
-| `session-briefs/gbrain-office-hours-dual-laptop-hermes-2026-06-19.md` | OH artifact |
-| `session-briefs/clickup-payloads-dual-laptop-hermes-2026-06-19.md` | mixed full + short |
-| `session-briefs/handoffs/l2-collab-test-response-2026-06-20.md` | handoff path in Telegram draft only |
-
-### E1 counts
-
-- **Total files with matches:** 31
-- **P0:** 10
-- **P1:** 4
-- **P2:** 7
-- **Exempt:** 3
+- `HANDOFFS/MISSION-QUEUE.md`
+- `HANDOFFS/l1-week1-git-collab-test-2026-06-20.md`
 
 ---
 
-## → Hermes: skeptic-review request (Turn 2)
+## → Hermes: E4 verification request (Turn 4)
 
-**@neuralsync-intern-builder** — please execute E2 on branch `l2/gsd-dual-terminal-eval-2026-06-20`:
+**@neuralsync-intern-builder** — execute E4 on branch `l2/gsd-dual-terminal-eval-2026-06-20`:
 
-1. **Skeptic-review E1** above. Challenge false positives; add any missed files; confirm P0/P1/P2 ranking.
-2. Write your verdict to `hermes-inbox.md` (append below the header).
-3. Update `mission-control/state.json` → `cubicle_l2`:
-   - `active_mission`: `gsd-dual-terminal-eval`
-   - `active_branch`: `l2/gsd-dual-terminal-eval-2026-06-20`
-   - `last_session`: one-line summary of E2 skeptic review
-   - `last_push`: ISO timestamp after your commit
-4. Increment `SESSION.json` → `turn: 2`, `next_actor: grok`.
-5. Commit + push branch. Do **not** merge to main.
+1. Independent re-grep the 8 P0 files for bare short paths used as agent instructions.
+2. Score **E3** in `EVAL-MATRIX.md` / `hermes-inbox.md`.
+3. Confirm **E6** turn protocol (turn 3→4 handoff clean).
+4. Append verdict to `hermes-inbox.md`; bump `SESSION.json` → `turn=4`, `next_actor=grok`.
+5. Commit + push. No main merge.
 
-**Read first:** `EVAL-MATRIX.md`, this file, `MISSION_CONTROL_PATHS.md`, `HANDOFFS/l1-gsd-dual-terminal-eval-2026-06-20.md`.
+**Read first:** this file, `hermes-inbox.md` E2 P0 list, `MISSION_CONTROL_PATHS.md`.
 
 ---
 
-## Poll 1 — Grok bus check
+## Prior turns (archive)
 
-**Timestamp:** 2026-06-21T00:10:00-04:00  
-**SESSION.json:** `turn=1`, `next_actor=hermes`, `status=active`  
-**hermes-inbox.md:** empty — no E2 skeptic verdict appended
+### E1 — Path hygiene audit (Turn 1)
 
-**Result:** HOLD. E3 blocked until Hermes completes E2 (Turn 2).  
-**Poll count:** 1 of 2 (blocked status triggers on second empty poll per `EVAL-MATRIX.md`)
+Submitted 2026-06-20T23:45:00-04:00. 31 files; P0=10. See git history `1116466`.
 
-**Next:** Hermes must append E2 verdict to `hermes-inbox.md`, bump `SESSION.json` to `turn=2` / `next_actor=grok`, commit + push.
+### Poll 1 — Grok bus check (Turn 1 hold)
+
+2026-06-21T00:10:00-04:00. hermes-inbox empty; held for E2.
