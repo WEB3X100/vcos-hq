@@ -1,0 +1,16 @@
+{
+  "_comment": "ClickUp user IDs as strings for MCP assignee filters. Codex daily ground job reads this file first.",
+  "workspace_id": "9017760195",
+  "space_view_id": "90175689274",
+  "umair": {
+    "clickup_user_id": "95232352",
+    "aliases": ["100xOnly", "100x", "100xonlyy@gmail.com"],
+    "name_aliases": ["Umair", "100xOnly", "100x", "100xonlyy@gmail.com"]
+  },
+  "trysoft": {
+    "clickup_user_id": "266518054",
+    "aliases": ["Try Soft Ai", "Trysoft", "trysoftai@gmail.com"],
+    "name_aliases": ["Trysoft", "Try Soft Ai", "trysoftai@gmail.com"]
+  },
+  "mcp_filter_note": "Always pass clickup_user_id as string in assignee filters. On server error: retry once, then broad_scan fallback matching id or aliases."
+}

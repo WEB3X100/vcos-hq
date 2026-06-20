@@ -25,7 +25,7 @@ Before doing HQ work, read these files in order:
 
 1. `AGENTS.md`
 2. `1_Command_Brain_Core/1.2_Headquarters_Memory/ubiquitous_language.md`
-3. `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state.md`
+3. `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md`
 4. `1_Command_Brain_Core/1.2_Headquarters_Memory/active-context.md`
 5. `1_Command_Brain_Core/1.2_Headquarters_Memory/key-workspaces.md`
 
@@ -76,8 +76,11 @@ _VCOS_Headquarters/
 │   ├── 5.1_Legacy_Reference_Singular/
 │   └── 5.2_Legacy_References_Plural/
 |
-└── 6_Arsenal/
-    └── arsenal-index.md
+├── 6_Arsenal/
+│   └── arsenal-index.md
+│
+└── 7_VCOS_Interns/
+    └── 7.1_NeuralSync_Marketing_Intern/
 ```
 
 ## Root Files
@@ -100,30 +103,24 @@ _VCOS_Headquarters/
 | `4_Reusable_Systems_and_Skills/` | Skill foundry | Turn repeated workflows into Mini Intern capabilities and marketplace assets. | Employee OS template, skill candidates, department skill packs, reusable SOPs, validated marketplace skills. | Raw client-specific context or unvalidated one-off experiments. |
 | `5_Legacy_Reference_Archive/` | Historical archive | Preserve old material until reviewed and migrated. | Legacy files, duplicated references, historical exports. | Active context. Do not load by default. |
 | `6_Arsenal/` | Swiss Army Knife | Curated tools, repos, APIs, frameworks, prompts, and gems. | Resource index with URLs, problem tags, and reusable tool references. | Full raw docs unless intentionally archived elsewhere. |
+| `7_VCOS_Interns/` | Deployable Mini Intern workspaces | Run brand-specific interns with local backlog, trackers, and handoff packets. | Intern identity, AGENTS.md, content backlog, generation tracker, sprint playbooks. | Department skill definitions (use `4.3`); raw client project files (use `3`). |
 
 ## Command Brain Core
 
 ### `1.1_Command_Center_State_and_Protocols/`
 
-Live operational control layer.
+Live operational control layer. Read `README.md` first, then enter the smallest numbered room for the task.
 
 | File Or Area | Purpose | Allocation Rule |
 | --- | --- | --- |
-| `project.md` | HQ vision and durable strategic north star. | Put long-lived “what VCOS is becoming” statements here. |
-| `requirements.md` | Hard requirements and constraints. | Put non-negotiable system requirements here. |
-| `state.md` | Current state, decisions, blockers, next actions. | Update when something changes the live operating picture. |
-| `roadmap.md` | Sequencing and progress. | Use for ordered build plans and milestone movement. |
-| `approval-gates.md` | Human approval rules. | Put rules for sends, publishing, CRM mutation, budgets, deployment, and risk. |
-| `cadence-hooks.md` | Daily/weekly heartbeat patterns. | Put recurring briefing, review, and check-in routines here. |
-| `ai-os-second-brain-architecture.md` | Two-layer VCOS architecture: Second Brain remembers, AI OS acts. | Read when designing GBrain, Obsidian, skills, automations, routines, or an operator console. |
-| `automation-registry.md` | Automation inventory. | Put active/suggested automations, cron jobs, and scheduled work here. |
-| `connections-map.md` | Tool and integration map. | Put connector/API/system relationship notes here. |
-| `session-context-discipline.md` | Token/context operating discipline. | Use when sessions get long, polluted, expensive, or need a handoff. |
-| `managed-agent-runtime-evaluation.md` | Runtime selection rubric. | Use before choosing local Claude, managed agents, Trigger.dev, OpenClaw/Hermes, n8n, etc. |
-| `clickup/` | ClickUp planning and preservation material. | Store ClickUp restructure plans, IDs, import snapshots, and task-system decisions. |
-| `drive/` | Drive routing notes. | Store Drive folder/file routing notes, not full Drive exports. |
-| `session-briefs/README.md` | Office hours router index. | **Read first** for weekly OH, GBrain critiques, and activation plans (e.g. dual-laptop Hermes). Do not laptop-search for briefs. |
-| `session-briefs/dual-laptop-hermes/plan.md` | Dual-laptop Hermes activation plan. | Active infrastructure activation; pair with latest `gbrain-office-hours-dual-laptop-hermes-*.md`. |
+| `README.md` | Command-center navigation interface. | Read first after fast path when working inside this folder. |
+| `00_Live_State_and_GSD/` | Project, requirements, roadmap, current decisions, blockers, next actions. | Read `state.md` first for the live operating picture. |
+| `01_Operating_Protocols_and_Guardrails/` | Approval gates, cadence, QA/review, context discipline, secret handling, recursive improvement. | Use when the task is about how agents may act or what requires approval. |
+| `02_AI_OS_Architecture_and_Runtime/` | AI OS, Second Brain, Hermes/SuperGrok, Grok Build, Obsidian, Graphify, Claude, managed runtime choices. | Use before choosing a runtime or changing memory/retrieval architecture. |
+| `03_Execution_Surfaces_and_Integrations/` | ClickUp, Drive, GitHub, automations, connections, and preservation snapshots. | Use for external operating surfaces and integration routing. |
+| `04_Mission_Control_Dashboard/` | Dual-Hermes dashboard and coordination surface. | Use for L1/L2 state, Replit dashboard planning, git coordination, and Hermes prompts. |
+| `05_Office_Hours_and_Session_Briefs/` | Office-hours router, critiques, weekly plans, ClickUp payloads, handoff packets. | **Read `session-briefs/README.md` first** for OH triggers; do not laptop-search for briefs. |
+| `06_Activation_Audits_and_Strategy/` | Revenue readiness, AI-native activation, Arsenal activation, business-service patterns, employee-template strategy. | Use to decide whether to activate/defer tools, routines, lanes, or strategic systems. |
 
 ### `1.3_Knowledge_Graphs/`
 
@@ -203,12 +200,13 @@ Every task should have exactly one owning intern, even if it hands off to anothe
 | Intern | Department Field | Owns | Default Folder |
 | --- | --- | --- | --- |
 | Marketing Mini Intern | `Marketing` | LinkedIn video, YouTube SME research, content hooks, Higgsfield prompts, Nano Banana images, Seedance clips, website creative, social campaigns, static artworks. | `4_Reusable_Systems_and_Skills/4.3_Department_Skill_Packs/marketing/` |
+| NeuralSync Marketing Intern | `Marketing` | AgentOSync acquisition content backlog, Seedance sprint, LinkedIn vertical video queue for NeuralSync lane. | `7_VCOS_Interns/7.1_NeuralSync_Marketing_Intern/` |
 | Ops Mini Intern | `Operations` | n8n maps, website/testimonial updates, CMS/webhook specs, CRM-safe logging, reporting, data quality, dashboards, WhatsApp/forms insights. | `4_Reusable_Systems_and_Skills/4.3_Department_Skill_Packs/ops/` |
 | Sales Mini Intern | `Sales Ops` | Lead qualification, Upwork proposals, LinkedIn DM drafts, call handoff packets, Trojan Horse partner outreach, AVAPI booking demo sales flow. | `4_Reusable_Systems_and_Skills/4.3_Department_Skill_Packs/sales/` |
 | Infrastructure Intern | `Infrastructure` | Employee OS skeleton, repo templates, deployment notes, `.env.example`, API setup notes, runtime selection, GitHub sync. | `4_Reusable_Systems_and_Skills/4.3_Department_Skill_Packs/infrastructure/` |
 | Reviewer / QA Intern | `Reviewer QA` | Claim checks, script scoring, handoff review, factual accuracy, risk review, quality gates. | `4_Reusable_Systems_and_Skills/4.3_Department_Skill_Packs/reviewer-qa/` |
 | Marketplace Intern | `Marketplace` | Packaging successful workflows into reusable installable skills and templates. | `4_Reusable_Systems_and_Skills/4.3_Department_Skill_Packs/marketplace/` |
-| Approval / Decisions Layer | `Approval` | Human approval gates, final execution authority, high-risk decisions. | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/approval-gates.md` |
+| Approval / Decisions Layer | `Approval` | Human approval gates, final execution authority, high-risk decisions. | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/approval-gates.md` |
 | Future Systems | `Future` | TV Network/R&D Pod, Trojan Horse partnerships, future wedge experiments. | `3_Project_Workspaces/3.2_Project_Briefs/` until validated, then move to domain/skill area. |
 
 ## Data Allocation Router
@@ -217,16 +215,16 @@ Use this table when new material is thrown into HQ.
 
 | Incoming Material | Put It Here | Also Update |
 | --- | --- | --- |
-| New live priority, blocker, or operating status | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state.md` | `active-context.md` if it changes current focus. |
+| New live priority, blocker, or operating status | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md` | `active-context.md` if it changes current focus. |
 | Durable strategic decision | `1_Command_Brain_Core/1.2_Headquarters_Memory/decisions.md` | `state.md` if it affects active work. |
 | New term/framework used across VCOS | `1_Command_Brain_Core/1.2_Headquarters_Memory/ubiquitous_language.md` | Relevant skill/domain README if operational. |
 | Workspace ID, repo URL, ClickUp ID, Drive folder | `1_Command_Brain_Core/1.2_Headquarters_Memory/key-workspaces.md` | Relevant project/domain file. |
-| Human approval rule | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/approval-gates.md` | `AGENTS.md` if it becomes mandatory behavior. |
+| Human approval rule | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/approval-gates.md` | `AGENTS.md` if it becomes mandatory behavior. |
 | Prompting or Claude Code power-user habit | `1_Command_Brain_Core/1.2_Headquarters_Memory/prompting-principles.md` | `claude-power-user-playbook.md` or Employee template if reusable. |
 | Graphify graph, wiki, Obsidian export, or graph report | `1_Command_Brain_Core/1.3_Knowledge_Graphs/` | Update `registry.md` and the owning project/domain README source capsule. |
 | Curated Markdown context for Claude Projects, Claude Code, Hermes, or other agent runtimes | `1_Command_Brain_Core/1.4_Agent_Context_Packets/` | Link canonical files and update `CLAUDE.md` or `automation-registry.md` when relevant. |
-| Long session handoff/context reset guidance | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-context-discipline.md` | Employee template session discipline if it applies to Mini Interns. |
-| Repeated failure, repeated correction, or reusable win | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/recursive-self-improvement-loop.md` | Update the relevant skill, domain README, project manifest, tracker, or decision log. |
+| Long session handoff/context reset guidance | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/session-context-discipline.md` | Employee template session discipline if it applies to Mini Interns. |
+| Repeated failure, repeated correction, or reusable win | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/recursive-self-improvement-loop.md` | Update the relevant skill, domain README, project manifest, tracker, or decision log. |
 | New client-specific file/context | Relevant folder under `3_Project_Workspaces/` | Link from ClickUp where applicable. |
 | New industry/vertical insight | Relevant `2_Domain_Packs/<domain>/README.md` | Implementation folder only if detailed. |
 | Raw transcript, PDF notes, copied article, or dump | Summarize first; store raw only in `5_Legacy_Reference_Archive/` or project implementation folder if needed. | Add compact summary to the active project/domain/skill file. |

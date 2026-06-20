@@ -1,0 +1,108 @@
+{
+  "updated_at": "2026-06-20T10:00:00-04:00",
+  "week": 1,
+  "flywheel": {
+    "delegation_level": "L0",
+    "brief_score_last": 5,
+    "brief_score_7pm_cron": 4,
+    "brief_delivery_streak": 2,
+    "dealership_demo_score": 5
+  },
+  "cubicle_l1": {
+    "name": "Chief of Staff Hermes",
+    "device": "personal_laptop",
+    "channel": "whatsapp",
+    "profile": "vcos-brain-grok",
+    "status": "active",
+    "last_session": "2026-06-20 — Week 1: pushed git collab test mission to GitHub for L2",
+    "local_repos_touched": [
+      "_VCOS_Headquarters",
+      "github.com/WEB3X100/vcos-hq"
+    ],
+    "pending_decisions_for_umair": [
+      "Provision L2 and run l2-collab-test-prompt.md on second laptop",
+      "After L2 push: approve merge l2/collab-test-2026-06-20 to main (Y/N)"
+    ]
+  },
+  "cubicle_l2": {
+    "name": "NeuralSync Intern",
+    "device": "second_laptop",
+    "channel": "telegram",
+    "profile": "neuralsync-intern-builder",
+    "status": "queued",
+    "active_mission": "week1-git-collab-test",
+    "active_branch": "l2/collab-test-2026-06-20",
+    "last_push": null,
+    "last_session": null,
+    "pending_decisions_for_umair": [
+      "Clone https://github.com/WEB3X100/vcos-hq to ~/VCOS-Coordination/vcos-hq",
+      "Run mission per l1-week1-git-collab-test-2026-06-20.md"
+    ]
+  },
+  "github": {
+    "coordination_repo": "https://github.com/WEB3X100/vcos-hq",
+    "local_path_recommended": "~/VCOS-Coordination/vcos-hq",
+    "open_prs": [],
+    "open_branches": [
+      "l2/collab-test-2026-06-20 (queued — not yet pushed by L2)"
+    ]
+  },
+  "client_lanes": {
+    "dealership": {
+      "priority": "P0",
+      "bullets": [
+        "Morning-brief demo PASSED 5/5 — ready for Sameer/Uzair walkthrough",
+        "Sample packet: sample-lead-set-v2-2026-06-19.md",
+        "L2 not assigned Dealership work until git collab test passes"
+      ]
+    },
+    "amax": {
+      "priority": "P1",
+      "bullets": [
+        "Rooshan reclassifying COA historical data to upgraded COA (in progress)",
+        "Umair loads QBO reports to 01_Finance_Control_Tower_QB_Hermes_DB/data/ when ready",
+        "L1 diagnostic next: qbo-report-inventory-matrix.md after reports land"
+      ]
+    }
+  },
+  "tonight_chunk": {
+    "lane": "Dual-Hermes Week 1",
+    "task": "L2 git collaboration test — clone, branch, handoff, push",
+    "done_means": "l2-collab-test-response-2026-06-20.md on branch l2/collab-test-2026-06-20",
+    "status": "queued",
+    "l1_complete": "Mission pushed to GitHub main"
+  },
+  "parking_lot": [
+    "AMAX API/Postgres until Rooshan Phase 0 gate + reports loaded",
+    "Ollama, Paperclip, NotebookLM",
+    "8am heartbeat until 7pm brief avg >=3.5 for 5 nights",
+    "100 parallel subagents (Week 4+)"
+  ],
+  "flywheel_snapshots": {
+    "kanban": {
+      "path": "/data/kanban.json",
+      "status": "missing",
+      "source": "Phase 1 optional snapshot"
+    },
+    "qa_gates": {
+      "path": "/data/qa-gates.json",
+      "status": "missing",
+      "source": "Phase 1 optional snapshot"
+    },
+    "journey_map": {
+      "path": "/data/journey-map.json",
+      "status": "missing",
+      "source": "Phase 1 optional snapshot"
+    },
+    "codeburn": {
+      "path": "/data/codeburn.json",
+      "status": "missing",
+      "source": "Phase 1 optional snapshot"
+    },
+    "skill_candidates": {
+      "path": "/data/skill-candidates.json",
+      "status": "missing",
+      "source": "Phase 1 optional snapshot"
+    }
+  }
+}

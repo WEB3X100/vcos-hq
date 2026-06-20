@@ -8,28 +8,30 @@ This is the Obsidian home note for VCOS Headquarters.
 - [[AGENTS|Agent Instructions]]
 - [[CLAUDE|Claude Code Guide]]
 - [[1_Command_Brain_Core/1.2_Headquarters_Memory/active-context|Active Context]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state|HQ State]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state|HQ State]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/README|Command Center Guide]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/04_Mission_Control_Dashboard/mission-control/dashboard|Mission Control Dashboard]]
 - [[1_Command_Brain_Core/1.2_Headquarters_Memory/decisions|Decisions]]
 
 ## 1 Command Brain Core
 
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/operating-system|Operating System]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/ai-os-second-brain-architecture|AI OS And Second Brain Architecture]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/ais-os-activation|AIS-OS Activation]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/graphify-obsidian-rag-architecture|Graphify Obsidian RAG Architecture]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/ai-native-company-arsenal-activation|AI Native Company Arsenal Activation]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/ai-native-company-activation-agentosync-amax-dealership-trading|AI Native Company Activation: AgentOSync, Amax, Dealership, Trading]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/revenue-readiness-audit|Revenue Readiness Audit]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/chief-of-staff-os-optimization|Chief Of Staff OS Optimization]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/requirements|Requirements]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/roadmap|Roadmap]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/approval-gates|Approval Gates]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/cadence-hooks|Cadence Hooks]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/automation-registry|Automation Registry]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/connections-map|Connections Map]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/four-c-audit|Four C Audit]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/obsidian-second-brain|Obsidian Second Brain]]
-- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/vcos-employee-template-strategy|VCOS Employee Template Strategy]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/operating-system|Operating System]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/ai-os-second-brain-architecture|AI OS And Second Brain Architecture]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/ais-os-activation|AIS-OS Activation]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/graphify-obsidian-rag-architecture|Graphify Obsidian RAG Architecture]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/06_Activation_Audits_and_Strategy/ai-native-company-arsenal-activation|AI Native Company Arsenal Activation]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/06_Activation_Audits_and_Strategy/ai-native-company-activation-agentosync-amax-dealership-trading|AI Native Company Activation: AgentOSync, Amax, Dealership, Trading]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/06_Activation_Audits_and_Strategy/revenue-readiness-audit|Revenue Readiness Audit]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/chief-of-staff-os-optimization|Chief Of Staff OS Optimization]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/requirements|Requirements]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/roadmap|Roadmap]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/approval-gates|Approval Gates]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/cadence-hooks|Cadence Hooks]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/03_Execution_Surfaces_and_Integrations/automation-registry|Automation Registry]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/03_Execution_Surfaces_and_Integrations/connections-map|Connections Map]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/four-c-audit|Four C Audit]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/obsidian-second-brain|Obsidian Second Brain]]
+- [[1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/06_Activation_Audits_and_Strategy/vcos-employee-template-strategy|VCOS Employee Template Strategy]]
 
 ## Knowledge Graphs
 
@@ -59,6 +61,12 @@ This is the Obsidian home note for VCOS Headquarters.
 - [[4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/vcos-task-skill-map|Task Skill Map]]
 - [[4_Reusable_Systems_and_Skills/content-intel-routine/CLAUDE|Content Intel Routine]]
 - [[4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/README|Skill Candidates]]
+
+## 7 VCOS Interns
+
+- [[7_VCOS_Interns/README|VCOS Interns Index]]
+- [[7_VCOS_Interns/7.1_NeuralSync_Marketing_Intern/README|NeuralSync Marketing Intern]]
+- [[7_VCOS_Interns/7.1_NeuralSync_Marketing_Intern/content-backlog/week-2026-06-20-to-06-27/backlog-overview|Week Content Backlog Jun 20–27]]
 
 ## Current Commercial Wedge
 

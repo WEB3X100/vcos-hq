@@ -57,7 +57,7 @@ Base name: `NeuralSync ClickUp Preservation Snapshot`
 
 Local import package:
 
-`/Users/umairkhalid/_VCOS_Headquarters/1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/clickup/airtable-preservation-snapshot`
+`/Users/umairkhalid/_VCOS_Headquarters/1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/03_Execution_Surfaces_and_Integrations/clickup/airtable-preservation-snapshot`
 
 Rule: do not rename, move, merge, archive, or delete ClickUp folders/lists/tasks until this Airtable snapshot is imported, reviewed, and approved.
 
@@ -68,6 +68,9 @@ Rule: do not rename, move, merge, archive, or delete ClickUp folders/lists/tasks
 | VCOS HQ | `/Users/umairkhalid/_VCOS_Headquarters` |
 | VCOS Project Workspaces | `/Users/umairkhalid/_VCOS_Headquarters/3_Project_Workspaces` |
 | VCOS Project Workspaces GitHub | `https://github.com/WEB3X100/VCOS-Project-Workspaces` |
+| VCOS Interns (HQ) | `7_VCOS_Interns/` in vcos-hq |
+| NeuralSync Marketing Intern | `7_VCOS_Interns/7.1_NeuralSync_Marketing_Intern/` |
+| VCOS Neural Sync (Employee) | `/Users/umairkhalid/VCOS-Employee/VCOS_Neural_Sync` |
 | VCOS Employee template | `/Users/umairkhalid/_VCOS_Headquarters/4_Reusable_Systems_and_Skills/4.1_VCOS_Employee_OS_Template` |
 | VCOS Employee GitHub | `https://github.com/WEB3X100/VCOS-Employee` |
 | GStack shared repo | `/Users/umairkhalid/_VCOS_Headquarters/6_Arsenal/repos/gstack` |
@@ -85,16 +88,16 @@ Rule: do not rename, move, merge, archive, or delete ClickUp folders/lists/tasks
 
 Read before any laptop-wide search for session briefs, weekly plans, or activation critiques:
 
-`1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/README.md`
+`1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/05_Office_Hours_and_Session_Briefs/session-briefs/README.md`
 
 | Topic | Canonical path |
 | --- | --- |
-| Dual-laptop Hermes plan (Approved) | `.../session-briefs/dual-laptop-hermes/plan.md` |
-| Interactive OH finalized (2026-06-19) | `.../session-briefs/interactive-office-hours-dual-laptop-hermes-2026-06-19.md` |
-| Mission Control dashboard | `.../mission-control/state.json` |
+| Dual-laptop Hermes plan (Approved) | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/05_Office_Hours_and_Session_Briefs/session-briefs/dual-laptop-hermes/plan.md` |
+| Interactive OH finalized (2026-06-19) | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/05_Office_Hours_and_Session_Briefs/session-briefs/interactive-office-hours-dual-laptop-hermes-2026-06-19.md` |
+| Mission Control dashboard | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/04_Mission_Control_Dashboard/mission-control/state.json` |
 | Hermes ClickUp tasks | https://app.clickup.com/9017760195/v/li/901713786845 |
-| Latest Sunday office hours recap | `.../session-briefs/sunday-office-hours-*.md` (newest date) |
-| Latest weekly plan draft | `.../session-briefs/weekly-office-hours-plan-*.md` (newest date) |
+| Latest Sunday office hours recap | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/05_Office_Hours_and_Session_Briefs/session-briefs/sunday-office-hours-*.md` (newest date) |
+| Latest weekly plan draft | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/05_Office_Hours_and_Session_Briefs/session-briefs/weekly-office-hours-plan-*.md` (newest date) |
 
 HQ absolute base: `/Users/umairkhalid/_VCOS_Headquarters`
 
