@@ -1,31 +1,28 @@
 # Mission Queue — L2 NeuralSync Intern
 
-**Updated:** 2026-06-20  
-**Poll:** Read this file + `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control/state.json` before every L2 session.
+**Updated:** 2026-06-21 (post-merge)  
+**Poll:** Read `MC/state.json` before every L2 session.  
+**Path constants:** `MC=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control` · `HANDOFFS=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/handoffs`
 
 ## Active mission
 
-_None._ `gsd-dual-terminal-eval` complete @ avg 4.6/5. Awaiting Umair merge of `l2/gsd-dual-terminal-eval-2026-06-20` → main.
-
-## Completed (eval)
-
-| ID | Branch | Handoff | Avg |
-| --- | --- | --- | --- |
-| `gsd-dual-terminal-eval` | `l2/gsd-dual-terminal-eval-2026-06-20` | `HANDOFFS/l2-gsd-dual-terminal-eval-2026-06-20.md` | 4.6/5 |
+_None._ L2 idle — `git checkout main && git pull` before next assignment.
 
 ## Completed
 
 | ID | Branch | Merged |
 | --- | --- | --- |
 | `week1-git-collab-test` | `l2/collab-test-2026-06-20` | 2026-06-20 → `main` @ `3155d04` |
+| `gsd-dual-terminal-eval` | `l2/gsd-dual-terminal-eval-2026-06-20` | 2026-06-21 → `main` @ `21f3a4e` (avg 4.6/5) |
 
 ## Queue (awaiting L1 assignment)
 
 | # | Mission | Status |
 | --- | --- | --- |
-| 2 | VCOS HQ hygiene: verify all `mission-control/` files present | pending |
-| 3 | Read `dual-hermes-collaboration-protocol.md`; confirm workdir path | pending |
+| 2 | VCOS HQ hygiene: verify all `MC/` files present | pending |
+| 3 | Read `MC/dual-hermes-collaboration-protocol.md`; confirm workdir path | pending |
+| 4 | E3b: patch deferred `HANDOFFS/` path refs (MISSION-QUEUE + l1-week1 handoff) | optional — Umair decision |
 
 ## Idle rule
 
-If `state.json` → `cubicle_l2.active_mission` is `null` and no mission is promoted above, report idle on Telegram. Do not invent greenfield work.
+If `MC/state.json` → `cubicle_l2.active_mission` is `null` and no mission is promoted above, report idle on Telegram. Do not invent greenfield work.

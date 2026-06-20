@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T01:40:00-04:00",
+  "updated_at": "2026-06-21T02:00:00-04:00",
   "week": 1,
   "flywheel": {
     "delegation_level": "L1",
@@ -16,6 +16,8 @@
       "turn": 7,
       "branch": "l2/gsd-dual-terminal-eval-2026-06-20",
       "completed_at": "2026-06-21T01:40:00-04:00",
+      "merged_at": "2026-06-21T02:00:00-04:00",
+      "merged_to_main_at": "21f3a4e",
       "scores": {
         "E1": 4,
         "E2": 4,
@@ -34,13 +36,14 @@
     "channel": "whatsapp",
     "profile": "vcos-brain-grok",
     "status": "active",
-    "last_session": "2026-06-20 — L2 collab test reviewed; merged l2/collab-test-2026-06-20 to main; delegation L0→L1",
+    "last_session": "2026-06-21 — GSD dual-terminal eval reviewed; merged l2/gsd-dual-terminal-eval-2026-06-20 to main (avg 4.6/5)",
     "local_repos_touched": [
       "_VCOS_Headquarters",
       "github.com/WEB3X100/vcos-hq"
     ],
     "pending_decisions_for_umair": [
-      "Create neuralsync-intern-builder Hermes profile on L2 (l2-soul-seed.md)"
+      "Create neuralsync-intern-builder Hermes profile on L2 (l2-soul-seed.md)",
+      "E3b: patch deferred HANDOFFS path refs (MISSION-QUEUE + l1-week1-git-collab-test)? (Y/N)"
     ]
   },
   "cubicle_l2": {
@@ -52,7 +55,7 @@
     "active_mission": null,
     "active_branch": null,
     "last_push": "2026-06-21T01:40:00-04:00",
-    "last_session": "Turn 7 — GSD dual-terminal eval COMPLETE; avg 4.6/5; E8 closure; merge approval pending",
+    "last_session": "GSD dual-terminal eval merged to main; L2 idle — await mission queue assignment",
     "pending_decisions_for_umair": [
       "Create neuralsync-intern-builder profile on L2 (l2-soul-seed.md)"
     ]
@@ -61,10 +64,8 @@
     "coordination_repo": "https://github.com/WEB3X100/vcos-hq",
     "local_path_recommended": "~/VCOS-Coordination/vcos-hq",
     "open_prs": [],
-    "open_branches": [
-      "l2/gsd-dual-terminal-eval-2026-06-20"
-    ],
-    "last_merge": "l2/collab-test-2026-06-20 → main @ 3155d04 (2026-06-20)"
+    "open_branches": [],
+    "last_merge": "l2/gsd-dual-terminal-eval-2026-06-20 → main @ 21f3a4e (2026-06-21)"
   },
   "client_lanes": {
     "dealership": {
@@ -86,11 +87,11 @@
   },
   "tonight_chunk": {
     "lane": "Dual-Hermes Week 1",
-    "task": "Week 1 git collaboration test",
-    "done_means": "l2-collab-test-response merged to main; delegation L1",
+    "task": "GSD dual-terminal eval + P0 path patches",
+    "done_means": "eval merged to main; Grok↔Hermes bus proven; avg 4.6/5",
     "status": "complete",
-    "l1_complete": "Reviewed L2 handoff; merged branch; updated state",
-    "l2_complete": "Branch pushed; handoff merged to main"
+    "l1_complete": "Merged l2/gsd-dual-terminal-eval-2026-06-20; updated state",
+    "l2_complete": "E1–E8 PASS; 8 P0 docs patched; idle"
   },
   "parking_lot": [
     "AMAX API/Postgres until Rooshan Phase 0 gate + reports loaded",
