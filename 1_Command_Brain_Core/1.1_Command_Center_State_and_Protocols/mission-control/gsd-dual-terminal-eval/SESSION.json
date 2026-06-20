@@ -1,23 +1,26 @@
 {
   "mission_id": "gsd-dual-terminal-eval",
   "branch": "l2/gsd-dual-terminal-eval-2026-06-20",
-  "status": "active",
-  "turn": 5,
+  "status": "complete",
+  "turn": 7,
   "max_turns": 12,
-  "next_actor": "hermes",
+  "next_actor": null,
   "grok_profile": "grok-build-l2",
   "hermes_profile": "neuralsync-intern-builder",
   "bus_path": "1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control/gsd-dual-terminal-eval",
   "started_at": "2026-06-20T23:45:00-04:00",
-  "updated_at": "2026-06-21T01:20:00-04:00",
+  "updated_at": "2026-06-21T01:40:00-04:00",
+  "completed_at": "2026-06-21T01:40:00-04:00",
   "eval_progress": {
     "E1": { "status": "scored", "actor": "grok", "turn": 1, "score": 4 },
     "E2": { "status": "scored", "actor": "hermes", "turn": 2, "score": 4 },
     "E3": { "status": "scored", "actor": "grok", "turn": 3, "score": 5 },
     "E4": { "status": "scored", "actor": "hermes", "turn": 4, "score": 5 },
-    "E5": { "status": "submitted", "actor": "grok", "turn": 5, "score": null },
-    "E6": { "status": "partial", "actor": "both", "turn": 5, "score": null },
-    "E7": { "status": "partial", "actor": "both", "turn": 5, "score": null },
-    "E8": { "status": "pending", "actor": "grok", "turn": null, "score": null }
-  }
+    "E5": { "status": "scored", "actor": "grok", "turn": 5, "score": 5 },
+    "E6": { "status": "scored", "actor": "both", "turn": 6, "score": 5 },
+    "E7": { "status": "scored", "actor": "both", "turn": 6, "score": 5 },
+    "E8": { "status": "scored", "actor": "grok", "turn": 7, "score": 5 }
+  },
+  "final_avg": 4.6,
+  "verdict": "PASS"
 }

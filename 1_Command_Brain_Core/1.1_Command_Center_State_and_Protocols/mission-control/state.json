@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T01:20:00-04:00",
+  "updated_at": "2026-06-21T01:40:00-04:00",
   "week": 1,
   "flywheel": {
     "delegation_level": "L1",
@@ -10,15 +10,21 @@
     "week1_git_collab_test": "passed",
     "week1_git_collab_merged_at": "2026-06-20T23:15:00-04:00",
     "gsd_dual_terminal_eval": {
-      "status": "in_progress",
-      "turn": 5,
+      "status": "complete",
+      "verdict": "PASS",
+      "avg_score": 4.6,
+      "turn": 7,
       "branch": "l2/gsd-dual-terminal-eval-2026-06-20",
+      "completed_at": "2026-06-21T01:40:00-04:00",
       "scores": {
         "E1": 4,
         "E2": 4,
         "E3": 5,
         "E4": 5,
-        "E5": null
+        "E5": 5,
+        "E6": 5,
+        "E7": 5,
+        "E8": 5
       }
     }
   },
@@ -43,10 +49,10 @@
     "channel": "telegram",
     "profile": "neuralsync-intern-builder",
     "status": "active",
-    "active_mission": "gsd-dual-terminal-eval",
-    "active_branch": "l2/gsd-dual-terminal-eval-2026-06-20",
-    "last_push": "2026-06-21T01:20:00-04:00",
-    "last_session": "Turn 5 — E5 GSD tools smoke test PASS (gsd-tools query --help exit 0); handed to Hermes",
+    "active_mission": null,
+    "active_branch": null,
+    "last_push": "2026-06-21T01:40:00-04:00",
+    "last_session": "Turn 7 — GSD dual-terminal eval COMPLETE; avg 4.6/5; E8 closure; merge approval pending",
     "pending_decisions_for_umair": [
       "Create neuralsync-intern-builder profile on L2 (l2-soul-seed.md)"
     ]

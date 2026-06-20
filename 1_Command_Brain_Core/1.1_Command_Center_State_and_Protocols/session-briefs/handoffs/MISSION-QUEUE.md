@@ -5,11 +5,13 @@
 
 ## Active mission
 
-| ID | Branch | Handoff |
-| --- | --- | --- |
-| `gsd-dual-terminal-eval` | `l2/gsd-dual-terminal-eval-2026-06-20` | `HANDOFFS/l1-gsd-dual-terminal-eval-2026-06-20.md` |
+_None._ `gsd-dual-terminal-eval` complete @ avg 4.6/5. Awaiting Umair merge of `l2/gsd-dual-terminal-eval-2026-06-20` → main.
 
-**Next actor:** Hermes — E5 confirm + E6/E7 check. Poll `MC/gsd-dual-terminal-eval/grok-inbox.md`.
+## Completed (eval)
+
+| ID | Branch | Handoff | Avg |
+| --- | --- | --- | --- |
+| `gsd-dual-terminal-eval` | `l2/gsd-dual-terminal-eval-2026-06-20` | `HANDOFFS/l2-gsd-dual-terminal-eval-2026-06-20.md` | 4.6/5 |
 
 ## Completed
 

@@ -102,3 +102,48 @@ All 8 files use `MC=` / `HANDOFFS=` alias pattern. Path constants block present 
 ### → Grok: E5 handoff (Turn 5)
 
 Run GSD tools smoke test from Hermes workspace (`gsd-tools.cmd query --help` or equivalent). Log result in `grok-inbox.md`. Bump `SESSION.json` → `turn=5`, `next_actor=hermes`.
+
+---
+
+## E5–E7 — Coordination confirm (Hermes Turn 6)
+
+**Timestamp:** 2026-06-21T01:35:00-04:00  
+**Actor:** NeuralSync Intern (Hermes L2)
+
+### E5 skeptic — PASS
+
+- Evidence: `gsd-tools.cmd query --help` exit 0; 50+ subcommands in output (`grok-inbox.md` Turn 5)
+- GSD limb reachable on L2 Hermes workspace
+
+### E6 turn protocol — PASS
+
+| Turn | Actor | Handoff clean |
+| --- | --- | --- |
+| 1 | grok | E1 → hermes |
+| 2 | hermes | E2 → grok |
+| 3 | grok | E3 → hermes |
+| 4 | hermes | E4 → grok |
+| 5 | grok | E5 → hermes |
+| 6 | hermes | E5–E7 → grok |
+
+No skipped turns. `next_actor` alternation maintained. Inbox entries timestamped.
+
+### E7 git discipline — PASS
+
+- Branch: `l2/gsd-dual-terminal-eval-2026-06-20` only
+- Commits: `1116466`, `4c100c7`, `f9cb707`, `808d311`, `e2e95e4` — no main merge
+- Push before each handoff
+
+### Scores
+
+| ID | Score |
+| --- | --- |
+| **E5** | **5/5** |
+| **E6** | **5/5** |
+| **E7** | **5/5** |
+
+**Blockers:** none
+
+### → Grok: E8 closure only (Turn 7)
+
+Write `HANDOFFS/l2-gsd-dual-terminal-eval-2026-06-20.md` with full score table. Set `SESSION.json` `status=complete`, `next_actor=null`. Update `flywheel.gsd_dual_terminal_eval` in `state.json`. Commit + push. No main merge. Request Umair merge approval.

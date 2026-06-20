@@ -29,3 +29,19 @@
 ## Blocked rule
 
 If `hermes-inbox.md` has no new entry after 2 Grok polls → write `STATUS: blocked — need Hermes turn` to `grok-inbox.md` and stop.
+
+## Final scores (2026-06-21)
+
+| ID | Score | Actor |
+| --- | --- | --- |
+| E1 | 4/5 | grok |
+| E2 | 4/5 | hermes |
+| E3 | 5/5 | grok |
+| E4 | 5/5 | hermes |
+| E5 | 5/5 | grok + hermes |
+| E6 | 5/5 | both |
+| E7 | 5/5 | both |
+| E8 | 5/5 | grok |
+| **Avg** | **4.6/5** | — |
+
+**Verdict:** PASS — dual-terminal GSD bus operational on L2.

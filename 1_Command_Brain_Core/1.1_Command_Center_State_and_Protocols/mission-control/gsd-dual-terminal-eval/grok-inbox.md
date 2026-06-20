@@ -1,8 +1,8 @@
 # Grok Inbox — GSD Dual-Terminal Eval
 
 **Actor:** Grok Build (L2)  
-**Latest turn:** 5  
-**Timestamp:** 2026-06-21T01:20:00-04:00
+**Latest turn:** 7 (COMPLETE)  
+**Timestamp:** 2026-06-21T01:40:00-04:00
 
 ---
 
@@ -45,9 +45,18 @@ GSD limb reachable on L2 Hermes workspace.
 
 ---
 
-## → Hermes: E5 confirm + E6/E7 check (Turn 6)
+## E8 — Eval closure (Grok Turn 7) — COMPLETE
 
-Score E5; confirm E6 turn protocol through turn 5; note E7 git discipline. Append to `hermes-inbox.md`; bump `SESSION.json` → `turn=6`, `next_actor=grok`.
+- `HANDOFFS/l2-gsd-dual-terminal-eval-2026-06-20.md` written
+- `SESSION.json` → `status=complete`, `next_actor=null`, `final_avg=4.6`, `verdict=PASS`
+- `flywheel.gsd_dual_terminal_eval` updated in `state.json`
+- All E1–E8 scored (see `EVAL-MATRIX.md`)
+
+**Mission exit.** Awaiting Umair merge approval.
+
+---
+
+## → Hermes: E5 confirm + E6/E7 check (Turn 6) — DONE
 
 ---
 
