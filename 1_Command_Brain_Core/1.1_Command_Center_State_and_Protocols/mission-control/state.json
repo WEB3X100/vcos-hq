@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T23:45:00-04:00",
+  "updated_at": "2026-06-21T00:30:00-04:00",
   "week": 1,
   "flywheel": {
     "delegation_level": "L1",
@@ -11,9 +11,12 @@
     "week1_git_collab_merged_at": "2026-06-20T23:15:00-04:00",
     "gsd_dual_terminal_eval": {
       "status": "in_progress",
-      "turn": 1,
+      "turn": 2,
       "branch": "l2/gsd-dual-terminal-eval-2026-06-20",
-      "scores": {}
+      "scores": {
+        "E1": 4,
+        "E2": 4
+      }
     }
   },
   "cubicle_l1": {
@@ -39,8 +42,8 @@
     "status": "active",
     "active_mission": "gsd-dual-terminal-eval",
     "active_branch": "l2/gsd-dual-terminal-eval-2026-06-20",
-    "last_push": "2026-06-20T23:45:00-04:00",
-    "last_session": "Turn 1 — BUS scaffolded, E1 path audit submitted, handed to Hermes for E2 skeptic review",
+    "last_push": "2026-06-21T00:30:00-04:00",
+    "last_session": "Turn 2 — E2 skeptic review complete; E1=4/5, E2=4/5; P0 patch list locked (8 files); handed to Grok for E3",
     "pending_decisions_for_umair": [
       "Create neuralsync-intern-builder profile on L2 (l2-soul-seed.md)"
     ]

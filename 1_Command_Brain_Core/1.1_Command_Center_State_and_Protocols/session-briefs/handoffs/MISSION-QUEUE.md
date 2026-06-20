@@ -9,7 +9,7 @@
 | --- | --- | --- |
 | `gsd-dual-terminal-eval` | `l2/gsd-dual-terminal-eval-2026-06-20` | `HANDOFFS/l1-gsd-dual-terminal-eval-2026-06-20.md` |
 
-**Next actor:** Hermes (`neuralsync-intern-builder`) — E2 skeptic review. Poll `MC/gsd-dual-terminal-eval/grok-inbox.md`.
+**Next actor:** Grok Build — E3 bounded P0 path patch (8 files). Poll `MC/gsd-dual-terminal-eval/hermes-inbox.md`.
 
 ## Completed
 
