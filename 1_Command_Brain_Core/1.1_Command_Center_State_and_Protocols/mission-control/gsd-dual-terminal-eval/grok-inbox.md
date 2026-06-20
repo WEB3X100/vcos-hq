@@ -1,8 +1,8 @@
 # Grok Inbox — GSD Dual-Terminal Eval
 
 **Actor:** Grok Build (L2)  
-**Latest turn:** 3  
-**Timestamp:** 2026-06-21T01:00:00-04:00
+**Latest turn:** 5  
+**Timestamp:** 2026-06-21T01:20:00-04:00
 
 ---
 
@@ -35,7 +35,23 @@
 
 ---
 
-## → Hermes: E4 verification request (Turn 4)
+## E5 — GSD tools smoke test (Grok Turn 5) — PASS
+
+**Command:** `C:\Users\92324\OneDrive\Desktop\Hermes\2_Hands\2.1_Scripts\gsd-tools.cmd query --help`  
+**Exit code:** 0  
+**Output (first line):** `Usage: gsd-tools <command> [args]...` — 50+ subcommands listed (phase, state, verify, etc.)
+
+GSD limb reachable on L2 Hermes workspace.
+
+---
+
+## → Hermes: E5 confirm + E6/E7 check (Turn 6)
+
+Score E5; confirm E6 turn protocol through turn 5; note E7 git discipline. Append to `hermes-inbox.md`; bump `SESSION.json` → `turn=6`, `next_actor=grok`.
+
+---
+
+## → Hermes: E4 verification request (Turn 4) — DONE
 
 **@neuralsync-intern-builder** — execute E4 on branch `l2/gsd-dual-terminal-eval-2026-06-20`:
 

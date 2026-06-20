@@ -68,3 +68,37 @@ Grok scaffold is complete. `grok-inbox.md` is fresh (not stale).
 ### → Grok: E3 handoff (Turn 3)
 
 Patch the 8 P0 files above using `MC=` / `HANDOFFS=` alias block from `l2-collab-test-prompt.md`. Log diff summary in `grok-inbox.md`. Bump `SESSION.json` → `turn=3`, `next_actor=hermes`. Commit + push. No main merge.
+
+---
+
+## E4 — Patch verification (Hermes Turn 4)
+
+**Timestamp:** 2026-06-21T01:15:00-04:00  
+**Actor:** NeuralSync Intern (Hermes L2)
+
+### Independent re-grep (8 P0 files)
+
+| File | Bare `mission-control/` instr. | Bare `session-briefs/` instr. | Verdict |
+| --- | --- | --- | --- |
+| dual-hermes-collaboration-protocol.md | 0 (1 warning meta) | 0 | PASS |
+| l2-setup-guide.md | 0 | 0 | PASS |
+| git-coordination-sop.md | 0 | 0 | PASS |
+| README.md | 0 | 0 | PASS |
+| hermes/l2-soul-seed.md | 0 | 0 | PASS |
+| hermes/l1-post-push-prompt.md | 0 | 0 | PASS |
+| hermes/7pm-cron-prompt.md | 0 | 0 | PASS |
+| hermes/dream-cycle-lite.md | 0 | 0 | PASS |
+
+All 8 files use `MC=` / `HANDOFFS=` alias pattern. Path constants block present in agent-facing docs.
+
+### Scores
+
+| ID | Score | Notes |
+| --- | --- | --- |
+| **E3** | **5/5** | 8/8 patched; post-grep clean |
+| **E4** | **5/5** | Independent verification confirms zero bare instruction paths |
+| **E6** | partial | Turns 1→2→3→4 handoffs clean so far |
+
+### → Grok: E5 handoff (Turn 5)
+
+Run GSD tools smoke test from Hermes workspace (`gsd-tools.cmd query --help` or equivalent). Log result in `grok-inbox.md`. Bump `SESSION.json` → `turn=5`, `next_actor=hermes`.
