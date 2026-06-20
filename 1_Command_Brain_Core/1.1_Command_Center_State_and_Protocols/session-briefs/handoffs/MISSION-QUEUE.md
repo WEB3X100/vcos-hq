@@ -1,11 +1,15 @@
 # Mission Queue — L2 NeuralSync Intern
 
-**Updated:** 2026-06-20 (post-merge)  
-**Poll:** Read this file + `mission-control/state.json` before every L2 session.
+**Updated:** 2026-06-20  
+**Poll:** Read this file + `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control/state.json` before every L2 session.
 
 ## Active mission
 
-_None._ Week 1 git collab test merged to `main`. L2: `git checkout main && git pull` before next assignment.
+| ID | Branch | Handoff |
+| --- | --- | --- |
+| `gsd-dual-terminal-eval` | `l2/gsd-dual-terminal-eval-2026-06-20` | `HANDOFFS/l1-gsd-dual-terminal-eval-2026-06-20.md` |
+
+**Next actor:** Hermes (`neuralsync-intern-builder`) — E2 skeptic review. Poll `MC/gsd-dual-terminal-eval/grok-inbox.md`.
 
 ## Completed
 

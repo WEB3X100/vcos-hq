@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-20T23:15:00-04:00",
+  "updated_at": "2026-06-20T23:45:00-04:00",
   "week": 1,
   "flywheel": {
     "delegation_level": "L1",
@@ -8,7 +8,13 @@
     "brief_delivery_streak": 2,
     "dealership_demo_score": 5,
     "week1_git_collab_test": "passed",
-    "week1_git_collab_merged_at": "2026-06-20T23:15:00-04:00"
+    "week1_git_collab_merged_at": "2026-06-20T23:15:00-04:00",
+    "gsd_dual_terminal_eval": {
+      "status": "in_progress",
+      "turn": 1,
+      "branch": "l2/gsd-dual-terminal-eval-2026-06-20",
+      "scores": {}
+    }
   },
   "cubicle_l1": {
     "name": "Chief of Staff Hermes",
@@ -31,10 +37,10 @@
     "channel": "telegram",
     "profile": "neuralsync-intern-builder",
     "status": "active",
-    "active_mission": null,
-    "active_branch": null,
-    "last_push": "2026-06-20T22:30:00-04:00",
-    "last_session": "Week 1 git collab test complete — branch merged to main by L1",
+    "active_mission": "gsd-dual-terminal-eval",
+    "active_branch": "l2/gsd-dual-terminal-eval-2026-06-20",
+    "last_push": "2026-06-20T23:45:00-04:00",
+    "last_session": "Turn 1 — BUS scaffolded, E1 path audit submitted, handed to Hermes for E2 skeptic review",
     "pending_decisions_for_umair": [
       "Create neuralsync-intern-builder profile on L2 (l2-soul-seed.md)"
     ]
@@ -43,7 +49,9 @@
     "coordination_repo": "https://github.com/WEB3X100/vcos-hq",
     "local_path_recommended": "~/VCOS-Coordination/vcos-hq",
     "open_prs": [],
-    "open_branches": [],
+    "open_branches": [
+      "l2/gsd-dual-terminal-eval-2026-06-20"
+    ],
     "last_merge": "l2/collab-test-2026-06-20 → main @ 3155d04 (2026-06-20)"
   },
   "client_lanes": {
