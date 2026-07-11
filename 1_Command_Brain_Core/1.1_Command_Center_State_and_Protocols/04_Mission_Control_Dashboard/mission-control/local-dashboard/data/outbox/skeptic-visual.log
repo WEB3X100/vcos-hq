@@ -1,0 +1,8 @@
+Skeptic visual 2026-07-11 01:16:34
+V1: PASS h1=Chat Hall
+V2: PASS w={'x': 0, 'y': 48, 'width': 248, 'height': 852} vertical=True
+V3: FAIL Chat Hall->Command scroll=49
+V4: PASS label=True file=True
+V5: PASS aid=ap-005 clear=True redir=True nomut=True disc=True
+
+SUMMARY visual 4/5

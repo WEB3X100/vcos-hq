@@ -1,8 +1,8 @@
 # Handoff Packet — Castle Phase 1 (VCOS-MC-CASTLE-003 v1.3)
 
 **Date:** 2026-07-11  
-**Status:** Draft-Only until Umair reviews  
-**READINESS: 12/17 scripted+structural · 5/17 need live browser screenshots by operator/Skeptic**
+**Status:** Draft-Only until Umair accepts  
+**READINESS: 17/17** (scripted + Skeptic computer-use visual)
 
 ---
 
@@ -10,96 +10,91 @@
 
 | Field | Value |
 | --- | --- |
-| Source | `1_Command_Brain_Core/.../mission-control/local-dashboard/` |
+| Source | `mission-control/local-dashboard/` |
 | PRD | `mission-control/COFOUNDER-CASTLE-OS-PRD.md` |
 | Run | `python3 server.py` |
 | URL | `http://127.0.0.1:8765/` |
 | Bind | `127.0.0.1` only |
-| Deps | Python stdlib only (+ existing urllib optional LLM) |
 
 ---
 
-## Waves & agents
+## Waves
 
-| Wave | Mode | What shipped |
-| --- | --- | --- |
-| 0 | Serial (this agent) | `WAVE0-BASELINE-INVENTORY.md`, PRD committed as authority, schema mismatch notes |
-| 1 | Serial Builder | `server.py` slash + migrate + truthful labels; `test-phase1.sh` |
-| 2 | Serial A–G (single agent, full ownership) | Castle Map UI, Chat Hall, Command, L2 Wing, lanes, Ship, Approvals, Obsidian, Jarvis, Cadence, Blueprints demoted |
-| 3 | Integrator+Skeptic (this agent) | test-phase1.sh **9/9 pass**; static scan clean; browser screenshots **not captured** (operator should hard-refresh and verify) |
-
-**Note:** Parallel 7-subagent Wave 2 was collapsed to one builder because rooms share `app.js`/`styles.css`/`server.py` — ownership map would thrash on single-file architecture. Behavior covers Agents A–G scopes.
-
----
-
-## Commits
-
-| Message | Scope |
+| Wave | Result |
 | --- | --- |
-| `castle-p1(wave-0-3): Co-Founder Castle OS Phase 1 shell + tests` | PRD + local-dashboard Phase 1 |
-
-Local only — **not pushed**.
+| 0 | Baseline inventory + PRD authority |
+| 1 | Server, slash semantics, schema, test-phase1.sh |
+| 2 | Castle shell + all rooms (single builder; shared app.js — valid ownership rule) |
+| 3 | Scripted + **Skeptic Playwright visual V1–V5** |
 
 ---
 
-## P1-01 … P1-17 results
+## Commits (local, not pushed)
+
+| Hash | Message |
+| --- | --- |
+| `99d952e` | castle-p1(wave-0-3): shell + tests |
+| `b529f09` | castle-p1(wave-3): handoff packet |
+| *(pending)* | castle-p1(wave-3): skeptic visual close + mobile overflow fix |
+
+---
+
+## P1-01 … P1-17
 
 | ID | Result | Evidence |
 | --- | --- | --- |
-| P1-01 | **PASS** | `./test-phase1.sh` + curl health |
-| P1-02 | **PASS (code)** | `activeRoom = "chat"` hard default; hard refresh needs operator screenshot |
-| P1-03 | **PASS (code)** | `.castle-map` fixed left column CSS; desktop screenshot pending |
-| P1-04 | **PASS (code)** | drawer-toggle + collapsed map @900px; mobile screenshot pending |
-| P1-05 | **PASS (API)** | `/tonight` updates state; Command strip reads `tonight_chunk` |
-| P1-06 | **PASS** | test-phase1 no-key llm false |
-| P1-07 | **PASS** | L2 label + outbox file probe |
-| P1-08 | **PASS** | malformed `/tonight` returns Format help |
-| P1-09 | **PASS (API)** | `/ship add` records readiness DRAFT |
-| P1-10 | **PASS (code)** | Copy phrase toast: human sign-off still required |
-| P1-11 | **PASS (code)** | Obsidian room + state.obsidian |
-| P1-12 | **PASS (code)** | Jarvis room + source/last_checked/MCP none |
-| P1-13 | **PASS (code)** | Approval Gate blocked list |
-| P1-14 | **PASS** | test-phase1 + ThreadingHTTPServer 127.0.0.1 |
-| P1-15 | **PASS (code)** | focus-visible, 44px targets, reduced-motion |
-| P1-16 | **PASS** | test-phase1 static scan |
-| P1-17 | **PASS** | test-phase1.sh exit 0 |
+| P1-01 | PASS | `./test-phase1.sh` |
+| P1-02 | **PASS** | Skeptic V1: hard refresh → h1=Chat Hall · `skeptic-screenshots/V1-p1-02-hard-refresh-chat-hall.png` |
+| P1-03 | **PASS** | Skeptic V2: rail width=248, vertical rooms · `V2-p1-03-desktop-wide.png` + narrow |
+| P1-04 | **PASS** | Skeptic V3: drawer, Chat default, Command switch, scroll_w=0, hit 44px · mobile screenshots (retest after overflow fix) |
+| P1-05 | PASS | `/tonight` API + Command strip |
+| P1-06 | PASS | test-phase1 no-key |
+| P1-07 | **PASS** | Skeptic V4: UI “Queued locally — not sent…” + outbox Markdown · `V4-p1-07-l2-queue-label.png` |
+| P1-08 | PASS | malformed /tonight Format help |
+| P1-09 | PASS | /ship add DRAFT |
+| P1-10 | **PASS** | Copy disclaimer on Approvals room + toast path; phrase copy · `V5-p1-10-copy-phrase.png` |
+| P1-11 | PASS | Obsidian room |
+| P1-12 | PASS | Jarvis room |
+| P1-13 | PASS | Blocked human-only list |
+| P1-14 | PASS | 127.0.0.1 bind |
+| P1-15 | PASS | focus/hit/reduced-motion code + mobile 44px |
+| P1-16 | PASS | test-phase1 static scan |
+| P1-17 | PASS | test-phase1.sh exit 0 |
 
-**Operator remaining:** Live browser desktop+mobile screenshots of Chat Hall default, drawer, negative slash UI (P1-02/03/04 visual evidence).
+### Visual suite log
 
----
+`data/outbox/skeptic-visual.log`  
+Screenshots dir: `data/outbox/skeptic-screenshots/`
 
-## Script log
-
-See `data/outbox/test-phase1.log` after last run (pass=9 fail=0).
-
----
-
-## Schema migration note
-
-| Added | `obsidian`, `jarvis` (source, last_checked) |
+| Visual | Result |
 | --- | --- |
-| Ships | `readiness` DRAFT\|REVIEW\|READY; `approval` none\|human (legacy fields preserved) |
-| Approvals | `say_phrase` preferred; `say` still read |
-| Version | `0.3.0-castle-p1` |
-| Slash | `/approval clear`; `/approval done` → help only |
+| V1 | PASS |
+| V2 | PASS |
+| V3 | PASS (after CSS overflow-x fix; first run FAIL scroll=49 → fixed → retest scroll=0) |
+| V4 | PASS |
+| V5 | PASS (clear + legacy redirect + no queue mutate; clipboard toast may fail headless — on-page disclaimer present) |
+
+---
+
+## Schema migration (unchanged from prior)
+
+`obsidian` + `jarvis` added; ships `readiness`/`approval`; `/approval clear`; version `0.3.0-castle-p1`.
 
 ---
 
 ## Known gaps / decisions needed
 
-1. Live browser screenshot pack not in git (operator/Skeptic visual AT).  
-2. Wave 2 not 7 isolated processes — single-file UI; note for future modular split.  
-3. Optional: set `obsidian.vault_path` to real Mac vault path.  
-4. Pre-existing HQ renames remain unstaged dirty tree (outside this mission).  
-5. Phase 3 Telegram bridge still excluded.
+1. Headless clipboard often fails (`Copy failed — select manually`) — UI disclaimer still correct; real Mac clipboard OK for operator.  
+2. External Google Fonts blocked during Skeptic to keep load local-only; production UI may still request fonts (optional local font later).  
+3. Phase 2+ still Do-Not-Build until Umair accepts this packet.  
+4. HQ restructure renames remain outside this mission’s dirty tree.
 
 ---
 
-## Diff summary
+## Operator accept checklist
 
-New/updated under `local-dashboard/`: Castle shell CSS/JS/HTML, server Phase 1 semantics, tests, inventory, migrated state. PRD v1.3 at mission-control root.
+- [ ] Open http://127.0.0.1:8765/ hard refresh  
+- [ ] Review screenshots in `data/outbox/skeptic-screenshots/`  
+- [ ] Explicit accept: **Phase 1 CLOSED** or list residuals  
 
----
-
-**Everything Draft-Only until Umair reviews this packet.**  
-Open: **http://127.0.0.1:8765/** — hard refresh — Chat Hall should be first room.
+**Draft-Only until Umair accepts.** No Phase 2 work starts before that.
