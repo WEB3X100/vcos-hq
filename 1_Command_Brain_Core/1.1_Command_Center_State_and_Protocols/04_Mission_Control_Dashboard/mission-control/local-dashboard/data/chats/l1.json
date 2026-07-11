@@ -112,6 +112,412 @@
         "kind": "os",
         "state_changed": true
       }
+    },
+    {
+      "id": "l1-1783746118396",
+      "role": "user",
+      "content": "/approval done ap-001",
+      "ts": "2026-07-11T01:01:58-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783746118397",
+      "role": "system",
+      "content": "[No state change]\nUnknown form. /approval done is retired because it sounds like a human sign-off.\nUse: /approval clear <id>\nThat only clears the local display queue — it does not perform the human sign-off or any external action.",
+      "ts": "2026-07-11T01:01:58-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783746118433",
+      "role": "user",
+      "content": "/tonight onlyone",
+      "ts": "2026-07-11T01:01:58-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783746118434",
+      "role": "system",
+      "content": "[No state change]\nFormat: /tonight <lane> | <task> | <done means>  (all three segments required)",
+      "ts": "2026-07-11T01:01:58-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783746570145",
+      "role": "user",
+      "content": "hy",
+      "ts": "2026-07-11T01:09:30-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783746570146",
+      "role": "system",
+      "content": "Saved locally.\n• Slash commands update local Castle state only (/help)\n• Model replies need XAI_API_KEY in server env (optional)\n• L2: use the L2 pane (queues local outbox — not auto-dispatched)",
+      "ts": "2026-07-11T01:09:30-04:00",
+      "meta": {
+        "kind": "local_ack"
+      }
+    },
+    {
+      "id": "l1-1783746593174",
+      "role": "user",
+      "content": "where are these messages going",
+      "ts": "2026-07-11T01:09:53-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783746593175",
+      "role": "system",
+      "content": "Saved locally.\n• Slash commands update local Castle state only (/help)\n• Model replies need XAI_API_KEY in server env (optional)\n• L2: use the L2 pane (queues local outbox — not auto-dispatched)",
+      "ts": "2026-07-11T01:09:53-04:00",
+      "meta": {
+        "kind": "local_ack"
+      }
+    },
+    {
+      "id": "l1-1783746605325",
+      "role": "user",
+      "content": "/help",
+      "ts": "2026-07-11T01:10:05-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783746605326",
+      "role": "system",
+      "content": "[No state change]\nSlash commands (update local Castle state only):\n\n/help\n/tonight <lane> | <task> | <done means>\n/l2 status <text>\n/l2 model <text>\n/ship add <lane> | <title> | <path>\n/approval add <item> | <say phrase>\n/approval clear <id>\n/park add <item>\n/priority\n/note <text>\n/safar blocker <text>\n\nEffect: Updated local Castle state only.\nL1 free text: Saved locally.\nL2 free text: Queued locally — not sent to Hermes or Telegram.\nLegacy /approval done is not supported — use /approval clear.\n",
+      "ts": "2026-07-11T01:10:05-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783746999057",
+      "role": "user",
+      "content": "/approval add Skeptic test item | SAY_SKEPTIC_PHRASE_XYZ",
+      "ts": "2026-07-11T01:16:39-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783746999058",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: queue item ap-005 (local display only)",
+      "ts": "2026-07-11T01:16:39-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747001166",
+      "role": "user",
+      "content": "/approval clear ap-005",
+      "ts": "2026-07-11T01:16:41-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747001167",
+      "role": "system",
+      "content": "[Updated local Castle state]\nCleared ap-005 from local display — this does not perform the human sign-off or any external action.",
+      "ts": "2026-07-11T01:16:41-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747002225",
+      "role": "user",
+      "content": "/approval done ap-999",
+      "ts": "2026-07-11T01:16:42-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747002226",
+      "role": "system",
+      "content": "[No state change]\nUnknown form. /approval done is retired because it sounds like a human sign-off.\nUse: /approval clear <id>\nThat only clears the local display queue — it does not perform the human sign-off or any external action.",
+      "ts": "2026-07-11T01:16:42-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783747816412",
+      "role": "user",
+      "content": "/approval done ap-001",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747816412",
+      "role": "system",
+      "content": "[No state change]\nUnknown form. /approval done is retired because it sounds like a human sign-off.\nUse: /approval clear <id>\nThat only clears the local display queue — it does not perform the human sign-off or any external action.",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783747816441",
+      "role": "user",
+      "content": "/tonight onlyone",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747816442",
+      "role": "system",
+      "content": "[No state change]\nFormat: /tonight <lane> | <task> | <done means>  (all three segments required)",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783747816456",
+      "role": "user",
+      "content": "/lane set amax | next_action | Reclass batch",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747816458",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: lanes.amax.next_action",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747816486",
+      "role": "user",
+      "content": "/lane set amax | next_action",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747816487",
+      "role": "system",
+      "content": "[No state change]\nFormat: /lane set <lane> | <field> | <value>",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783747816515",
+      "role": "user",
+      "content": "/ship add Test | t | /tmp/t.md",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747816516",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: ship ship-004 recorded (readiness DRAFT). Human sign-off still required before any external use.",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747816552",
+      "role": "user",
+      "content": "/ship update ship-004 | readiness | READY",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747816553",
+      "role": "system",
+      "content": "[No state change]\nreadiness transitions DRAFT → REVIEW → READY only (no skipping)",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783747816585",
+      "role": "user",
+      "content": "/ship update ship-004 | readiness | REVIEW",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747816586",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: ship ship-004 readiness=REVIEW",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747816595",
+      "role": "user",
+      "content": "/ship update ship-004 | readiness | READY",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747816596",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: ship ship-004 readiness=READY. READY — human sign-off still required before any external use.",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747816626",
+      "role": "user",
+      "content": "/jarvis set hermes-l2 | model | grok-4.3",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747816627",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: jarvis.agents[hermes-l2].model",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747816656",
+      "role": "user",
+      "content": "/vault set path /Users/test/vault",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747816657",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: obsidian.vault_path",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747826604",
+      "role": "user",
+      "content": "/ship add BlockTest | bt | /tmp/b.md",
+      "ts": "2026-07-11T01:30:26-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747826605",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: ship ship-005 recorded (readiness DRAFT). Human sign-off still required before any external use.",
+      "ts": "2026-07-11T01:30:26-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747826645",
+      "role": "user",
+      "content": "/ship update ship-005 | approval | none",
+      "ts": "2026-07-11T01:30:26-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747826646",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: ship ship-005.approval",
+      "ts": "2026-07-11T01:30:26-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747826653",
+      "role": "user",
+      "content": "/ship update ship-005 | readiness | REVIEW",
+      "ts": "2026-07-11T01:30:26-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747826654",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: ship ship-005 readiness=REVIEW",
+      "ts": "2026-07-11T01:30:26-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747826662",
+      "role": "user",
+      "content": "/ship update ship-005 | readiness | READY",
+      "ts": "2026-07-11T01:30:26-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747826664",
+      "role": "system",
+      "content": "[Updated local Castle state]\nREADY blocked — approval field is 'none'. Local display only; nothing external.",
+      "ts": "2026-07-11T01:30:26-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783747853514",
+      "role": "user",
+      "content": "/approval done ap-001",
+      "ts": "2026-07-11T01:30:53-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747853515",
+      "role": "system",
+      "content": "[No state change]\nUnknown form. /approval done is retired because it sounds like a human sign-off.\nUse: /approval clear <id>\nThat only clears the local display queue — it does not perform the human sign-off or any external action.",
+      "ts": "2026-07-11T01:30:53-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783747853544",
+      "role": "user",
+      "content": "/tonight onlyone",
+      "ts": "2026-07-11T01:30:53-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783747853544",
+      "role": "system",
+      "content": "[No state change]\nFormat: /tonight <lane> | <task> | <done means>  (all three segments required)",
+      "ts": "2026-07-11T01:30:53-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
     }
   ]
 }

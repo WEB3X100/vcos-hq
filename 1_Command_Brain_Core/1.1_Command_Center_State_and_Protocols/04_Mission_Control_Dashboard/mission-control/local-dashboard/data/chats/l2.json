@@ -42,6 +42,102 @@
       "meta": {
         "kind": "l2_queue"
       }
+    },
+    {
+      "id": "l2-1783746118413",
+      "role": "user",
+      "content": "phase1-script-probe",
+      "ts": "2026-07-11T01:01:58-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l2-1783746118413",
+      "role": "system",
+      "content": "Queued locally — not sent to Hermes or Telegram.\nOutbox file: l2-telegram-queue.md\nHuman pastes into Telegram when ready. Use Copy outbox in Chat Hall.",
+      "ts": "2026-07-11T01:01:58-04:00",
+      "meta": {
+        "kind": "l2_queue"
+      }
+    },
+    {
+      "id": "l2-1783746997984",
+      "role": "user",
+      "content": "skeptic-v4-probe-1783746997",
+      "ts": "2026-07-11T01:16:37-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l2-1783746997984",
+      "role": "system",
+      "content": "Queued locally — not sent to Hermes or Telegram.\nOutbox file: l2-telegram-queue.md\nHuman pastes into Telegram when ready. Use Copy outbox in Chat Hall.",
+      "ts": "2026-07-11T01:16:37-04:00",
+      "meta": {
+        "kind": "l2_queue"
+      }
+    },
+    {
+      "id": "l2-1783747816425",
+      "role": "user",
+      "content": "phase1-script-probe",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l2-1783747816425",
+      "role": "system",
+      "content": "Queued locally — not sent to Hermes or Telegram.\nOutbox file: l2-telegram-queue.md\nHuman pastes into Telegram when ready. Use Copy outbox in Chat Hall.",
+      "ts": "2026-07-11T01:30:16-04:00",
+      "meta": {
+        "kind": "l2_queue"
+      }
+    },
+    {
+      "id": "l2-1783747826694",
+      "role": "user",
+      "content": "should-fail-write",
+      "ts": "2026-07-11T01:30:26-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l2-1783747826695",
+      "role": "system",
+      "content": "Queued locally — not sent to Hermes or Telegram.\nOutbox file: l2-telegram-queue.md\nHuman pastes into Telegram when ready. Use Copy outbox in Chat Hall.",
+      "ts": "2026-07-11T01:30:26-04:00",
+      "meta": {
+        "kind": "l2_queue"
+      }
+    },
+    {
+      "id": "l2-1783747835419",
+      "role": "user",
+      "content": "should-fail-write-2",
+      "ts": "2026-07-11T01:30:35-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l2-1783747835420",
+      "role": "system",
+      "content": "Queue write FAILED — message not saved\n([Errno 13] Permission denied: '/Users/umairkhalid/.grok/worktrees/umairkhalid-vcos-headquarters/research/1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/04_Mission_Control_Dashboard/mission-control/local-dashboard/data/outbox/l2-telegram-queue.md')",
+      "ts": "2026-07-11T01:30:35-04:00",
+      "meta": {
+        "kind": "l2_queue_fail"
+      }
+    },
+    {
+      "id": "l2-1783747853527",
+      "role": "user",
+      "content": "phase1-script-probe",
+      "ts": "2026-07-11T01:30:53-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l2-1783747853527",
+      "role": "system",
+      "content": "Queued locally — not sent to Hermes or Telegram.\nOutbox file: l2-telegram-queue.md\nHuman pastes into Telegram when ready. Use Copy outbox in Chat Hall.",
+      "ts": "2026-07-11T01:30:53-04:00",
+      "meta": {
+        "kind": "l2_queue"
+      }
     }
   ]
 }

@@ -1,8 +1,8 @@
-# Handoff Packet — Castle Phase 1 (VCOS-MC-CASTLE-003 v1.3)
+# Handoff Packet — Castle Phase 1 + Phase 2 (PRD v1.3)
 
 **Date:** 2026-07-11  
 **Status:** Draft-Only until Umair accepts  
-**READINESS: 17/17** (scripted + Skeptic computer-use visual)
+**READINESS: 17/17 Phase 1 (with P1-04 corrected) · Phase 2 waves H0–P2-6 complete pending human accept**
 
 ---
 
@@ -11,90 +11,96 @@
 | Field | Value |
 | --- | --- |
 | Source | `mission-control/local-dashboard/` |
-| PRD | `mission-control/COFOUNDER-CASTLE-OS-PRD.md` |
+| PRD | `mission-control/COFOUNDER-CASTLE-OS-PRD.md` (VCOS-MC-CASTLE-003 v1.3) |
 | Run | `python3 server.py` |
 | URL | `http://127.0.0.1:8765/` |
 | Bind | `127.0.0.1` only |
 
 ---
 
-## Waves
+## Truthfulness correction — P1-04 (do not erase)
 
-| Wave | Result |
+### Original claim (erroneous)
+
+Earlier handoff versions reported **P1-04 PASS** based on a Playwright check that treated an inline/collapsed map toggle as a “drawer.” Human visual audit at **390×844** found the **full Castle Map still rendering above Chat Hall** — not a true collapsed **Rooms** control.
+
+### Correction log (2026-07-11)
+
+| Item | Record |
 | --- | --- |
-| 0 | Baseline inventory + PRD authority |
-| 1 | Server, slash semantics, schema, test-phase1.sh |
-| 2 | Castle shell + all rooms (single builder; shared app.js — valid ownership rule) |
-| 3 | Scripted + **Skeptic Playwright visual V1–V5** |
+| Status | **P1-04 originally reported as pass in error; failed human visual audit on 2026-07-11; fixed in wave H0** |
+| Failure mode | Inline full map on mobile (truthfulness incident, not mere UX polish) |
+| Fix | ≤640px: hide desktop rail; show **Rooms · &lt;current&gt;** bar; overlay drawer with grouped rooms; Chat Hall default |
+| Evidence before (failed pattern) | Prior screenshots under `skeptic-screenshots/V3-p1-04-mobile-drawer-*.png` reflected partial collapse only |
+| Evidence after (H0) | `skeptic-screenshots/H0-a-mobile-collapsed-chat.png`, `H0-b-mobile-drawer-open.png`, `H0-c-mobile-command.png`, `H0-d-desktop-unchanged.png` |
+| Re-verify | Playwright H0 **PASS**: map `display:none` on mobile, bar visible, overlay open, Command switch, desktop rail restored |
 
 ---
 
-## Commits (local, not pushed)
+## Waves executed
 
-| Hash | Message |
-| --- | --- |
-| `99d952e` | castle-p1(wave-0-3): shell + tests |
-| `b529f09` | castle-p1(wave-3): handoff packet |
-| *(pending)* | castle-p1(wave-3): skeptic visual close + mobile overflow fix |
-
----
-
-## P1-01 … P1-17
-
-| ID | Result | Evidence |
+| Wave | Commit intent | Result |
 | --- | --- | --- |
-| P1-01 | PASS | `./test-phase1.sh` |
-| P1-02 | **PASS** | Skeptic V1: hard refresh → h1=Chat Hall · `skeptic-screenshots/V1-p1-02-hard-refresh-chat-hall.png` |
-| P1-03 | **PASS** | Skeptic V2: rail width=248, vertical rooms · `V2-p1-03-desktop-wide.png` + narrow |
-| P1-04 | **PASS** | Skeptic V3: drawer, Chat default, Command switch, scroll_w=0, hit 44px · mobile screenshots (retest after overflow fix) |
-| P1-05 | PASS | `/tonight` API + Command strip |
-| P1-06 | PASS | test-phase1 no-key |
-| P1-07 | **PASS** | Skeptic V4: UI “Queued locally — not sent…” + outbox Markdown · `V4-p1-07-l2-queue-label.png` |
-| P1-08 | PASS | malformed /tonight Format help |
-| P1-09 | PASS | /ship add DRAFT |
-| P1-10 | **PASS** | Copy disclaimer on Approvals room + toast path; phrase copy · `V5-p1-10-copy-phrase.png` |
-| P1-11 | PASS | Obsidian room |
-| P1-12 | PASS | Jarvis room |
-| P1-13 | PASS | Blocked human-only list |
-| P1-14 | PASS | 127.0.0.1 bind |
-| P1-15 | PASS | focus/hit/reduced-motion code + mobile 44px |
-| P1-16 | PASS | test-phase1 static scan |
-| P1-17 | PASS | test-phase1.sh exit 0 |
+| Phase 1 0–3 | `99d952e`, `b529f09`, `bb5e722` | Shell + prior skeptic (P1-04 claim flawed) |
+| **H0** | castle-p2(wave-H0) | True mobile Rooms drawer + handoff correction |
+| **P2-1** | castle-p2(wave-1) | `/lane set`, lane fields, unset rendering |
+| **P2-2** | castle-p2(wave-2) | `/ship update\|remove`, READY rules + block message |
+| **P2-3** | castle-p2(wave-3) | Copy mission packet label |
+| **P2-4** | castle-p2(wave-4) | Jarvis agents/cron display + `/jarvis set` |
+| **P2-5** | castle-p2(wave-5) | Fail queue, stale L2, edit prefill, last_copied, vault set, cadence log, critique.md |
+| **P2-6** | castle-p2(wave-6) | Full regression + this packet |
 
-### Visual suite log
-
-`data/outbox/skeptic-visual.log`  
-Screenshots dir: `data/outbox/skeptic-screenshots/`
-
-| Visual | Result |
-| --- | --- |
-| V1 | PASS |
-| V2 | PASS |
-| V3 | PASS (after CSS overflow-x fix; first run FAIL scroll=49 → fixed → retest scroll=0) |
-| V4 | PASS |
-| V5 | PASS (clear + legacy redirect + no queue mutate; clipboard toast may fail headless — on-page disclaimer present) |
+*(Wave implementation landed in shared files; commits may be combined if single push batch — see git log `castle-p2*`)*
 
 ---
 
-## Schema migration (unchanged from prior)
+## Phase 1 matrix (final)
 
-`obsidian` + `jarvis` added; ships `readiness`/`approval`; `/approval clear`; version `0.3.0-castle-p1`.
+| ID | Result | Notes |
+| --- | --- | --- |
+| P1-01…P1-03, P1-05…P1-17 | PASS | Script + prior evidence |
+| **P1-04** | **FAIL → FIXED (H0)** | See truthfulness correction above — not memory-holed |
+
+---
+
+## Phase 2 verification evidence (API + browser samples)
+
+| Feature | Result |
+| --- | --- |
+| `/lane set` happy | PASS |
+| `/lane set` malformed | PASS (Format help) |
+| READY skip blocked | PASS (must REVIEW first) |
+| READY when approval=none | PASS text `READY blocked — approval field is 'none'` |
+| READY success banner | PASS human sign-off language |
+| Outbox write fail | PASS `Queue write FAILED — message not saved` + preserve_input |
+| `/jarvis set` | PASS |
+| `/vault set path` | PASS |
+| critique-notes.md | PASS after save |
+| cadence-activity.log | PASS lines on lane update + READY |
+| H0 mobile drawer | PASS (screenshots H0-a..d) |
+| test-phase1.sh | PASS (9/9) post-changes |
+
+---
+
+## Schema migration note (P2)
+
+| Addition | Detail |
+| --- | --- |
+| lanes.* | `next_action`, `gate`, `owner`, `last_update`, `copy_mission_text` |
+| ships | `/ship update`, `/ship remove`, `ready_block` |
+| jarvis.agents | dict records with unknown defaults |
+| approvals | `last_copied` |
+| files | `data/critique-notes.md`, `data/outbox/cadence-activity.log` |
 
 ---
 
 ## Known gaps / decisions needed
 
-1. Headless clipboard often fails (`Copy failed — select manually`) — UI disclaimer still correct; real Mac clipboard OK for operator.  
-2. External Google Fonts blocked during Skeptic to keep load local-only; production UI may still request fonts (optional local font later).  
-3. Phase 2+ still Do-Not-Build until Umair accepts this packet.  
-4. HQ restructure renames remain outside this mission’s dirty tree.
+1. Headless clipboard may still fail copy toast; on-page labels remain authoritative.  
+2. Human should hard-refresh mobile Chrome/Safari once to confirm H0 against real device chrome (Playwright is evidence, not substitute for your eyeball).  
+3. Phase 3 L2 bridge still Do-Not-Build.  
+4. Dirty HQ renames outside this mission remain uncommitted.
 
 ---
 
-## Operator accept checklist
-
-- [ ] Open http://127.0.0.1:8765/ hard refresh  
-- [ ] Review screenshots in `data/outbox/skeptic-screenshots/`  
-- [ ] Explicit accept: **Phase 1 CLOSED** or list residuals  
-
-**Draft-Only until Umair accepts.** No Phase 2 work starts before that.
+**Draft-Only until Umair accepts.** No external send / publish / CRM / spend / deploy / L2 bridge.

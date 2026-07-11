@@ -106,6 +106,14 @@ def migrate_state(state: dict) -> dict:
     ):
         l2.setdefault(k, v)
     state.setdefault("lanes", {})
+    for lk, lane in list(state["lanes"].items()):
+        if not isinstance(lane, dict):
+            continue
+        lane.setdefault("next_action", "")
+        lane.setdefault("gate", "")
+        lane.setdefault("owner", "")
+        lane.setdefault("last_update", "")
+        lane.setdefault("copy_mission_text", "")
     state.setdefault("obsidian", {
         "vault_path": "",
         "home_note": "Home.md",
@@ -156,6 +164,28 @@ def migrate_state(state: dict) -> dict:
         a.setdefault("say_phrase", "")
         a.setdefault("id", "")
         a.setdefault("item", "")
+        a.setdefault("last_copied", "")
+
+    # jarvis.agents may be list of strings or list of dicts
+    j = state.get("jarvis") or {}
+    agents = j.get("agents") or []
+    if agents and isinstance(agents[0], str):
+        j["agents"] = [
+            {
+                "id": a,
+                "model": "unknown",
+                "channel": "unknown",
+                "health": "unknown",
+                "source": "unknown",
+                "last_checked": "",
+            }
+            for a in agents
+        ]
+        state["jarvis"] = j
+    elif not agents:
+        j["agents"] = []
+        state["jarvis"] = j
+    j.setdefault("cron_jobs", [])
 
     return state
 
@@ -173,6 +203,7 @@ def save_state(state: dict) -> None:
 
 
 def append_l2_outbox(text: str) -> Path:
+    """Raises OSError on write failure so caller can preserve compose input."""
     path = OUTBOX / "l2-telegram-queue.md"
     block = f"\n---\n## Queued locally {now_iso()}\n\n```text\n{text.strip()}\n```\n"
     if path.exists():
@@ -195,8 +226,14 @@ HELP = """Slash commands (update local Castle state only):
 /l2 status <text>
 /l2 model <text>
 /ship add <lane> | <title> | <path>
+/ship update <id> | <field> | <value>
+/ship remove <id>
 /approval add <item> | <say phrase>
 /approval clear <id>
+/lane set <lane> | <field> | <value>
+/jarvis set <agent> | <field> | <value>
+/vault set path <value>
+/vault set home <value>
 /park add <item>
 /priority
 /note <text>
@@ -207,6 +244,25 @@ L1 free text: Saved locally.
 L2 free text: Queued locally — not sent to Hermes or Telegram.
 Legacy /approval done is not supported — use /approval clear.
 """
+
+LANE_KEYS = ("amax", "content", "content_intel", "safar", "fde", "trading", "gtm")
+LANE_FIELDS = ("next_action", "gate", "owner", "copy_mission_text")
+JARVIS_AGENT_FIELDS = ("model", "channel", "health", "source", "last_checked")
+SHIP_FIELDS = ("lane", "title", "path", "readiness", "approval")
+READINESS_ORDER = {"DRAFT": 0, "REVIEW": 1, "READY": 2}
+
+
+def append_activity(line: str) -> None:
+    path = OUTBOX / "cadence-activity.log"
+    with path.open("a", encoding="utf-8") as f:
+        f.write(f"{now_iso()} | {line}\n")
+
+
+def normalize_lane_key(name: str) -> str:
+    n = name.strip().lower().replace(" ", "_")
+    if n == "content":
+        return "content_intel"
+    return n
 
 
 def apply_os_command(text: str) -> tuple[str, bool]:
@@ -283,6 +339,135 @@ def apply_os_command(text: str) -> tuple[str, bool]:
             "Human sign-off still required before any external use.",
             True,
         )
+
+    if lower.startswith("/ship update"):
+        body = raw[len("/ship update") :].strip()
+        parts = [p.strip() for p in body.split("|")]
+        if len(parts) < 3 or not all(parts[:3]):
+            return ("Format: /ship update <id> | <field> | <value>", False)
+        sid, field, value = parts[0], parts[1].lower(), parts[2]
+        if field not in SHIP_FIELDS:
+            return (f"Unknown field. Allowed: {', '.join(SHIP_FIELDS)}", False)
+        ship = next((s for s in state.get("ships", []) if s.get("id") == sid), None)
+        if not ship:
+            return (f"No ship id {sid}", False)
+        if field == "readiness":
+            value = value.upper()
+            if value not in READINESS_ORDER:
+                return ("readiness must be DRAFT | REVIEW | READY", False)
+            cur = ship.get("readiness", "DRAFT")
+            # no skip forward; rollback REVIEW→DRAFT ok; READY← only from REVIEW
+            if value == "READY" and cur != "REVIEW":
+                return ("readiness transitions DRAFT → REVIEW → READY only (no skipping)", False)
+            if value == "REVIEW" and cur not in ("DRAFT", "REVIEW", "READY"):
+                return ("Invalid current readiness", False)
+            if value == "DRAFT" and cur not in ("DRAFT", "REVIEW", "READY"):
+                return ("Invalid rollback", False)
+            if value == "READY" and ship.get("approval") == "none":
+                ship["ready_block"] = "READY blocked — approval field is 'none'"
+                save_state(state)
+                return (
+                    "READY blocked — approval field is 'none'. Local display only; nothing external.",
+                    True,
+                )
+            ship.pop("ready_block", None)
+            ship["readiness"] = value
+            if value == "READY":
+                append_activity(f"ship {sid} READY | lane={ship.get('lane')}")
+            save_state(state)
+            return (
+                f"Updated local Castle state: ship {sid} readiness={value}"
+                + (
+                    ". READY — human sign-off still required before any external use."
+                    if value == "READY"
+                    else ""
+                ),
+                True,
+            )
+        if field == "approval" and value not in ("none", "human"):
+            return ("approval must be none | human", False)
+        ship[field] = value
+        save_state(state)
+        return (f"Updated local Castle state: ship {sid}.{field}", True)
+
+    if lower.startswith("/ship remove"):
+        body = raw[len("/ship remove") :].strip()
+        if not body:
+            return ("Format: /ship remove <id>", False)
+        sid = body.split()[0]
+        before = len(state.get("ships", []))
+        state["ships"] = [s for s in state.get("ships", []) if s.get("id") != sid]
+        if len(state["ships"]) == before:
+            return (f"No ship id {sid}", False)
+        save_state(state)
+        return (f"Updated local Castle state: removed ship {sid}", True)
+
+    if lower.startswith("/lane set"):
+        body = raw[len("/lane set") :].strip()
+        parts = [p.strip() for p in body.split("|")]
+        if len(parts) < 3 or not all(parts[:3]):
+            return ("Format: /lane set <lane> | <field> | <value>", False)
+        lk = normalize_lane_key(parts[0])
+        field = parts[1].lower()
+        value = parts[2]
+        if field not in LANE_FIELDS:
+            return (f"Unknown field. Allowed: {', '.join(LANE_FIELDS)}", False)
+        lane = state.setdefault("lanes", {}).setdefault(lk, {"name": parts[0]})
+        lane[field] = value
+        lane["last_update"] = now_iso()
+        append_activity(f"lane {lk} last_update | field={field}")
+        save_state(state)
+        return (f"Updated local Castle state: lanes.{lk}.{field}", True)
+
+    if lower.startswith("/jarvis set"):
+        body = raw[len("/jarvis set") :].strip()
+        parts = [p.strip() for p in body.split("|")]
+        if len(parts) < 3 or not all(parts[:3]):
+            return ("Format: /jarvis set <agent> | <field> | <value>", False)
+        agent_id, field, value = parts[0], parts[1].lower(), parts[2]
+        if field not in JARVIS_AGENT_FIELDS:
+            return (f"Unknown field. Allowed: {', '.join(JARVIS_AGENT_FIELDS)}", False)
+        agents = state.setdefault("jarvis", {}).setdefault("agents", [])
+        # ensure dict list
+        if agents and isinstance(agents[0], str):
+            agents = [
+                {"id": a, "model": "unknown", "channel": "unknown", "health": "unknown", "source": "unknown", "last_checked": ""}
+                for a in agents
+            ]
+            state["jarvis"]["agents"] = agents
+        rec = next((a for a in agents if isinstance(a, dict) and a.get("id") == agent_id), None)
+        if not rec:
+            rec = {
+                "id": agent_id,
+                "model": "unknown",
+                "channel": "unknown",
+                "health": "unknown",
+                "source": "unknown",
+                "last_checked": "",
+            }
+            agents.append(rec)
+        rec[field] = value
+        if field != "last_checked":
+            rec["last_checked"] = now_iso()
+        state["jarvis"]["last_checked"] = now_iso()
+        save_state(state)
+        return (f"Updated local Castle state: jarvis.agents[{agent_id}].{field}", True)
+
+    if lower.startswith("/vault set path "):
+        val = raw[len("/vault set path ") :].strip()
+        if not val:
+            return ("Format: /vault set path <value>", False)
+        state.setdefault("obsidian", {})["vault_path"] = val
+        save_state(state)
+        return ("Updated local Castle state: obsidian.vault_path", True)
+
+    if lower.startswith("/vault set home "):
+        val = raw[len("/vault set home ") :].strip()
+        if not val:
+            return ("Format: /vault set home <value>", False)
+        state.setdefault("obsidian", {})["home_note"] = val
+        save_state(state)
+        return ("Updated local Castle state: obsidian.home_note", True)
 
     if lower.startswith("/approval add"):
         body = raw[len("/approval add") :].strip()
@@ -429,6 +614,11 @@ class Handler(SimpleHTTPRequestHandler):
             p = OUTBOX / "l2-telegram-queue.md"
             text = p.read_text(encoding="utf-8") if p.exists() else "# empty\n"
             return self._send(200, {"path": str(p), "markdown": text})
+        if path == "/api/cadence/activity":
+            p = OUTBOX / "cadence-activity.log"
+            text = p.read_text(encoding="utf-8") if p.exists() else ""
+            lines = [ln for ln in text.strip().splitlines() if ln][-30:]
+            return self._send(200, {"lines": lines})
         return super().do_GET()
 
     def do_POST(self) -> None:  # noqa: N802
@@ -442,6 +632,22 @@ class Handler(SimpleHTTPRequestHandler):
                 return self._send(
                     200, {"reply": reply, "changed": changed, "state": load_state()}
                 )
+            if path == "/api/approval/copied":
+                payload = self._read_json()
+                aid = (payload.get("id") or "").strip()
+                st = load_state()
+                for a in st.get("approvals_queue", []):
+                    if a.get("id") == aid:
+                        a["last_copied"] = now_iso()
+                        save_state(st)
+                        return self._send(200, {"ok": True, "state": load_state()})
+                return self._send(404, {"error": "not found"})
+            if path == "/api/critique/save":
+                payload = self._read_json()
+                text = payload.get("text") or ""
+                path_out = DATA / "critique-notes.md"
+                path_out.write_text(text, encoding="utf-8")
+                return self._send(200, {"ok": True, "path": str(path_out), "effect": "Saved locally"})
             return self._send(404, {"error": "not found"})
         except Exception as e:
             traceback.print_exc()
@@ -474,7 +680,27 @@ class Handler(SimpleHTTPRequestHandler):
                     )
                 )
         elif channel == "l2":
-            out_path = append_l2_outbox(content)
+            try:
+                out_path = append_l2_outbox(content)
+            except OSError as e:
+                return self._send(
+                    200,
+                    {
+                        "user": user_msg,
+                        "replies": [
+                            append_message(
+                                channel,
+                                "system",
+                                f"Queue write FAILED — message not saved\n({e})",
+                                {"kind": "l2_queue_fail"},
+                            )
+                        ],
+                        "effect": "Queue write FAILED — message not saved",
+                        "state_changed": False,
+                        "state": None,
+                        "preserve_input": True,
+                    },
+                )
             effect = "Queued locally — not sent to Hermes or Telegram"
             replies.append(
                 append_message(

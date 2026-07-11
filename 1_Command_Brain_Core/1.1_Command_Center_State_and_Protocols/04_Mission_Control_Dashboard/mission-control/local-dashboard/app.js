@@ -65,13 +65,12 @@ function shipApproval(s) {
   return "human";
 }
 
-/* ——— Shell ——— */
-function renderMap() {
-  const map = $("#castle-map");
-  let html = `<button type="button" class="drawer-toggle" id="drawer-toggle" aria-expanded="${drawerOpen}">
-    Rooms · ${esc(ROOMS.find((r) => r.id === activeRoom)?.label || activeRoom)}
-  </button>`;
-  html += `<div class="map-title">Castle Map</div>`;
+function isMobile() {
+  return window.matchMedia("(max-width: 640px)").matches;
+}
+
+function roomListHtml(idPrefix) {
+  let html = "";
   let last = "";
   for (const r of ROOMS) {
     if (r.section !== last) {
@@ -80,27 +79,75 @@ function renderMap() {
     }
     let num = "";
     if (r.id === "approvals" && state)
-      num = state.approvals_queue?.filter((a) => a.status !== "done" && a.status !== "cleared").length ?? "";
+      num =
+        state.approvals_queue?.filter((a) => a.status !== "done" && a.status !== "cleared")
+          .length ?? "";
     if (r.id === "ship" && state) num = state.ships?.length ?? "";
     html += `<button type="button" class="room-btn ${activeRoom === r.id ? "active" : ""} ${
       r.secondary ? "secondary" : ""
-    }" data-room="${r.id}">
+    }" data-room="${r.id}" id="${idPrefix}-${r.id}">
       ${esc(r.label)}${num !== "" ? `<span class="num">${num}</span>` : ""}
     </button>`;
   }
-  map.innerHTML = html;
-  map.classList.toggle("collapsed", !drawerOpen && window.innerWidth <= 900);
+  return html;
+}
+
+function closeRoomsDrawer() {
+  drawerOpen = false;
+  const ov = $("#rooms-overlay");
+  if (ov) ov.hidden = true;
+  const btn = $("#rooms-open-btn");
+  if (btn) btn.setAttribute("aria-expanded", "false");
+}
+
+function openRoomsDrawer() {
+  drawerOpen = true;
+  const ov = $("#rooms-overlay");
+  if (ov) ov.hidden = false;
+  const btn = $("#rooms-open-btn");
+  if (btn) btn.setAttribute("aria-expanded", "true");
+  const list = $("#rooms-drawer-list");
+  if (list) {
+    list.innerHTML = `<div class="map-title">Castle Map</div>` + roomListHtml("drawer");
+    list.querySelectorAll("[data-room]").forEach((b) => {
+      b.addEventListener("click", () => {
+        activeRoom = b.dataset.room;
+        closeRoomsDrawer();
+        render();
+      });
+    });
+  }
+}
+
+/* ——— Shell ——— */
+function renderMap() {
+  const map = $("#castle-map");
+  const label = ROOMS.find((r) => r.id === activeRoom)?.label || activeRoom;
+  // Desktop rail (hidden via CSS on ≤640)
+  map.innerHTML = `<div class="map-title">Castle Map</div>` + roomListHtml("rail");
   map.querySelectorAll("[data-room]").forEach((btn) => {
     btn.addEventListener("click", () => {
       activeRoom = btn.dataset.room;
-      drawerOpen = false;
       render();
     });
   });
-  $("#drawer-toggle")?.addEventListener("click", () => {
-    drawerOpen = !drawerOpen;
-    renderMap();
-  });
+
+  // Mobile bar
+  const bar = $("#mobile-rooms-bar");
+  const openBtn = $("#rooms-open-btn");
+  if (bar && openBtn) {
+    bar.hidden = !isMobile();
+    openBtn.textContent = `Rooms · ${label}`;
+    openBtn.onclick = () => {
+      if (drawerOpen) closeRoomsDrawer();
+      else openRoomsDrawer();
+    };
+  }
+  $("#rooms-close-btn") && ($("#rooms-close-btn").onclick = closeRoomsDrawer);
+  $("#rooms-backdrop") && ($("#rooms-backdrop").onclick = closeRoomsDrawer);
+  if (!isMobile()) closeRoomsDrawer();
+  else if (drawerOpen) openRoomsDrawer();
+  else closeRoomsDrawer();
 }
 
 function renderCmdStrip() {
@@ -220,31 +267,29 @@ function renderCommand() {
   const t = state.tonight_chunk || {};
   const pri = (state.active_priority_order || []).map((p, i) => `<li>P${i + 1} · ${esc(p)}</li>`).join("");
   const park = (state.parked || []).map((p) => `<li>${esc(p)}</li>`).join("");
+  const tonightCmd = `/tonight ${t.lane || "lane"} | ${t.task || "task"} | ${t.done_means || "done means"}`;
   return panel(
     "Command",
     "Tonight's one chunk. ClickUp remains execution truth.",
     `<div class="grid grid-2">
       <div class="card">
-        <h2>Tonight chunk</h2>
+        <h2>Tonight chunk <button type="button" class="btn" data-prefill="${esc(
+          tonightCmd
+        )}">Edit</button></h2>
         <p><strong>${esc(t.lane || "—")}</strong></p>
         <p>${esc(t.task || "")}</p>
         <p class="mono">done_means: ${esc(t.done_means || "")}</p>
         <p class="mono">tool: ${esc(t.primary_tool || "")}</p>
         <h2 style="margin-top:12px">Do not open</h2>
         <ul class="list gate-list">${(t.do_not_open || []).map((x) => `<li>${esc(x)}</li>`).join("")}</ul>
-        <div class="btn-row">
-          <button class="btn primary" type="button" data-copy="${esc(
-            `/tonight ${t.lane || "lane"} | ${t.task || "task"} | ${t.done_means || "done"}`
-          )}">Copy /tonight form</button>
-        </div>
       </div>
       <div class="stack">
-        <div class="card"><h2>Priorities</h2><ul class="list">${pri}</ul></div>
-        <div class="card"><h2>Parked</h2><ul class="list">${park}</ul></div>
+        <div class="card"><h2>Priorities <button type="button" class="btn" data-prefill="/priority">Edit</button></h2><ul class="list">${pri}</ul></div>
+        <div class="card"><h2>Parked <button type="button" class="btn" data-prefill="/park add item">Edit</button></h2><ul class="list">${park}</ul></div>
         <div class="card"><h2>Slash help</h2>
           <div class="prompt-box">/tonight a | b | c
+/lane set amax | next_action | value
 /ship add lane | title | path
-/approval clear ap-001
 /help</div>
           <p class="effect-tag">Slash effects: Updated local Castle state only</p>
         </div>
@@ -256,26 +301,32 @@ function renderCommand() {
 function renderL2Wing() {
   const l = state.l2 || {};
   const j = state.jarvis || {};
+  const stale = isStale(j.last_checked, 24);
+  const cardClass = stale ? "card stale-border" : "card";
   return panel(
     "L2 Wing",
-    "Read-only mirror of human-observed co-founder facts. MCP: none unless stated.",
-    `<div class="card">
+    "Human-observed co-founder facts only. MCP: none unless stated.",
+    `<div class="${cardClass}">
+      ${
+        stale
+          ? `<p class="stale-warn">Stale — re-confirm with human before treating as current.</p>`
+          : ""
+      }
       <table>
         <tr><th>Field</th><th>Value</th></tr>
         <tr><td>Name</td><td>${esc(l.name)}</td></tr>
         <tr><td>Status</td><td><span class="badge warn">${esc(l.status || "unknown")}</span></td></tr>
-        <tr><td>Profile</td><td class="mono">${esc(l.profile || "—")}</td></tr>
-        <tr><td>Model</td><td class="mono">${esc(l.model || "—")}</td></tr>
+        <tr><td>Profile</td><td class="mono">${esc(l.profile || "unknown")}</td></tr>
+        <tr><td>Model</td><td class="mono">${esc(l.model || "unknown")}</td></tr>
         <tr><td>Gateway</td><td>${esc(l.gateway || "unknown")}</td></tr>
         <tr><td>Localhost dashboard on L2</td><td>${
           l.dashboard_localhost ? "yes" : '<span class="badge bad">no</span>'
         }</td></tr>
-        <tr><td>MCP</td><td>${
-          l.mcp_configured ? "configured" : '<span class="badge">none</span>'
-        }</td></tr>
+        <tr><td>MCP</td><td>${l.mcp_configured ? "configured" : "none"}</td></tr>
         <tr><td>Handoffs root</td><td class="mono">${esc(l.handoffs_root || "Set me")}</td></tr>
-        <tr><td>Jarvis source</td><td class="mono">${esc(j.source || "—")}</td></tr>
-        <tr><td>Last checked</td><td class="mono">${esc(j.last_checked || "—")}</td></tr>
+        <tr><td>Last checked</td><td class="mono">${esc(j.last_checked || "unknown")} (${relativeTime(
+          j.last_checked
+        )})</td></tr>
       </table>
       <p class="effect-tag" style="margin-top:12px">L2 not auto-dispatched from this UI · outbox-first handoff</p>
     </div>`
@@ -283,29 +334,45 @@ function renderL2Wing() {
 }
 
 function renderLane(key) {
-  const lane = state.lanes?.[key] || state.lanes?.[key === "content" ? "content_intel" : key];
-  if (!lane) return panel(key, "Not available in Phase 1", `<div class="card mono">Set me in state.json lanes</div>`);
-  const next = (lane.next_actions || []).map((x) => `<li>${esc(x)}</li>`).join("");
+  const laneKey = key === "content" ? "content_intel" : key;
+  const lane = state.lanes?.[laneKey] || state.lanes?.[key];
+  if (!lane)
+    return panel(key, "Lane unset", `<div class="card mono">unset — use /lane set ${key} | field | value</div>`);
+  const nextList = (lane.next_actions || []).map((x) => `<li>${esc(x)}</li>`).join("");
   const gates = (lane.gates || []).map((x) => `<li>${esc(x)}</li>`).join("");
   const blockers = (lane.blockers || []).map((x) => `<li>${esc(x)}</li>`).join("");
-  const mission = `MISSION: ${lane.goal || lane.name}\nLANE: ${lane.name}\nDONE MEANS: (set path)\nFORBIDDEN: publish, QBO write, CRM write, spend`;
+  const packet = assembleMissionPacket(laneKey, lane);
+  const lastUp = lane.last_update ? `last updated ${relativeTime(lane.last_update)}` : "last updated unset";
   return panel(
     lane.name || key,
-    `Priority ${lane.priority ?? "—"} · ${lane.status || ""} · read-only Phase 1`,
+    `Priority ${lane.priority ?? "—"} · ${lane.status || ""}`,
     `<div class="grid grid-2">
       <div class="stack">
         <div class="card"><h2>Goal</h2><p>${esc(lane.goal || "")}</p>
-          <p class="mono">folder: ${esc(lane.handoff_folder || "—")}</p>
-          <div class="btn-row"><button class="btn primary" type="button" data-copy="${esc(
-            mission
-          )}">Copy mission draft</button></div>
-          <p class="effect-tag">Copied — human still dispatches via Chat Hall / Telegram</p>
+          <p class="mono">folder: ${esc(lane.handoff_folder || "unset")}</p>
+          <p class="mono">${esc(lastUp)}</p>
+          <table style="margin-top:10px">
+            <tr><th>Field</th><th>Value</th></tr>
+            <tr><td>next_action</td><td>${fieldOrUnset(lane.next_action)}</td></tr>
+            <tr><td>gate</td><td>${fieldOrUnset(lane.gate)}</td></tr>
+            <tr><td>owner</td><td>${fieldOrUnset(lane.owner)}</td></tr>
+            <tr><td>copy_mission_text</td><td>${fieldOrUnset(lane.copy_mission_text)}</td></tr>
+          </table>
+          <div class="btn-row">
+            <button class="btn primary" type="button" data-mission-packet="${esc(packet)}">Copy mission packet</button>
+            <button class="btn" type="button" data-prefill="/lane set ${esc(laneKey)} | next_action | ">Edit lane</button>
+          </div>
+          <p class="effect-tag">Copied — for manual handoff to L2. Not sent.</p>
         </div>
-        <div class="card"><h2>Next actions</h2><ul class="list ok-list">${next || "<li>—</li>"}</ul></div>
+        <div class="card"><h2>Next actions (legacy list)</h2><ul class="list ok-list">${
+          nextList || "<li class=unset>unset</li>"
+        }</ul></div>
       </div>
       <div class="stack">
-        <div class="card"><h2>Blockers</h2><ul class="list">${blockers || "<li>None listed</li>"}</ul></div>
-        <div class="card"><h2>Gates</h2><ul class="list gate-list">${gates || "<li>Draft-only default</li>"}</ul></div>
+        <div class="card"><h2>Blockers</h2><ul class="list">${blockers || "<li class=unset>unset</li>"}</ul></div>
+        <div class="card"><h2>Gates</h2><ul class="list gate-list">${
+          gates || "<li>Draft-only default</li>"
+        }</ul></div>
       </div>
     </div>`
   );
@@ -313,24 +380,37 @@ function renderLane(key) {
 
 function renderShip() {
   const rows = (state.ships || [])
-    .map(
-      (s) => `<tr>
+    .map((s) => {
+      const r = shipReadiness(s);
+      const ap = shipApproval(s);
+      const block = s.ready_block
+        ? `<div class="ready-block">${esc(s.ready_block)}</div>`
+        : "";
+      const readyNote =
+        r === "READY"
+          ? `<div class="ready-note">READY — human sign-off still required before any external use.</div>`
+          : "";
+      return `<tr>
+      <td class="mono">${esc(s.id || "")}</td>
       <td>${esc(s.lane)}</td>
       <td>${esc(s.title)}</td>
       <td class="mono">${esc(s.path)}</td>
-      <td><span class="badge">${esc(shipReadiness(s))}</span></td>
-      <td>${esc(shipApproval(s))}</td>
-    </tr>`
-    )
+      <td><span class="badge">${esc(r)}</span>${block}${readyNote}</td>
+      <td>${esc(ap)}</td>
+    </tr>`;
+    })
     .join("");
   return panel(
     "Ship Dock",
-    "Artifacts with paths. Chat text alone is not a ship.",
+    "Local ship records. READY is display-only.",
     `<div class="card">
       <table>
-        <tr><th>Lane</th><th>Title</th><th>Path</th><th>Readiness</th><th>Approval</th></tr>
-        ${rows || "<tr><td colspan=5 class=mono>No ships yet — /ship add lane | title | path</td></tr>"}
+        <tr><th>ID</th><th>Lane</th><th>Title</th><th>Path</th><th>Readiness</th><th>Approval</th></tr>
+        ${rows || "<tr><td colspan=6 class=mono>No ships — /ship add lane | title | path</td></tr>"}
       </table>
+      <div class="prompt-box" style="margin-top:10px">/ship update ship-001 | readiness | REVIEW
+/ship update ship-001 | readiness | READY
+/ship remove ship-001</div>
       <p class="effect-tag" style="margin-top:10px">Records are local Castle state only</p>
     </div>`
   );
@@ -343,8 +423,9 @@ function renderApprovals() {
       <td class="mono">${esc(a.id)}</td>
       <td>${esc(a.item)}</td>
       <td class="mono">${esc(sayPhrase(a))}</td>
-      <td><button class="btn" type="button" data-copy-phrase="${esc(
-        sayPhrase(a)
+      <td class="mono">${esc(a.last_copied || "")}</td>
+      <td><button class="btn" type="button" data-copy-phrase="${esc(sayPhrase(a))}" data-ap-id="${esc(
+        a.id
       )}">Copy phrase</button></td>
     </tr>`
     )
@@ -354,8 +435,8 @@ function renderApprovals() {
     "Copy phrase for human use. This UI never executes external sign-off.",
     `<div class="card">
       <table>
-        <tr><th>ID</th><th>Item</th><th>Say phrase</th><th></th></tr>
-        ${rows || "<tr><td colspan=4>Empty queue</td></tr>"}
+        <tr><th>ID</th><th>Item</th><th>Say phrase</th><th>Last copied</th><th></th></tr>
+        ${rows || "<tr><td colspan=5>Empty queue</td></tr>"}
       </table>
       <p class="effect-tag" style="margin-top:10px">Copied — human sign-off still required · /approval clear only clears local display</p>
     </div>
@@ -376,15 +457,23 @@ function renderObsidian() {
   const fp = (o.fast_path || []).map((p) => `<li class="mono">${esc(p)}</li>`).join("");
   return panel(
     "Obsidian Vault",
-    "Second brain pointers. One vault. Progressive load.",
+    "Second brain pointers. Never guess vault path.",
     `<div class="card">
       <table>
         <tr><th>Field</th><th>Value</th></tr>
-        <tr><td>Vault path</td><td class="mono">${esc(o.vault_path || "Set me")}</td></tr>
-        <tr><td>Home note</td><td class="mono">${esc(o.home_note || "Home.md")}</td></tr>
+        <tr><td>Vault path</td><td class="mono">${
+          o.vault_path ? esc(o.vault_path) : '<span class="unset">Set me</span>'
+        }</td></tr>
+        <tr><td>Home note</td><td class="mono">${
+          o.home_note ? esc(o.home_note) : '<span class="unset">Set me</span>'
+        }</td></tr>
       </table>
+      <div class="btn-row">
+        <button class="btn" type="button" data-prefill="/vault set path ">Edit path</button>
+        <button class="btn" type="button" data-prefill="/vault set home ">Edit home</button>
+      </div>
       <h2 style="margin-top:12px">Fast path</h2>
-      <ul class="list">${fp || "<li class=mono>Set me</li>"}</ul>
+      <ul class="list">${fp || "<li class=unset>Set me</li>"}</ul>
     </div>`
   );
 }
@@ -392,26 +481,77 @@ function renderObsidian() {
 function renderJarvis() {
   const j = state.jarvis || {};
   const l = state.l2 || {};
-  const agents = (j.agents || []).map((a) => `<li>${esc(a)}</li>`).join("");
-  const crons = (j.cron_jobs || []).map((c) => `<li>${esc(c)}</li>`).join("");
+  const agents = j.agents || [];
+  let agentRows = "";
+  if (!agents.length) {
+    agentRows = `<tr><td colspan="6" class="unset">unknown</td></tr>`;
+  } else {
+    for (const a of agents) {
+      if (typeof a === "string") {
+        agentRows += `<tr><td>${esc(a)}</td><td class="unset">unknown</td><td class="unset">unknown</td><td class="unset">unknown</td><td class="unset">unknown</td><td class="unset">unknown</td></tr>`;
+      } else {
+        const u = (v) =>
+          !v || v === "unknown"
+            ? `<span class="unset">unknown</span>`
+            : esc(v);
+        agentRows += `<tr>
+          <td>${esc(a.id || "unknown")}</td>
+          <td>${u(a.model)}</td>
+          <td>${u(a.channel)}</td>
+          <td>${u(a.health)}</td>
+          <td>${u(a.source)}</td>
+          <td class="mono">${u(a.last_checked)}</td>
+        </tr>`;
+      }
+    }
+  }
+  const crons = j.cron_jobs || [];
+  let cronRows = "";
+  if (!crons.length) {
+    cronRows = `<tr><td colspan="8" class="unset">unknown</td></tr>`;
+  } else {
+    for (const c of crons) {
+      if (typeof c === "string") {
+        cronRows += `<tr><td colspan="8">${esc(c)}</td></tr>`;
+      } else {
+        cronRows += `<tr>
+          <td>${fieldOrUnset(c.owner)}</td>
+          <td>${fieldOrUnset(c.purpose)}</td>
+          <td class="mono">${fieldOrUnset(c.output_path)}</td>
+          <td>${fieldOrUnset(c.next_run)}</td>
+          <td>${fieldOrUnset(c.stop_condition)}</td>
+          <td>${fieldOrUnset(c.hard_cap)}</td>
+          <td>${fieldOrUnset(c.approval_required)}</td>
+          <td>${fieldOrUnset(c.status)}</td>
+        </tr>`;
+      }
+    }
+  }
   return panel(
     "Jarvis Bay",
-    "Agent registry (local mirror). Not a remote-control plane.",
+    "Display-only registry. Never polls MCP or network health.",
     `<div class="card">
       <table>
         <tr><th>Field</th><th>Value</th></tr>
         <tr><td>Gateway note</td><td>${esc(j.gateway_note || l.gateway || "unknown")}</td></tr>
-        <tr><td>L2 model</td><td class="mono">${esc(l.model || "—")}</td></tr>
-        <tr><td>L2 profile</td><td class="mono">${esc(l.profile || "—")}</td></tr>
         <tr><td>MCP</td><td>${l.mcp_configured ? "configured" : "none"}</td></tr>
-        <tr><td>Source</td><td class="mono">${esc(j.source || "—")}</td></tr>
-        <tr><td>Last checked</td><td class="mono">${esc(j.last_checked || "—")}</td></tr>
+        <tr><td>Source</td><td class="mono">${esc(j.source || "unknown")}</td></tr>
+        <tr><td>Last checked</td><td class="mono">${esc(j.last_checked || "unknown")}</td></tr>
       </table>
       <h2 style="margin-top:12px">Agents</h2>
-      <ul class="list">${agents || "<li class=mono>none listed</li>"}</ul>
-      <h2 style="margin-top:12px">Cron labels</h2>
-      <ul class="list">${crons || "<li class=mono>none listed</li>"}</ul>
-      <p class="effect-tag">L2 not auto-dispatched · MCP: none unless human-observed</p>
+      <table>
+        <tr><th>id</th><th>model</th><th>channel</th><th>health</th><th>source</th><th>last_checked</th></tr>
+        ${agentRows}
+      </table>
+      <div class="btn-row">
+        <button class="btn" type="button" data-prefill="/jarvis set agent-id | model | ">Edit agent</button>
+      </div>
+      <h2 style="margin-top:12px">Cron jobs (read-only)</h2>
+      <table>
+        <tr><th>owner</th><th>purpose</th><th>output_path</th><th>next_run</th><th>stop</th><th>hard_cap</th><th>approval_required</th><th>status</th></tr>
+        ${cronRows}
+      </table>
+      <p class="effect-tag">Display only — no MCP call, network probe, or scheduling action</p>
     </div>`
   );
 }
@@ -419,7 +559,7 @@ function renderJarvis() {
 function renderCadence() {
   return panel(
     "Cadence",
-    "Draft-only loops. Hard caps. No background external actions.",
+    "Draft-only loops. Observation log is local only.",
     `<div class="grid grid-2">
       <div class="card"><h2>Policy</h2>
         <ul class="list ok-list">
@@ -429,12 +569,9 @@ function renderCadence() {
           <li>Human sign-off before external use</li>
         </ul>
       </div>
-      <div class="card"><h2>Suggested loops</h2>
-        <ul class="list">
-          <li>Morning: PING L2 (Telegram) · set /tonight</li>
-          <li>Ship block: one MISSION with path</li>
-          <li>Bookend: HANDOFF packet · /note</li>
-        </ul>
+      <div class="card"><h2>Recent activity</h2>
+        <div id="cadence-activity" class="prompt-box" style="max-height:200px">Loading…</div>
+        <p class="effect-tag">Observation only — log cannot trigger actions</p>
       </div>
     </div>`
   );
@@ -455,7 +592,7 @@ function renderBlueprints() {
         <p class="mono" style="margin-top:8px">PRD: mission-control/COFOUNDER-CASTLE-OS-PRD.md</p>
       </div>
       <div class="card">
-        <h2>Critique notes (browser localStorage)</h2>
+        <h2>Critique notes</h2>
         <textarea id="critique-box" class="prompt-box" style="min-height:120px;width:100%">${esc(
           saved
         )}</textarea>
@@ -463,6 +600,7 @@ function renderBlueprints() {
           <button class="btn primary" type="button" id="btn-save-critique">Save notes</button>
           <button class="btn" type="button" id="btn-copy-critique">Copy notes</button>
         </div>
+        <p class="effect-tag">Save writes localStorage + data/critique-notes.md (local only)</p>
       </div>
     </div>`
   );
@@ -505,6 +643,7 @@ async function sendChat(channel) {
   const input = $(`#chat-input-${channel}`);
   const content = (input?.value || "").trim();
   if (!content) return;
+  const prev = content;
   input.value = "";
   input.disabled = true;
   try {
@@ -515,27 +654,118 @@ async function sendChat(channel) {
     });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || "send failed");
+    if (data.preserve_input || (data.effect || "").includes("FAILED")) {
+      input.value = prev;
+      toast(data.effect || "Queue write FAILED — message not saved");
+    } else {
+      toast(data.effect || "Saved locally");
+    }
     if (data.state) state = data.state;
     await loadChats();
     render();
-    toast(data.effect || "Saved locally");
   } catch (e) {
     toast(String(e.message || e));
-    if (input) input.value = content;
+    if (input) input.value = prev;
   } finally {
-    input.disabled = false;
-    input?.focus();
+    const inp = $(`#chat-input-${channel}`);
+    if (inp) {
+      inp.disabled = false;
+      inp.focus();
+    }
   }
+}
+
+function fieldOrUnset(v) {
+  if (v === undefined || v === null || String(v).trim() === "") {
+    return `<span class="unset">unset</span>`;
+  }
+  return esc(v);
+}
+
+function relativeTime(iso) {
+  if (!iso) return "";
+  const t = Date.parse(iso);
+  if (!t) return esc(iso);
+  const sec = Math.floor((Date.now() - t) / 1000);
+  if (sec < 60) return `${sec}s ago`;
+  if (sec < 3600) return `${Math.floor(sec / 60)}m ago`;
+  if (sec < 86400) return `${Math.floor(sec / 3600)}h ago`;
+  return `${Math.floor(sec / 86400)}d ago`;
+}
+
+function isStale(iso, hours = 24) {
+  if (!iso) return true;
+  const t = Date.parse(iso);
+  if (!t) return true;
+  return Date.now() - t > hours * 3600 * 1000;
+}
+
+function assembleMissionPacket(laneKey, lane) {
+  const t = state.tonight_chunk || {};
+  const ships = (state.ships || []).filter(
+    (s) =>
+      String(s.lane || "").toLowerCase().includes(String(laneKey).replace("_intel", "")) ||
+      String(s.lane || "").toLowerCase() === String(lane.name || "").toLowerCase()
+  );
+  const shipLines = ships
+    .map((s) => `- ${s.id}: ${s.title} | ${s.path} | ${shipReadiness(s)} | approval=${shipApproval(s)}`)
+    .join("\n");
+  return (
+    `# Mission packet (local draft)\n` +
+    `Lane: ${lane.name || laneKey}\n` +
+    `Goal: ${lane.goal || ""}\n` +
+    `next_action: ${lane.next_action || "unset"}\n` +
+    `gate: ${lane.gate || "unset"}\n` +
+    `owner: ${lane.owner || "unset"}\n` +
+    `copy_mission_text: ${lane.copy_mission_text || "unset"}\n` +
+    `last_update: ${lane.last_update || "unset"}\n\n` +
+    `## Tonight\n` +
+    `lane: ${t.lane || ""}\ntask: ${t.task || ""}\ndone_means: ${t.done_means || ""}\n\n` +
+    `## Ships\n${shipLines || "(none)"}\n`
+  );
 }
 
 function wireMain() {
   document.querySelectorAll("[data-copy]").forEach((b) =>
     b.addEventListener("click", () => copyText(b.getAttribute("data-copy")))
   );
-  document.querySelectorAll("[data-copy-phrase]").forEach((b) =>
+  document.querySelectorAll("[data-mission-packet]").forEach((b) =>
+    b.addEventListener("click", async () => {
+      await copyText(b.getAttribute("data-mission-packet"));
+      toast("Copied — for manual handoff to L2. Not sent.");
+    })
+  );
+  document.querySelectorAll("[data-prefill]").forEach((b) =>
     b.addEventListener("click", () => {
-      copyText(b.getAttribute("data-copy-phrase"));
+      activeRoom = "chat";
+      const cmd = b.getAttribute("data-prefill") || "";
+      render();
+      const input = $("#chat-input-l1");
+      if (input) {
+        input.value = cmd;
+        input.focus();
+      }
+    })
+  );
+  document.querySelectorAll("[data-copy-phrase]").forEach((b) =>
+    b.addEventListener("click", async () => {
+      await copyText(b.getAttribute("data-copy-phrase"));
       toast("Copied — human sign-off still required");
+      const id = b.getAttribute("data-ap-id");
+      if (id && apiMode) {
+        try {
+          const res = await fetch("/api/approval/copied", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id }),
+          });
+          const data = await res.json();
+          if (data.state) {
+            state = data.state;
+            if (activeRoom === "approvals") render();
+          }
+        } catch (_) {}
+      }
     })
   );
   document.querySelectorAll("[data-send]").forEach((b) =>
@@ -577,9 +807,31 @@ function wireMain() {
       })
       .catch(() => {});
   }
-  $("#btn-save-critique")?.addEventListener("click", () => {
-    localStorage.setItem("vcos_mc_critique", $("#critique-box")?.value || "");
-    toast("Saved locally (browser)");
+  if ($("#cadence-activity") && apiMode) {
+    fetch("/api/cadence/activity")
+      .then((r) => r.json())
+      .then((o) => {
+        $("#cadence-activity").textContent = (o.lines || []).join("\n") || "(empty)";
+      })
+      .catch(() => {
+        $("#cadence-activity").textContent = "(unavailable)";
+      });
+  }
+  $("#btn-save-critique")?.addEventListener("click", async () => {
+    const text = $("#critique-box")?.value || "";
+    localStorage.setItem("vcos_mc_critique", text);
+    if (apiMode) {
+      try {
+        await fetch("/api/critique/save", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ text }),
+        });
+        toast("Saved locally (localStorage + data/critique-notes.md)");
+      } catch {
+        toast("Saved locally (browser only)");
+      }
+    } else toast("Saved locally (browser)");
   });
   $("#btn-copy-critique")?.addEventListener("click", () =>
     copyText($("#critique-box")?.value || "")

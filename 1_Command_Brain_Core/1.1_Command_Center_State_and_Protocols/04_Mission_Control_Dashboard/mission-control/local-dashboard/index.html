@@ -34,11 +34,26 @@
         </div>
       </header>
 
+      <div class="mobile-rooms-bar" id="mobile-rooms-bar" hidden>
+        <button type="button" class="rooms-open-btn" id="rooms-open-btn" aria-haspopup="dialog" aria-expanded="false">
+          Rooms · Chat Hall
+        </button>
+      </div>
       <nav class="castle-map" id="castle-map" aria-label="Castle Map rooms"></nav>
       <div class="cmd-strip" id="cmd-strip" aria-label="Tonight command strip"></div>
       <main class="main" id="main" role="main">
         <p class="mono">Loading…</p>
       </main>
+    </div>
+    <div class="rooms-overlay" id="rooms-overlay" hidden>
+      <button type="button" class="rooms-backdrop" id="rooms-backdrop" aria-label="Close rooms"></button>
+      <div class="rooms-drawer" id="rooms-drawer" role="dialog" aria-label="Rooms">
+        <div class="rooms-drawer-head">
+          <strong>Rooms</strong>
+          <button type="button" class="btn" id="rooms-close-btn">Close</button>
+        </div>
+        <div id="rooms-drawer-list"></div>
+      </div>
     </div>
     <div class="toast" id="toast" role="status"></div>
     <script src="app.js"></script>

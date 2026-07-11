@@ -31,3 +31,24 @@ phase1-script-probe
 ```text
 skeptic-v4-probe-1783746997
 ```
+
+---
+## Queued locally 2026-07-11T01:30:16-04:00
+
+```text
+phase1-script-probe
+```
+
+---
+## Queued locally 2026-07-11T01:30:26-04:00
+
+```text
+should-fail-write
+```
+
+---
+## Queued locally 2026-07-11T01:30:53-04:00
+
+```text
+phase1-script-probe
+```

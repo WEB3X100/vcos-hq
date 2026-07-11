@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11T01:16:41-04:00",
+  "updated_at": "2026-07-11T01:30:26-04:00",
   "version": "0.3.0-castle-p1",
   "data_freshness": "chat-updated",
   "data_note": "Seeded from L2 handoffs 2026-07-11 + active-context. Edit this file or use dashboard critique notes. Not live Hermes API.",
@@ -97,6 +97,25 @@
       "path": "/tmp/x.md",
       "readiness": "DRAFT",
       "approval": "human"
+    },
+    {
+      "id": "ship-004",
+      "date": "2026-07-11",
+      "lane": "Test",
+      "title": "t",
+      "path": "/tmp/t.md",
+      "readiness": "READY",
+      "approval": "human"
+    },
+    {
+      "id": "ship-005",
+      "date": "2026-07-11",
+      "lane": "BlockTest",
+      "title": "bt",
+      "path": "/tmp/b.md",
+      "readiness": "REVIEW",
+      "approval": "none",
+      "ready_block": "READY blocked — approval field is 'none'"
     }
   ],
   "lanes": {
@@ -117,7 +136,12 @@
       "gates": [
         "No QBO write",
         "No client finance email as agent"
-      ]
+      ],
+      "next_action": "Reclass batch",
+      "gate": "",
+      "owner": "",
+      "last_update": "2026-07-11T01:30:16-04:00",
+      "copy_mission_text": ""
     },
     "content_intel": {
       "name": "Content Intel / AgentOSync",
@@ -136,7 +160,12 @@
       "gates": [
         "Draft-only until APPROVED LINKEDIN",
         "No fake proof"
-      ]
+      ],
+      "next_action": "",
+      "gate": "",
+      "owner": "",
+      "last_update": "",
+      "copy_mission_text": ""
     },
     "safar": {
       "name": "Safar-E-Madina",
@@ -170,7 +199,12 @@
         "Meta ads",
         "Google ads",
         "retargeting"
-      ]
+      ],
+      "next_action": "",
+      "gate": "",
+      "owner": "",
+      "last_update": "",
+      "copy_mission_text": ""
     },
     "fde": {
       "name": "Premium FDE / AI-Native ERP",
@@ -183,7 +217,12 @@
       ],
       "gates": [
         "No confidential client material"
-      ]
+      ],
+      "next_action": "",
+      "gate": "",
+      "owner": "",
+      "last_update": "",
+      "copy_mission_text": ""
     },
     "trading": {
       "name": "Trading Coach / Hedge Fund Journey",
@@ -193,7 +232,12 @@
       "gates": [
         "No live trading",
         "No broker write"
-      ]
+      ],
+      "next_action": "",
+      "gate": "",
+      "owner": "",
+      "last_update": "",
+      "copy_mission_text": ""
     },
     "gtm": {
       "name": "AgentOSync GTM",
@@ -202,7 +246,12 @@
       "goal": "Proof distribution after Content + AMAX",
       "gates": [
         "Draft-only outbound"
-      ]
+      ],
+      "next_action": "",
+      "gate": "",
+      "owner": "",
+      "last_update": "",
+      "copy_mission_text": ""
     }
   },
   "approvals_queue": [
@@ -212,7 +261,8 @@
       "type": "publish",
       "status": "waiting",
       "say": "APPROVED LINKEDIN + draft number",
-      "say_phrase": "APPROVED LINKEDIN + draft number"
+      "say_phrase": "APPROVED LINKEDIN + draft number",
+      "last_copied": ""
     },
     {
       "id": "ap-002",
@@ -220,7 +270,8 @@
       "type": "infra",
       "status": "waiting",
       "say": "RUN AUTOSTART",
-      "say_phrase": "RUN AUTOSTART"
+      "say_phrase": "RUN AUTOSTART",
+      "last_copied": ""
     },
     {
       "id": "ap-003",
@@ -228,7 +279,8 @@
       "type": "spend_ads",
       "status": "blocked",
       "say": "UNLOCK PHASE 2 ADS (after WhatsApp live + budget)",
-      "say_phrase": "UNLOCK PHASE 2 ADS (after WhatsApp live + budget)"
+      "say_phrase": "UNLOCK PHASE 2 ADS (after WhatsApp live + budget)",
+      "last_copied": ""
     },
     {
       "id": "ap-004",
@@ -236,7 +288,8 @@
       "type": "mutation",
       "status": "blocked",
       "say": "Explicit APPROVED + target",
-      "say_phrase": "Explicit APPROVED + target"
+      "say_phrase": "Explicit APPROVED + target",
+      "last_copied": ""
     }
   ],
   "clickup": {
@@ -290,7 +343,7 @@
     ]
   },
   "obsidian": {
-    "vault_path": "",
+    "vault_path": "/Users/test/vault",
     "home_note": "Home.md",
     "fast_path": [
       "AGENTS.md",
@@ -302,11 +355,26 @@
   },
   "jarvis": {
     "agents": [
-      "neuralsync-intern-builder"
+      {
+        "id": "neuralsync-intern-builder",
+        "model": "unknown",
+        "channel": "unknown",
+        "health": "unknown",
+        "source": "unknown",
+        "last_checked": ""
+      },
+      {
+        "id": "hermes-l2",
+        "model": "grok-4.3",
+        "channel": "unknown",
+        "health": "unknown",
+        "source": "unknown",
+        "last_checked": "2026-07-11T01:30:16-04:00"
+      }
     ],
     "gateway_note": "running_manual",
     "cron_jobs": [],
     "source": "local state mirror (human-observed)",
-    "last_checked": "2026-07-11T01:01:28-04:00"
+    "last_checked": "2026-07-11T01:30:16-04:00"
   }
 }
