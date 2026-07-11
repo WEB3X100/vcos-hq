@@ -14,7 +14,8 @@
 4. `FIRST-OVERNIGHT-TEST.md` — first real acceptance mission.
 5. `GITHUB-COFOUNDER-CONTRACT.md` — durable cross-laptop memory, PRD grilling, and shipping protocol.
 6. `PROJECT-STATE.md` — honest shipped/current/blocked/approval state for every new agent.
-7. `GROK-BUILD-PROMPT.md` — supervised prompt for Grok Build.
+7. `L2-RESUME-PROMPT.md` — exact safe fetch/read/preflight handoff for Hermes on Windows.
+8. `GROK-BUILD-PROMPT.md` — supervised prompt for Grok Build.
 
 ## Product boundary
 

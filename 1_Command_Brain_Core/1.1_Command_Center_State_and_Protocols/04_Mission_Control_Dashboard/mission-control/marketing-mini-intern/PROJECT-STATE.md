@@ -4,7 +4,8 @@
 **Observed L1 branch:** `main` with extensive uncommitted HQ restructuring
 **Remote Castle branch observed by L1:** `origin/castle/core-workflows-2026-07-11` at `40253c5` during the Castle interrogation
 **Observed L2 state:** `main`, clean tracked tree, untracked `.hermes/` and `cofounder-handoffs/`; Castle/MMI interfaces absent
-**Status:** Design packet complete locally; GitHub synchronization not yet complete
+**Published coordination branch:** `codex/hermes-marketing-mini-intern` at `a96b3fd` (first packet commit)  
+**Status:** Design packet pushed for L2 preflight; not merged and not implemented
 
 ## North star
 
@@ -19,7 +20,7 @@ Ship one trustworthy co-founder loop: Umair activates a bounded marketing missio
 - Dual-Hermes Mission Control Week 1 scaffold exists on the older shared `main` history.
 - Castle branch `40253c5` was reviewed on L1; verdict was NO-GO for merge pending stabilization.
 
-## Designed locally, not yet shipped
+## Designed and published for review, not implemented
 
 - Marketing Mini Intern product requirements.
 - Capability schemas and state machine.
@@ -27,16 +28,16 @@ Ship one trustworthy co-founder loop: Umair activates a bounded marketing missio
 - Grok supervised build prompt.
 - GitHub co-founder memory, PRD-grilling, and shipping contract.
 
-These items must not be described to L2 as present until their branch is pushed and L2 verifies the commit.
+These interfaces are now available on `codex/hermes-marketing-mini-intern`. They remain design artifacts—not a working Marketing Mini Intern—until L2 fetches the branch and implementation/UAT passes.
 
 ## Working now
 
-Publish a clean documentation/coordination branch that L2 can fetch without mixing unrelated HQ changes. Then re-run preflight against the exact branch and paths.
+Have L2 fetch `codex/hermes-marketing-mini-intern`, verify the commit, read this packet, and re-run preflight against the exact paths.
 
 ## Blocked
 
 - L1 contains a large staged/unstaged HQ restructure and many untracked artifacts.
-- L2 cannot see the Castle/MMI branch/files it was instructed to read.
+- L2 has not yet fetched and verified the newly published Castle/MMI coordination branch.
 - Castle remains NO-GO for direct merge until test truthfulness, outbound behavior, atomic writes, runtime-data separation, and integration strategy are fixed.
 - The canonical first brand for the supervised seven-day run is not yet recorded.
 
@@ -49,4 +50,4 @@ Publish a clean documentation/coordination branch that L2 can fetch without mixi
 
 ## Next
 
-Create and push a clean branch containing this MMI packet and the canonical Castle interfaces, then give L2 an exact fetch/read/preflight prompt referencing the pushed commit.
+Run `L2-RESUME-PROMPT.md` through the approved Hermes Telegram surface and review the returned preflight before any implementation.
