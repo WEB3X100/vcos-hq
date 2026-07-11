@@ -10,8 +10,9 @@
 | **`CORE_WORKFLOWS.md`** | **Solidified daily workflows — read before inventing loops** |
 | `COFOUNDER-CASTLE-OS-PRD.md` | Build authority (Castle UI / phases) |
 | `local-dashboard/` | Run: `python3 server.py` → http://127.0.0.1:8765/ |
+| `marketing-mini-intern/README.md` | Draft-Only Telegram → Hermes → five LinkedIn kits → Castle review/approval packet |
 
-**Push:** Core workflows + Castle commits are L1-local until Umair says **PUSH**.
+**Branch truth:** Castle is available on its reviewed feature branch; it is not merged to `main`. Read `marketing-mini-intern/PROJECT-STATE.md` for current shipped/designed/blocked truth.
 
 ## Two Cubicles
 
@@ -54,6 +55,7 @@ After every L1 or L2 session:
 | `hermes/ai-sdr-daily-brief-setup.md` | Enable checklist for AI SDR Telegram monitoring cron |
 | `replit-launch/` | Replit dashboard PRD, build prompt, UI spec, QA plan, and retrieval safety |
 | `replit-launch/flywheel-enhancements-spec.md` | Labyrinth observability, skill pipeline, QA gates, CodeBurn, and Kanban read-only spec |
+| `marketing-mini-intern/README.md` | MMI requirements, GitHub memory contract, build prompt, and first overnight UAT |
 | `README.md` | This file |
 
 See `../../05_Office_Hours_and_Session_Briefs/session-briefs/interactive-office-hours-dual-laptop-hermes-2026-06-19.md` for locked 7pm brief template.
