@@ -1,9 +1,9 @@
 {
   "updated_at": "2026-07-11T01:30:26-04:00",
-  "version": "0.3.0-castle-p1",
+  "version": "0.3.1-core-workflows",
   "data_freshness": "chat-updated",
   "data_note": "Seeded from L2 handoffs 2026-07-11 + active-context. Edit this file or use dashboard critique notes. Not live Hermes API.",
-  "north_star": "AgentOSync → $100K MRR via proof, delivery, and public-safe authority",
+  "north_star": "AgentOSync \u2192 $100K MRR via proof, delivery, and public-safe authority",
   "active_priority_order": [
     "AMAX Travel OS / QB operating truth",
     "Content Intel / AgentOSync OS launch series",
@@ -19,14 +19,15 @@
     "Meta/Google ads for Safar-E-Madina until UNLOCK PHASE 2 ADS + WhatsApp live"
   ],
   "tonight_chunk": {
-    "lane": "Safar",
-    "task": "Funnel map",
-    "done_means": "path on L2",
-    "primary_tool": "Telegram → L2 Hermes",
+    "lane": "Ops / solidify",
+    "task": "Run CORE_WORKFLOWS daily loop (WF-01 + one ship lane); push only after \u00a77 checklist",
+    "done_means": "Umair accepts CORE_WORKFLOWS.md + names PUSH target branch or defers push",
+    "primary_tool": "Castle + Telegram L2",
     "do_not_open": [
-      "MCP install",
-      "Meta ads",
-      "localhost Hermes dashboard fantasy"
+      "git push without PUSH",
+      "reset --hard on L2",
+      "Phase 3 Telegram bridge",
+      "Meta ads"
     ]
   },
   "l1": {
@@ -115,7 +116,7 @@
       "path": "/tmp/b.md",
       "readiness": "REVIEW",
       "approval": "none",
-      "ready_block": "READY blocked — approval field is 'none'"
+      "ready_block": "READY blocked \u2014 approval field is 'none'"
     }
   ],
   "lanes": {
@@ -149,7 +150,7 @@
       "status": "active",
       "goal": "14-day launch series drafts + Loom blueprint",
       "blockers": [
-        "Day-1 pack drafted — not published",
+        "Day-1 pack drafted \u2014 not published",
         "Keep separate from Safar-E-Madina brand"
       ],
       "next_actions": [
@@ -301,13 +302,17 @@
   "prompts": {
     "ping": "PING",
     "ping_mac_off": "PING MAC-OFF",
-    "safar_seed": "SAFAR BRIEF — store memory + write 04_briefs\\SAFAR_E_MADINA_BRIEF.md (see safar-e-madina-cofounder-brief.md)",
-    "safar_funnel": "SAFAR FUNNEL → 01_content_drafts\\safar-e-madina\\2026-07-11-funnel-map.md",
-    "safar_content": "SAFAR CONTENT → 01_content_drafts\\safar-e-madina\\2026-07-11-content-pack.md",
-    "amax_checklist": "MISSION AMAX reclass checklist → 02_amax_drafts\\2026-07-11-reclass-checklist.md",
-    "run_autostart": "RUN AUTOSTART — Task Scheduler for neuralsync-intern-builder gateway"
+    "safar_seed": "SAFAR BRIEF \u2014 store memory + write 04_briefs\\SAFAR_E_MADINA_BRIEF.md (see safar-e-madina-cofounder-brief.md)",
+    "safar_funnel": "SAFAR FUNNEL \u2192 01_content_drafts\\safar-e-madina\\2026-07-11-funnel-map.md",
+    "safar_content": "SAFAR CONTENT \u2192 01_content_drafts\\safar-e-madina\\2026-07-11-content-pack.md",
+    "amax_checklist": "MISSION AMAX reclass checklist \u2192 02_amax_drafts\\2026-07-11-reclass-checklist.md",
+    "run_autostart": "RUN AUTOSTART \u2014 Task Scheduler for neuralsync-intern-builder gateway"
   },
   "sources": [
+    {
+      "name": "Core Workflows (solidified)",
+      "path": "1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/04_Mission_Control_Dashboard/mission-control/CORE_WORKFLOWS.md"
+    },
     {
       "name": "Fast path state",
       "path": "1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md"
