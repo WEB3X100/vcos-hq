@@ -1,0 +1,312 @@
+{
+  "updated_at": "2026-07-11T01:01:45-04:00",
+  "version": "0.3.0-castle-p1",
+  "data_freshness": "chat-updated",
+  "data_note": "Seeded from L2 handoffs 2026-07-11 + active-context. Edit this file or use dashboard critique notes. Not live Hermes API.",
+  "north_star": "AgentOSync → $100K MRR via proof, delivery, and public-safe authority",
+  "active_priority_order": [
+    "AMAX Travel OS / QB operating truth",
+    "Content Intel / AgentOSync OS launch series",
+    "Safar-E-Madina funnel + content (Phase 1)",
+    "Premium FDE / AI-Native ERP Consultant",
+    "Workplace AI Trading Coach (plan only)",
+    "AgentOSync GTM"
+  ],
+  "parked": [
+    "Dealership Sameer/Uzair",
+    "Barbershop live demo commercial",
+    "Restaurants",
+    "Meta/Google ads for Safar-E-Madina until UNLOCK PHASE 2 ADS + WhatsApp live"
+  ],
+  "tonight_chunk": {
+    "lane": "Safar",
+    "task": "Funnel map",
+    "done_means": "path on L2",
+    "primary_tool": "Telegram → L2 Hermes",
+    "do_not_open": [
+      "MCP install",
+      "Meta ads",
+      "localhost Hermes dashboard fantasy"
+    ]
+  },
+  "l1": {
+    "name": "Main Mac Sentinel",
+    "device": "macOS",
+    "channel": "VS Code / Grok Build / this dashboard",
+    "status": "active_when_open",
+    "role": "Approvals, ClickUp truth, heavy IDE, critique this dashboard"
+  },
+  "l2": {
+    "name": "VCOS Co-Founder",
+    "device": "L2-Windows gaming laptop",
+    "channel": "Telegram (home) + CLI",
+    "profile": "neuralsync-intern-builder",
+    "model": "grok-4.3",
+    "provider": "xai-oauth",
+    "gateway": "running_manual",
+    "dashboard_localhost": false,
+    "mcp_configured": false,
+    "handoffs_root": "C:\\Users\\92324\\VCOS-Coordination\\vcos-hq\\cofounder-handoffs\\",
+    "workdir": "C:\\Users\\92324\\VCOS-Coordination\\vcos-hq",
+    "mac_off_ping": "PASS 2026-07-11 00:08",
+    "working_contract": "04_briefs\\WORKING_CONTRACT.md",
+    "status": "active",
+    "commands": [
+      "/new",
+      "PING",
+      "BRIEF",
+      "MISSION",
+      "CONTENT",
+      "BUILD",
+      "HANDOFF",
+      "STOP",
+      "TRAVEL ON/OFF",
+      "UNLOCK STEP X",
+      "SAFAR BRIEF",
+      "SAFAR CONTENT",
+      "SAFAR FUNNEL",
+      "SAFAR ADS"
+    ]
+  },
+  "ships": [
+    {
+      "id": "ship-001",
+      "date": "2026-07-11",
+      "lane": "Content",
+      "title": "AgentOSync day-1 LinkedIn pack",
+      "path": "cofounder-handoffs\\01_content_drafts\\2026-07-11-agentosync-day1.md",
+      "status": "draft_ready",
+      "approval": "human",
+      "readiness": "DRAFT"
+    },
+    {
+      "id": "ship-002",
+      "date": "2026-07-11",
+      "lane": "Ops",
+      "title": "Working Contract",
+      "path": "cofounder-handoffs\\04_briefs\\WORKING_CONTRACT.md",
+      "status": "done",
+      "approval": "none",
+      "readiness": "DRAFT"
+    },
+    {
+      "id": "ship-003",
+      "date": "2026-07-11",
+      "lane": "Safar",
+      "title": "test ship",
+      "path": "/tmp/x.md",
+      "readiness": "DRAFT",
+      "approval": "human"
+    }
+  ],
+  "lanes": {
+    "amax": {
+      "name": "AMAX Travel OS / QB",
+      "priority": 1,
+      "status": "active",
+      "goal": "July-close-forward operating truth; CEO dashboard drafts",
+      "blockers": [
+        "Reclass through July still in flight",
+        "No QBO mutation without approval"
+      ],
+      "next_actions": [
+        "L2: AMAX reclass checklist draft under 02_amax_drafts",
+        "Umair: source reports when ready for mapping"
+      ],
+      "handoff_folder": "02_amax_drafts",
+      "gates": [
+        "No QBO write",
+        "No client finance email as agent"
+      ]
+    },
+    "content_intel": {
+      "name": "Content Intel / AgentOSync",
+      "priority": 2,
+      "status": "active",
+      "goal": "14-day launch series drafts + Loom blueprint",
+      "blockers": [
+        "Day-1 pack drafted — not published",
+        "Keep separate from Safar-E-Madina brand"
+      ],
+      "next_actions": [
+        "Review day-1 pack; APPROVED LINKEDIN + # or revise",
+        "Content day-2 pack on L2"
+      ],
+      "handoff_folder": "01_content_drafts",
+      "gates": [
+        "Draft-only until APPROVED LINKEDIN",
+        "No fake proof"
+      ]
+    },
+    "safar": {
+      "name": "Safar-E-Madina",
+      "priority": 2,
+      "status": "active_phase1",
+      "live_url": "https://safar-e-madina.replit.app/",
+      "github": "https://github.com/WEB3X100/Safar-E-Medina",
+      "goal": "Phase 1: organic content + funnel; WhatsApp CTA live",
+      "blockers": [
+        "WhatsApp number NOT configured on live site",
+        "Phase 2 Meta/Google ads locked"
+      ],
+      "next_actions": [
+        "Human: set WHATSAPP_NUMBER on site",
+        "L2: SAFAR BRIEF seed + SAFAR FUNNEL map",
+        "L2: SAFAR CONTENT day-1 pack"
+      ],
+      "handoff_folder": "01_content_drafts\\safar-e-madina",
+      "gates": [
+        "No Meta/Google until UNLOCK PHASE 2 ADS",
+        "Indicative pricing only",
+        "No Amax private P&L in public posts"
+      ],
+      "phase1": [
+        "content",
+        "funnel map",
+        "qualify script",
+        "UTM lite"
+      ],
+      "phase2": [
+        "Meta ads",
+        "Google ads",
+        "retargeting"
+      ]
+    },
+    "fde": {
+      "name": "Premium FDE / AI-Native ERP",
+      "priority": 3,
+      "status": "active",
+      "goal": "Resume/site + evidence packs toward July 14 metrics",
+      "next_actions": [
+        "Public-safe evidence pack drafts",
+        "John-gated public motion"
+      ],
+      "gates": [
+        "No confidential client material"
+      ]
+    },
+    "trading": {
+      "name": "Trading Coach / Hedge Fund Journey",
+      "priority": 4,
+      "status": "planning",
+      "goal": "Phase 1 game plan only",
+      "gates": [
+        "No live trading",
+        "No broker write"
+      ]
+    },
+    "gtm": {
+      "name": "AgentOSync GTM",
+      "priority": 5,
+      "status": "active_behind",
+      "goal": "Proof distribution after Content + AMAX",
+      "gates": [
+        "Draft-only outbound"
+      ]
+    }
+  },
+  "approvals_queue": [
+    {
+      "id": "ap-001",
+      "item": "Publish AgentOSync LinkedIn day-1 pack",
+      "type": "publish",
+      "status": "waiting",
+      "say": "APPROVED LINKEDIN + draft number",
+      "say_phrase": "APPROVED LINKEDIN + draft number"
+    },
+    {
+      "id": "ap-002",
+      "item": "L2 gateway Task Scheduler autostart",
+      "type": "infra",
+      "status": "waiting",
+      "say": "RUN AUTOSTART",
+      "say_phrase": "RUN AUTOSTART"
+    },
+    {
+      "id": "ap-003",
+      "item": "Safar-E-Madina Phase 2 Meta/Google ads",
+      "type": "spend_ads",
+      "status": "blocked",
+      "say": "UNLOCK PHASE 2 ADS (after WhatsApp live + budget)",
+      "say_phrase": "UNLOCK PHASE 2 ADS (after WhatsApp live + budget)"
+    },
+    {
+      "id": "ap-004",
+      "item": "Any QBO / CRM / client outbound",
+      "type": "mutation",
+      "status": "blocked",
+      "say": "Explicit APPROVED + target",
+      "say_phrase": "Explicit APPROVED + target"
+    }
+  ],
+  "clickup": {
+    "primary_view": "https://app.clickup.com/9017760195/v/s/90175689274",
+    "async_a": "https://app.clickup.com/9017760195/v/f/90178817003/90175689274",
+    "async_b": "https://app.clickup.com/9017760195/v/f/90178817004/90175689274",
+    "hermes_list": "https://app.clickup.com/9017760195/v/li/901713786845"
+  },
+  "prompts": {
+    "ping": "PING",
+    "ping_mac_off": "PING MAC-OFF",
+    "safar_seed": "SAFAR BRIEF — store memory + write 04_briefs\\SAFAR_E_MADINA_BRIEF.md (see safar-e-madina-cofounder-brief.md)",
+    "safar_funnel": "SAFAR FUNNEL → 01_content_drafts\\safar-e-madina\\2026-07-11-funnel-map.md",
+    "safar_content": "SAFAR CONTENT → 01_content_drafts\\safar-e-madina\\2026-07-11-content-pack.md",
+    "amax_checklist": "MISSION AMAX reclass checklist → 02_amax_drafts\\2026-07-11-reclass-checklist.md",
+    "run_autostart": "RUN AUTOSTART — Task Scheduler for neuralsync-intern-builder gateway"
+  },
+  "sources": [
+    {
+      "name": "Fast path state",
+      "path": "1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md"
+    },
+    {
+      "name": "Active context",
+      "path": "1_Command_Brain_Core/1.2_Headquarters_Memory/active-context.md"
+    },
+    {
+      "name": "L2 setup prompts",
+      "path": "1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/05_Office_Hours_and_Session_Briefs/session-briefs/dual-laptop-hermes/cofounder-laptop-setup-prompts.md"
+    },
+    {
+      "name": "L2 ship log",
+      "path": "1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/05_Office_Hours_and_Session_Briefs/session-briefs/dual-laptop-hermes/l2-ship-log-2026-07-11.md"
+    },
+    {
+      "name": "Safar-E-Madina brief",
+      "path": "1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/05_Office_Hours_and_Session_Briefs/session-briefs/dual-laptop-hermes/safar-e-madina-cofounder-brief.md"
+    },
+    {
+      "name": "Hermes SuperGrok playbook",
+      "path": "1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/hermes-supergrok-vcos-playbook.md"
+    }
+  ],
+  "critique": {
+    "instructions": "Use the Critique tab. Notes save in browser localStorage. Paste into Telegram or commit later.",
+    "wanted": [
+      "Which tabs do you open every day?",
+      "What is missing for 10x shipping?",
+      "What feels fake or noisy?",
+      "Should dark Hermes aesthetic stay or switch light?"
+    ]
+  },
+  "obsidian": {
+    "vault_path": "",
+    "home_note": "Home.md",
+    "fast_path": [
+      "AGENTS.md",
+      "1_Command_Brain_Core/1.2_Headquarters_Memory/ubiquitous_language.md",
+      "1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md",
+      "1_Command_Brain_Core/1.2_Headquarters_Memory/active-context.md",
+      "1_Command_Brain_Core/1.2_Headquarters_Memory/key-workspaces.md"
+    ]
+  },
+  "jarvis": {
+    "agents": [
+      "neuralsync-intern-builder"
+    ],
+    "gateway_note": "running_manual",
+    "cron_jobs": [],
+    "source": "local state mirror (human-observed)",
+    "last_checked": "2026-07-11T01:01:28-04:00"
+  }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>VCOS Co-Founder Castle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="brand-mark">V</div>
+          <div>
+            Co-Founder Castle
+            <small id="version-label">loading</small>
+          </div>
+        </div>
+        <div class="freshness">
+          <span class="dot" id="fresh-dot"></span>
+          <span id="fresh-text">Loading…</span>
+        </div>
+        <div class="topbar-right">
+          <button class="btn" type="button" id="btn-reload">Reload state</button>
+          <button class="btn primary" type="button" id="btn-copy-tonight">
+            Copy tonight
+          </button>
+        </div>
+      </header>
+
+      <nav class="castle-map" id="castle-map" aria-label="Castle Map rooms"></nav>
+      <div class="cmd-strip" id="cmd-strip" aria-label="Tonight command strip"></div>
+      <main class="main" id="main" role="main">
+        <p class="mono">Loading…</p>
+      </main>
+    </div>
+    <div class="toast" id="toast" role="status"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

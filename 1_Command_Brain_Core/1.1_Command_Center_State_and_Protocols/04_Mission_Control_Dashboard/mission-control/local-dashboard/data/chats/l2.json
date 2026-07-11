@@ -1,0 +1,47 @@
+{
+  "channel": "l2",
+  "label": "L2 Co-Founder (Telegram)",
+  "messages": [
+    {
+      "id": "seed-l2",
+      "role": "system",
+      "content": "L2 chat ready. Messages are QUEUED for Telegram — not auto-pushed to Hermes.\nCopy outbox → paste in Telegram to L2 (neuralsync-intern-builder).\nSlash commands still update this OS (state.json).",
+      "ts": "2026-07-11T00:00:00",
+      "meta": {
+        "kind": "seed"
+      }
+    },
+    {
+      "id": "l2-1783743567148",
+      "role": "user",
+      "content": "PING MAC-OFF",
+      "ts": "2026-07-11T00:19:27-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l2-1783743567148",
+      "role": "system",
+      "content": "Queued for L2 Telegram (NOT auto-sent).\nOutbox: l2-telegram-queue.md\nCopy the block into Telegram on your phone/Mac, or use Copy outbox in the UI.\nTo update OS from L2 results, paste handoffs here with /ship add …",
+      "ts": "2026-07-11T00:19:27-04:00",
+      "meta": {
+        "kind": "l2_queue"
+      }
+    },
+    {
+      "id": "l2-1783746105588",
+      "role": "user",
+      "content": "phase1-script-probe",
+      "ts": "2026-07-11T01:01:45-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l2-1783746105588",
+      "role": "system",
+      "content": "Queued locally — not sent to Hermes or Telegram.\nOutbox file: l2-telegram-queue.md\nHuman pastes into Telegram when ready. Use Copy outbox in Chat Hall.",
+      "ts": "2026-07-11T01:01:45-04:00",
+      "meta": {
+        "kind": "l2_queue"
+      }
+    }
+  ]
+}

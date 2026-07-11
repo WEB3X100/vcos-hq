@@ -1,0 +1,117 @@
+{
+  "channel": "l1",
+  "label": "Main Mac / Sentinel",
+  "messages": [
+    {
+      "id": "seed-l1",
+      "role": "system",
+      "content": "L1 chat ready. You are talking to Main Mac / Mission Control OS.\n• /help for OS slash commands\n• Free text saved here; set XAI_API_KEY for model replies\n• Use L2 box for co-founder / Telegram queue",
+      "ts": "2026-07-11T00:00:00",
+      "meta": {
+        "kind": "seed"
+      }
+    },
+    {
+      "id": "l1-1783743567117",
+      "role": "user",
+      "content": "/help",
+      "ts": "2026-07-11T00:19:27-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783743567117",
+      "role": "system",
+      "content": "Slash commands (update OS / state.json):\n\n/help\n/tonight <lane> | <task> | <done means>\n/l2 status <text>\n/l2 model <text>\n/ship add <lane> | <title> | <path>\n/approval add <item> | <say phrase>\n/approval done <id>\n/park add <item>\n/priority show\n/note <critique note>\n/safar blocker <text>\n\nL1 free text: saved here. If XAI_API_KEY is set, optional model reply.\nL2 free text: queued for Telegram (copy outbox) — not auto-sent to Hermes.\n",
+      "ts": "2026-07-11T00:19:27-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783743567176",
+      "role": "user",
+      "content": "/tonight Safar | Seed funnel | SAFAR FUNNEL file on L2",
+      "ts": "2026-07-11T00:19:27-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783743567177",
+      "role": "system",
+      "content": "OS updated tonight_chunk:\n- lane: Safar\n- task: Seed funnel\n- done: SAFAR FUNNEL file on L2",
+      "ts": "2026-07-11T00:19:27-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783746105575",
+      "role": "user",
+      "content": "/approval done ap-001",
+      "ts": "2026-07-11T01:01:45-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783746105575",
+      "role": "system",
+      "content": "[No state change]\nUnknown form. /approval done is retired because it sounds like a human sign-off.\nUse: /approval clear <id>\nThat only clears the local display queue — it does not perform the human sign-off or any external action.",
+      "ts": "2026-07-11T01:01:45-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783746105604",
+      "role": "user",
+      "content": "/tonight onlyone",
+      "ts": "2026-07-11T01:01:45-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783746105604",
+      "role": "system",
+      "content": "[No state change]\nFormat: /tonight <lane> | <task> | <done means>  (all three segments required)",
+      "ts": "2026-07-11T01:01:45-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": false
+      }
+    },
+    {
+      "id": "l1-1783746105619",
+      "role": "user",
+      "content": "/tonight Safar | Funnel map | path on L2",
+      "ts": "2026-07-11T01:01:45-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783746105620",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state (tonight_chunk):\n- lane: Safar\n- task: Funnel map\n- done_means: path on L2",
+      "ts": "2026-07-11T01:01:45-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    },
+    {
+      "id": "l1-1783746105648",
+      "role": "user",
+      "content": "/ship add Safar | test ship | /tmp/x.md",
+      "ts": "2026-07-11T01:01:45-04:00",
+      "meta": {}
+    },
+    {
+      "id": "l1-1783746105648",
+      "role": "system",
+      "content": "[Updated local Castle state]\nUpdated local Castle state: ship ship-003 recorded (readiness DRAFT). Human sign-off still required before any external use.",
+      "ts": "2026-07-11T01:01:45-04:00",
+      "meta": {
+        "kind": "os",
+        "state_changed": true
+      }
+    }
+  ]
+}
