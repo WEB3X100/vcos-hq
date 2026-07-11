@@ -4,7 +4,7 @@
 **Observed L1 branch:** `main` with extensive uncommitted HQ restructuring
 **Remote Castle branch observed by L1:** `origin/castle/core-workflows-2026-07-11` at `40253c5` during the Castle interrogation
 **Observed L2 state:** `main`, clean tracked tree, untracked `.hermes/` and `cofounder-handoffs/`; Castle/MMI interfaces absent
-**Published coordination branch:** `codex/hermes-marketing-mini-intern` at `a96b3fd` (first packet commit)  
+**Published coordination branch:** `codex/hermes-marketing-mini-intern` at `a96b3fd` (first packet commit)
 **Status:** Design packet pushed for L2 preflight; not merged and not implemented
 
 ## North star
