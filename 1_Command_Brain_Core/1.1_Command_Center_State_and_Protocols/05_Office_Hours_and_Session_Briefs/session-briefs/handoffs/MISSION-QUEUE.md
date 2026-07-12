@@ -1,19 +1,20 @@
 # Mission Queue — L2 NeuralSync Intern
 
-**Updated:** 2026-07-11  
+**Updated:** 2026-07-11 (VCOS-STAB-03 flywheel init)  
 **Poll:** Read `MC/state.json` before every L2 session.  
-**Path constants:** `MC=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control` · `HANDOFFS=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/handoffs`
+**Path constants:** `MC=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/mission-control` · `HANDOFFS=` `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/05_Office_Hours_and_Session_Briefs/session-briefs/handoffs`
 
 ## Active mission
 
 | Field | Value |
 | --- | --- |
-| **ID** | `content-intel-day2-2026-07-12` |
-| **Priority** | P0 — Content Intel launch series |
-| **Assignment** | `cofounder-handoffs/04_briefs/l1-content-intel-2026-07-11.md` |
-| **Branch** | `l2/content-intel-day2-2026-07-12` |
-| **Status** | `queued` — Loop A complete; awaiting L2 pickup |
-| **Assigned by** | Grok (L1) + Umair |
+| **ID** | `VCOS-STAB-03` |
+| **Priority** | P0 — dual-laptop flywheel proof (docs only) |
+| **Assignment** | `HANDOFFS/l1-vcos-stab-03-2026-07-11.md` |
+| **Branch** | `feature/vcos-stab-03-init-docs` |
+| **Status** | `queued` — awaiting L2 pickup |
+| **Assigned by** | L1 Sentinel (Grok) + Umair |
+| **Time box** | 60 min |
 
 ## Completed
 
@@ -29,7 +30,8 @@
 | 2 | VCOS HQ hygiene: verify all `MC/` files present | pending |
 | 3 | Read `MC/dual-hermes-collaboration-protocol.md`; confirm workdir path | pending |
 | 4 | E3b: patch deferred `HANDOFFS/` path refs (MISSION-QUEUE + l1-week1 handoff) | optional — Umair decision |
-| 5 | Content Intel Day-3: Employee 01 Front Desk wedge | pending after Day-2 review |
+| 5 | `content-intel-day2-2026-07-12` — Content Intel Day-2 pack | parked after STAB-03 |
+| 6 | Content Intel Day-3: Employee 01 Front Desk wedge | pending |
 
 ## Idle rule
 

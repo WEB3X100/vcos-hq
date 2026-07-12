@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11T12:00:00-04:00",
+  "updated_at": "2026-07-11T18:00:00-04:00",
   "week": 1,
   "flywheel": {
     "delegation_level": "L1",
@@ -52,13 +52,13 @@
     "channel": "telegram",
     "profile": "neuralsync-intern-builder",
     "status": "queued",
-    "active_mission": "content-intel-day2-2026-07-12",
-    "active_branch": "l2/content-intel-day2-2026-07-12",
+    "active_mission": "VCOS-STAB-03",
+    "active_branch": "feature/vcos-stab-03-init-docs",
     "last_push": "2026-06-21T01:40:00-04:00",
-    "last_session": "Grok↔L2 loop handshake complete; Loop A spec queued",
+    "last_session": "VCOS-STAB-03 queued — dual-laptop flywheel init (docs only)",
     "pending_decisions_for_umair": [
-      "L2: git pull, read cofounder-handoffs/04_briefs/l1-content-intel-2026-07-11.md, execute SHIP",
-      "Umair: review drafts when READINESS: DRAFT_REVIEW arrives on Telegram"
+      "L2: run tailscale-verify.ps1, then execute VCOS-STAB-03 per l1-vcos-stab-03-2026-07-11.md",
+      "L1: review feature/vcos-stab-03-init-docs PR after L2 SHIP; merge authority on Mac only"
     ]
   },
   "github": {
@@ -87,12 +87,12 @@
     }
   },
   "tonight_chunk": {
-    "lane": "Dual-Hermes Week 1",
-    "task": "GSD dual-terminal eval + P0 path patches",
-    "done_means": "eval merged to main; Grok↔Hermes bus proven; avg 4.6/5",
-    "status": "complete",
-    "l1_complete": "Merged l2/gsd-dual-terminal-eval-2026-06-20; updated state",
-    "l2_complete": "E1–E8 PASS; 8 P0 docs patched; idle"
+    "lane": "Dual-Laptop Flywheel",
+    "task": "VCOS-STAB-03 — docs-only git transport proof",
+    "done_means": "feature/vcos-stab-03-init-docs pushed; vcos-stab-03-handoff.md; L1 merge review",
+    "status": "queued",
+    "l1_complete": "l1-vcos-stab-03-2026-07-11.md + tailscale-verify scripts pushed to main",
+    "l2_complete": null
   },
   "parking_lot": [
     "AMAX API/Postgres until Rooshan Phase 0 gate + reports loaded",
