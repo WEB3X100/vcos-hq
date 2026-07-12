@@ -11,6 +11,9 @@ Purpose: rules for how VCOS acts safely, reviews work, handles context, and impr
 | `context-mode-routing.md` | How to keep noisy context out of the main thread. |
 | `session-context-discipline.md` | When to compact, hand off, or reset. |
 | `recursive-self-improvement-loop.md` | Where repeated failures and reusable wins become system improvements. |
+| `loop-contract.md` | Master contract for any recurring or unattended loop: Hermes crons/heartbeats, `/loop`, VPS jobs. Ceilings, role boundaries, validation exit, stop conditions. |
+| `templates/validation-contract-template.md` | Prewritten assertions before implementation or a cron's first run. |
+| `templates/handoff-packet-template.md` | Standard output format for handoffs and Hermes cron runs. |
 | `secret-handling.md` | Secret and credential safety. |
 | `four-c-audit.md` | Context, Connections, Capabilities, Cadence audit. |
 

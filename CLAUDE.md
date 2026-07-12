@@ -10,22 +10,23 @@ Before doing work, read these files in order:
 
 1. `AGENTS.md`
 2. `1_Command_Brain_Core/1.2_Headquarters_Memory/ubiquitous_language.md`
-3. `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state.md`
+3. `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md`
 4. `1_Command_Brain_Core/1.2_Headquarters_Memory/active-context.md`
 5. `1_Command_Brain_Core/1.2_Headquarters_Memory/key-workspaces.md`
 
 Then load the smallest relevant interface:
 
-- HQ operations: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/operating-system.md`
-- Power AI usage: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/claude-power-user-playbook.md`
-- Session/context discipline: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-context-discipline.md`
-- Recursive self-improvement: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/recursive-self-improvement-loop.md`
+- HQ operations: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/operating-system.md`
+- Power AI usage: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/claude-power-user-playbook.md`
+- Session/context discipline: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/session-context-discipline.md`
+- Recursive self-improvement: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/recursive-self-improvement-loop.md`
+- Loops, crons, heartbeats (any recurring or unattended job, including all Hermes crons): `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/loop-contract.md`
 - Strategic prompting: `1_Command_Brain_Core/1.2_Headquarters_Memory/prompting-principles.md`
-- Workflow architecture: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/business-service-broker-pattern.md`
-- Managed/runtime evaluation: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/managed-agent-runtime-evaluation.md`
-- Hermes + SuperGrok persistent agent playbook (profiles, sessions, crons, scanner, memory seeding, Imagine/TTS): `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/hermes-supergrok-vcos-playbook.md`
-- Approval gates: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/approval-gates.md`
-- Automations: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/automation-registry.md`
+- Workflow architecture: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/06_Activation_Audits_and_Strategy/business-service-broker-pattern.md`
+- Managed/runtime evaluation: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/managed-agent-runtime-evaluation.md`
+- Hermes + SuperGrok persistent agent playbook (profiles, sessions, crons, scanner, memory seeding, Imagine/TTS): `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/hermes-supergrok-vcos-playbook.md`
+- Approval gates: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/approval-gates.md`
+- Automations: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/03_Execution_Surfaces_and_Integrations/automation-registry.md`
 - Skills: `4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/vcos-task-skill-map.md`
 - Claude Project context packets: `1_Command_Brain_Core/1.4_Agent_Context_Packets/claude-project/README.md`
 - Domain work: `2_Domain_Packs/<domain>/README.md`
@@ -51,7 +52,7 @@ Every session should answer internally:
 - Save raw/noisy material outside active memory.
 - Promote SOPs into skills only after repeated value.
 - Record durable decisions in `1_Command_Brain_Core/1.2_Headquarters_Memory/decisions.md`.
-- Update `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state.md` when blockers or next actions change.
+- Update `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md` when blockers or next actions change.
 
 ## Revenue-First Execution
 
@@ -66,7 +67,7 @@ Current compounding loops:
 
 Claude Code is the primary builder for these loops. Arsenal tools are parked unless they remove a blocker from the active sprint.
 
-Before expanding tools or routines, read `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/revenue-readiness-audit.md`. If shipped output, daily bottleneck, paid-pilot terms, Amax feedback, or variance risk is unknown, surface that as the blocker.
+Before expanding tools or routines, read `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/06_Activation_Audits_and_Strategy/revenue-readiness-audit.md`. If shipped output, daily bottleneck, paid-pilot terms, Amax feedback, or variance risk is unknown, surface that as the blocker.
 
 ## Core Routines
 
