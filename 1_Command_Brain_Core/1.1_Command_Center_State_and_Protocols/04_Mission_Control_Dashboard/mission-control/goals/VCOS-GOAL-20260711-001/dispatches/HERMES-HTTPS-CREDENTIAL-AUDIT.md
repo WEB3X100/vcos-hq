@@ -9,7 +9,11 @@ Preserve branch feature/vcos-stab-03-init-docs and commit bd3bf12c2c85e6034e4b69
 
 The remote is HTTPS. Do not create SSH keys, start ssh-agent, change transports, change the remote, erase/store credentials, open credential-manager UI, push, or edit repository/configuration files.
 
-Run from the repository root:
+Preferred execution when the goal artifact is available locally:
+
+bash 1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/04_Mission_Control_Dashboard/mission-control/goals/VCOS-GOAL-20260711-001/artifacts/https-credential-audit-git-bash.sh
+
+If the artifact cannot be fetched because transport is blocked, run these equivalent commands from the repository root:
 
 pwd
 git branch --show-current
@@ -84,4 +88,3 @@ next_action:
 
 Then stop.
 ```
-

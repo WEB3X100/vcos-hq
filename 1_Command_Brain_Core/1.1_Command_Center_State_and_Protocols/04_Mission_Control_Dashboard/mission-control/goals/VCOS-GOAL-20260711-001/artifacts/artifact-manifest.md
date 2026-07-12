@@ -15,3 +15,4 @@
 | `artifacts/ssh-identity-audit-git-bash.sh` | Codex | resumed cycle 3 | created | inspect then run on L2 |
 | `artifacts/SSH-IDENTITY-AUDIT.md` | Hermes L2 / Sentinel | resumed HTTPS correction | recorded and reviewed | inspect |
 | `dispatches/HERMES-HTTPS-CREDENTIAL-AUDIT.md` | Sentinel | resumed HTTPS correction | created | run on L2 |
+| `artifacts/https-credential-audit-git-bash.sh` | Codex | resumed HTTPS correction | created | inspect then run on L2 |

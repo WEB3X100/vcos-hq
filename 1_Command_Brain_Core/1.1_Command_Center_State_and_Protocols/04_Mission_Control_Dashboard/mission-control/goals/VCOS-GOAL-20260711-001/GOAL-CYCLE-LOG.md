@@ -67,3 +67,7 @@ Artifacts: `SSH-IDENTITY-AUDIT.md`, `HERMES-HTTPS-CREDENTIAL-AUDIT.md`
 Evidence binder: updated
 Evaluator verdict: continue
 Notes: The earlier `SSH_AUTH_FAILURE` classification does not explain Git operations because the configured remote is HTTPS. The next safe gate is noninteractive Git Credential Manager inspection; no key creation or remote change is authorized.
+
+### Resumed HTTPS audit-script update
+
+Remote feature branch remains absent. Packaged a bounded 30-second, noninteractive HTTPS credential audit script that reports helper/proxy presence and a classified `ls-remote` result without printing credential values or raw helper records.
