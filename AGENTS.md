@@ -7,7 +7,7 @@ You are operating inside VCOS Headquarters, the command brain for cross-client a
 Before executing any task, read these files in order:
 
 1. `1_Command_Brain_Core/1.2_Headquarters_Memory/ubiquitous_language.md`
-2. `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state.md`
+2. `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md`
 3. `1_Command_Brain_Core/1.2_Headquarters_Memory/active-context.md`
 4. `1_Command_Brain_Core/1.2_Headquarters_Memory/key-workspaces.md`
 
@@ -17,9 +17,9 @@ Then route the task through the smallest relevant interface. If the task belongs
 
 When the human says `office hours`, `GBrain office hours`, `grill this plan`, `dual-laptop Hermes`, `7pm brief setup`, or `NeuralSync intern activation`:
 
-1. Read `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/session-briefs/README.md` (router — do not search the laptop).
+1. Read `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/05_Office_Hours_and_Session_Briefs/session-briefs/README.md` (router — do not search the laptop).
 2. Open only the matched subject file from the router table.
-3. For dual-laptop Hermes work, read in order:
+3. For dual-laptop Hermes work, read in order (inside the router's `session-briefs/` folder above):
    - `session-briefs/dual-laptop-hermes/plan.md`
    - `session-briefs/gbrain-office-hours-dual-laptop-hermes-2026-06-19.md` (latest OH critique)
 4. Run `4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/gbrain-office-hours/SKILL.md` or gstack `/office-hours` on the subject plan.
@@ -79,17 +79,17 @@ Arsenal entries that get 3+ active uses should be flagged as skill candidates in
 - Use sub-agents or isolated execution for large builds, audits, scraping, or broad searches when available.
 - Route raw tool outputs, API responses, web scraping, large terminal logs, and browser snapshots through Context Mode when available.
 - If Context Mode is unavailable, manually compress raw output before bringing it into the main session. Keep only facts, decisions, errors, IDs, links, and next actions.
-- When a task produces a repeated failure, repeated correction, or reusable win, route it through `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/recursive-self-improvement-loop.md` instead of leaving the learning in chat history.
+- When a task produces a repeated failure, repeated correction, or reusable win, route it through `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/recursive-self-improvement-loop.md` instead of leaving the learning in chat history.
 - For persistent agent surfaces (Hermes Desktop + SuperGrok profiles): seed memory once with fast-path files + ubiquitous language + state summaries + decisions (brain-dump + "you are the VCOS persistent agent following AGENTS.md discipline"). Use dedicated slim sessions per project/lane. Prune skills. Give explicit feedback early so it self-improves. See hermes-supergrok-vcos-playbook.md. Never feed raw noisy logs or client data unless approved.
 
 ## GSD State Machine
 
 For headquarters-level work:
 
-- `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/project.md` is the vision.
-- `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/requirements.md` is the hard spec.
-- `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state.md` is the live decision and blocker file.
-- `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/roadmap.md` is the progress and sequencing file.
+- `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/project.md` is the vision.
+- `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/requirements.md` is the hard spec.
+- `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md` is the live decision and blocker file.
+- `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/roadmap.md` is the progress and sequencing file.
 
 Load only the state file required for the task.
 
@@ -107,7 +107,7 @@ When a human, Codex, Claude, or review process catches a repeated mistake:
 
 1. Add a negative constraint to this file or the relevant domain `README.md`.
 2. Add the decision to `1_Command_Brain_Core/1.2_Headquarters_Memory/decisions.md`.
-3. Add any active blocker to `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state.md`.
+3. Add any active blocker to `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md`.
 
 ## Browser And Session Safety
 
@@ -160,12 +160,14 @@ Default mode is Draft-Only until approval is recorded in ClickUp, Slack/Telegram
 
 The Sentinel may use Claude Code loops, Hermes/OpenClaw cron jobs (via Desktop or CLI), or scheduled automations to establish a heartbeat.
 
-Hermes Agent + SuperGrok (OAuth) with Hermes Desktop is the preferred persistent runtime for always-on memory, multi-session context hygiene, role-specific profiles (skills + soul.md + memories), artifacts (centralized assets), visible crons, and messaging gateways (Telegram/Slack/Signal for phone reach and approval surfaces). See `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/hermes-supergrok-vcos-playbook.md` for VCOS-specific profiles, memory seeding (ubiquitous language + state + decisions), adapted routines (scanner, briefs, content-intel), phase gates (starts Phase 0 read-only), and cost hygiene. Desktop sessions/folders + profile switching are superior to mono-thread chat apps for preventing context rot and cost bloat.
+Every recurring or unattended job — all Hermes crons and heartbeats included — carries a loop contract per `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/loop-contract.md` (per-cron autonomy ceiling, stop conditions, Skeptic validation exit, handoff-packet output).
+
+Hermes Agent + SuperGrok (OAuth) with Hermes Desktop is the preferred persistent runtime for always-on memory, multi-session context hygiene, role-specific profiles (skills + soul.md + memories), artifacts (centralized assets), visible crons, and messaging gateways (Telegram/Slack/Signal for phone reach and approval surfaces). See `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/hermes-supergrok-vcos-playbook.md` for VCOS-specific profiles, memory seeding (ubiquitous language + state + decisions), adapted routines (scanner, briefs, content-intel), phase gates (starts Phase 0 read-only), and cost hygiene. Desktop sessions/folders + profile switching are superior to mono-thread chat apps for preventing context rot and cost bloat.
 
 Default daily heartbeat:
 
 - Time: 8:00 AM America/Toronto.
-- Read `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state.md`.
+- Read `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md`.
 - Read `1_Command_Brain_Core/1.2_Headquarters_Memory/active-context.md`.
 - Fetch active ClickUp blockers when connector access is available.
 - Output a Daily Briefing to the configured human review surface: Slack, Telegram, ClickUp, or current thread.

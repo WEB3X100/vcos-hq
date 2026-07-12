@@ -246,7 +246,7 @@ Use this table when new material is thrown into HQ.
 | “Make this intern/workflow improve itself over time” | `recursive-self-improvement-loop.md`; define sensors, policy, tools, QA, feedback, learning update, and re-test. |
 | “Add a new useful repo/tool to my Swiss Army Knife” | `6_Arsenal/arsenal-index.md`; add problem tags and later promote if used repeatedly. |
 | “Clean up or migrate old references” | `5_Legacy_Reference_Archive/`; do not delete without migration index and approval. |
-| “Change ClickUp structure” | `1.1_Command_Center_State_and_Protocols/clickup/`; obey Airtable preservation snapshot gate first. |
+| “Change ClickUp structure” | `1.1_Command_Center_State_and_Protocols/03_Execution_Surfaces_and_Integrations/clickup/`; obey Airtable preservation snapshot gate first. |
 
 ## Obsidian Linking Rules
 
