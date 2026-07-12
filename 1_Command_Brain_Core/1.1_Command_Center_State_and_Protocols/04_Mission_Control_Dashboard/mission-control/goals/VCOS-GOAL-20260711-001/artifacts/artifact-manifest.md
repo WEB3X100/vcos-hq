@@ -12,3 +12,4 @@
 | `artifacts/adversarial-review.md` | Skeptic | 0 | created | inspect |
 | `artifacts/NEXT-MISSION-DRAFT.md` | Sentinel | 0 | created | review only |
 | `artifacts/SSH-REMEDIATION-MATRIX.md` | Sentinel | resumed cycle 3 | created | select only after identity audit |
+| `artifacts/ssh-identity-audit-git-bash.sh` | Codex | resumed cycle 3 | created | inspect then run on L2 |

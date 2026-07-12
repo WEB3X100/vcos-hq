@@ -43,3 +43,7 @@ Notes: The blocker is now classified as SSH authentication rather than general n
 ### Resumed Cycle 3 preparation update
 
 GitHub still has no `feature/vcos-stab-03-init-docs` ref. Added `SSH-REMEDIATION-MATRIX.md` so each supported audit result maps to one bounded, expiring, human-approved fix without another architecture round-trip.
+
+### Resumed Cycle 3 audit-script update
+
+Remote branch remains absent. Packaged the read-only identity audit as `ssh-identity-audit-git-bash.sh` to eliminate manual command transcription and constrain output to filenames, public fingerprints, effective host settings, and sanitized authentication trace lines.
