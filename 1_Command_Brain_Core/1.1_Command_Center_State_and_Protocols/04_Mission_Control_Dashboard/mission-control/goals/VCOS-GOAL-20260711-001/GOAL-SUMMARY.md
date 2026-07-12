@@ -14,7 +14,8 @@ Status: **blocked**
 | --- | --- | --- |
 | Git Bash diagnostic packet exists | PASS | dispatch and validated script in this goal directory |
 | Truthful L2 transport diagnostic obtained | PASS | `artifacts/TRANSPORT-DIAGNOSTIC-V2.md` proves SSH authentication failure |
-| Evidence-backed SSH fix selected | BLOCKED | `SSH_IDENTITY_AUDIT` not returned |
+| SSH identity audit obtained | PASS | `artifacts/SSH-IDENTITY-AUDIT.md` proves SSH is unused by the HTTPS remote |
+| Evidence-backed HTTPS fix selected | BLOCKED | `HTTPS_CREDENTIAL_AUDIT` not returned |
 | Verified remote branch/SHA | FAIL | final GitHub readback returned no feature ref |
 | Draft PR/evidence handoff | BLOCKED | remote branch is prerequisite |
 | Next bounded mission prepared | PASS | `artifacts/NEXT-MISSION-DRAFT.md` |
@@ -40,16 +41,19 @@ Status: **blocked**
 - `dispatches/HERMES-NEXT-5-STEPS.md`
 - `dispatches/HERMES-SSH-IDENTITY-AUDIT.md`
 - `artifacts/SSH-REMEDIATION-MATRIX.md`
+- `dispatches/HERMES-HTTPS-CREDENTIAL-AUDIT.md`
+- `artifacts/HTTPS-REMEDIATION-MATRIX.md`
+- `dispatches/HERMES-POST-AUTH-VERIFY-AND-PUSH.md`
 
 ## Blocker
 
-The Windows L2 environment completed `TRANSPORT_DIAGNOSTIC_V2`, proving an SSH authentication failure. It must now execute the prepared read-only identity audit and return `SSH_IDENTITY_AUDIT`. L1 cannot inspect the L2 SSH agent/key selection or repair its authentication from the Mac. No destructive or authentication-changing workaround is authorized.
+The Windows L2 environment completed the transport and SSH identity audits. Those results prove the repository uses HTTPS and the SSH failure is irrelevant to Git transport. L2 must now execute the prepared noninteractive HTTPS credential audit and return `HTTPS_CREDENTIAL_AUDIT`. L1 cannot inspect or repair the Windows credential helper from the Mac, and authentication requires human participation. No destructive or implicit transport-changing workaround is authorized.
 
 ## Resume condition
 
 Resume this goal when either:
 
-1. Hermes returns the complete `SSH_IDENTITY_AUDIT` packet; or
+1. Hermes returns the complete `HTTPS_CREDENTIAL_AUDIT` packet; or
 2. GitHub shows `feature/vcos-stab-03-init-docs` and its remote SHA can be compared with the full local SHA for `bd3bf12`.
 
 ## Do not do yet

@@ -75,3 +75,13 @@ Remote feature branch remains absent. Packaged a bounded 30-second, noninteracti
 ### Resumed HTTPS remediation update
 
 The audit result remains pending. Added `HTTPS-REMEDIATION-MATRIX.md` plus an inactive post-auth verification/push dispatch. After the audit, one human-approved action can flow directly into one noninteractive access check, one push attempt, and exact remote SHA readback.
+
+## HTTPS resumed blocked audit — 2026-07-11 America/Toronto
+
+Wave: final remote readback after three HTTPS-audit continuations
+Truths: 2 pass, 1 fail, 2 blocked
+Machine checks: local artifacts pass; remote feature ref fails; credential diagnosis/SHA/PR blocked
+Artifacts: HTTPS audit, remediation matrix, approval schema, post-auth dispatch, evidence binder
+Evidence binder: review-ready
+Evaluator verdict: blocked
+Notes: No `HTTPS_CREDENTIAL_AUDIT` arrived and the feature branch remains absent. Any next step would require guessing about or mutating L2 credentials, which is not authorized.
