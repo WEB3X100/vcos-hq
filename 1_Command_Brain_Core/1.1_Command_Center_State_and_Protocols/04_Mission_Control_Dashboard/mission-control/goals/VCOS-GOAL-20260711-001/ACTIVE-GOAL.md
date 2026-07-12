@@ -1,7 +1,7 @@
 ---
 goal_id: VCOS-GOAL-20260711-001
-status: active
-cycle: 1
+status: blocked
+cycle: 2
 project: WEB3X100/vcos-hq
 owner: Sentinel (Codex)
 created: 2026-07-11 America/Toronto
@@ -26,9 +26,9 @@ lanes: [codex, hermes-l2, skeptic, evidence]
 
 | Check | Command or method | Required result | Status | Evidence |
 | --- | --- | --- | --- | --- |
-| Remote branch exists | `git ls-remote --heads origin refs/heads/feature/vcos-stab-03-init-docs` | one row returned | UNKNOWN | `artifacts/machine-checks.md` |
-| Remote/local SHA agree | compare remote SHA with `bd3bf12` | exact match | UNKNOWN | `artifacts/machine-checks.md` |
-| Draft review surface exists | PR URL or GitHub comparison URL opens | URL recorded | UNKNOWN | `artifacts/evidence-ledger.md` |
+| Remote branch exists | `git ls-remote --heads origin refs/heads/feature/vcos-stab-03-init-docs` | one row returned | FAIL | `artifacts/machine-checks.md` |
+| Remote/local SHA agree | compare remote SHA with `bd3bf12` | exact match | BLOCKED | `artifacts/machine-checks.md` |
+| Draft review surface exists | PR URL or GitHub comparison URL opens | URL recorded | BLOCKED | `artifacts/evidence-ledger.md` |
 | Goal packet integrity | required files exist, script parses, and `git diff --check` exits 0 | PASS | PASS | `artifacts/machine-checks.md` |
 
 ## Non-goals
@@ -94,10 +94,10 @@ lanes: [codex, hermes-l2, skeptic, evidence]
 
 | # | Truth | Status | Evidence | Last cycle |
 | --- | --- | --- | --- | --- |
-| 1 | complete diagnostic | UNKNOWN | pending L2 dispatch | 0 |
-| 2 | evidence-backed fix | UNKNOWN | pending diagnostic | 0 |
-| 3 | remote SHA agreement | FAIL | remote branch absent on last L1 check | 0 |
-| 4 | draft review surface and handoff | FAIL | no remote branch or PR | 0 |
+| 1 | complete diagnostic | BLOCKED | no `TRANSPORT_DIAGNOSTIC_V2` returned from L2 | 2 |
+| 2 | evidence-backed fix | BLOCKED | diagnostic evidence is prerequisite | 2 |
+| 3 | remote SHA agreement | FAIL | GitHub still has no feature branch ref | 2 |
+| 4 | draft review surface and handoff | BLOCKED | no remote branch or PR can exist | 2 |
 | 5 | next mission draft prepared | PASS | verified one-file router-path mission in `artifacts/NEXT-MISSION-DRAFT.md` | 1 |
 
 ## Stop conditions
