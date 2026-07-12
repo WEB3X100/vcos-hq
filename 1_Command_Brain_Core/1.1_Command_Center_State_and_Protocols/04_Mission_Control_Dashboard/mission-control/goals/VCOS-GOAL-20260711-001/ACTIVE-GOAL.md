@@ -1,7 +1,7 @@
 ---
 goal_id: VCOS-GOAL-20260711-001
 status: active
-cycle: 0
+cycle: 1
 project: WEB3X100/vcos-hq
 owner: Sentinel (Codex)
 created: 2026-07-11 America/Toronto
@@ -98,7 +98,7 @@ lanes: [codex, hermes-l2, skeptic, evidence]
 | 2 | evidence-backed fix | UNKNOWN | pending diagnostic | 0 |
 | 3 | remote SHA agreement | FAIL | remote branch absent on last L1 check | 0 |
 | 4 | draft review surface and handoff | FAIL | no remote branch or PR | 0 |
-| 5 | next mission draft prepared | PASS | `artifacts/NEXT-MISSION-DRAFT.md` | 0 |
+| 5 | next mission draft prepared | PASS | verified one-file router-path mission in `artifacts/NEXT-MISSION-DRAFT.md` | 1 |
 
 ## Stop conditions
 

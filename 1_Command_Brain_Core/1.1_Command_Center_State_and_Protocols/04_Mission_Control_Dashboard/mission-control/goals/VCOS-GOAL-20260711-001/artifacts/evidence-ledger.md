@@ -6,5 +6,4 @@
 | 2 | fix is evidence-gated | `ACTIVE-GOAL.md` | inspect | diagnostic pending | UNKNOWN |
 | 3 | remote branch matches commit | remote GitHub ref | run | `git ls-remote` | FAIL |
 | 4 | draft review surface exists | PR/comparison URL | open | URL pending | FAIL |
-| 5 | next mission is prepared only | `NEXT-MISSION-DRAFT.md` | open | file exists | PASS |
-
+| 5 | next mission is fully bounded and not activated | `NEXT-MISSION-DRAFT.md` | open | one allowed file and exact validation contract | PASS |
