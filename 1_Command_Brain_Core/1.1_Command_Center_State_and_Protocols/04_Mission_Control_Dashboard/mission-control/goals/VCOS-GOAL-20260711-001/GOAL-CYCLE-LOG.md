@@ -71,3 +71,7 @@ Notes: The earlier `SSH_AUTH_FAILURE` classification does not explain Git operat
 ### Resumed HTTPS audit-script update
 
 Remote feature branch remains absent. Packaged a bounded 30-second, noninteractive HTTPS credential audit script that reports helper/proxy presence and a classified `ls-remote` result without printing credential values or raw helper records.
+
+### Resumed HTTPS remediation update
+
+The audit result remains pending. Added `HTTPS-REMEDIATION-MATRIX.md` plus an inactive post-auth verification/push dispatch. After the audit, one human-approved action can flow directly into one noninteractive access check, one push attempt, and exact remote SHA readback.
