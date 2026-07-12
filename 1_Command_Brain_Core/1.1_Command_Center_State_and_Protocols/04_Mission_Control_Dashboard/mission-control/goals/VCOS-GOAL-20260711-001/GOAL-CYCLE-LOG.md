@@ -39,3 +39,7 @@ Artifacts: `TRANSPORT-DIAGNOSTIC-V2.md`, `HERMES-SSH-IDENTITY-AUDIT.md`
 Evidence binder: updated
 Evaluator verdict: continue
 Notes: The blocker is now classified as SSH authentication rather than general networking. No configuration or credential change is authorized until the read-only audit identifies the smallest fix.
+
+### Resumed Cycle 3 preparation update
+
+GitHub still has no `feature/vcos-stab-03-init-docs` ref. Added `SSH-REMEDIATION-MATRIX.md` so each supported audit result maps to one bounded, expiring, human-approved fix without another architecture round-trip.

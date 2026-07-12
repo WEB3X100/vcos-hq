@@ -11,4 +11,4 @@
 | `artifacts/machine-checks.md` | Evidence | 0 | created | update after L2 result |
 | `artifacts/adversarial-review.md` | Skeptic | 0 | created | inspect |
 | `artifacts/NEXT-MISSION-DRAFT.md` | Sentinel | 0 | created | review only |
-
+| `artifacts/SSH-REMEDIATION-MATRIX.md` | Sentinel | resumed cycle 3 | created | select only after identity audit |
