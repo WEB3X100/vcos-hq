@@ -57,3 +57,13 @@ Artifacts: complete diagnostic, identity audit, remediation matrix, next mission
 Evidence binder: review-ready
 Evaluator verdict: blocked
 Notes: No `SSH_IDENTITY_AUDIT` has arrived and the feature branch remains absent. Continuing on L1 would require guessing or changing L2 credentials/configuration without evidence, which is prohibited.
+
+## Resumed HTTPS correction — 2026-07-11 America/Toronto
+
+Wave: ingest SSH identity audit and correct the transport hypothesis
+Truths: 2 pass, 1 fail, 2 unknown
+Machine checks: no SSH keys exist; SSH agent not running; origin uses HTTPS
+Artifacts: `SSH-IDENTITY-AUDIT.md`, `HERMES-HTTPS-CREDENTIAL-AUDIT.md`
+Evidence binder: updated
+Evaluator verdict: continue
+Notes: The earlier `SSH_AUTH_FAILURE` classification does not explain Git operations because the configured remote is HTTPS. The next safe gate is noninteractive Git Credential Manager inspection; no key creation or remote change is authorized.
