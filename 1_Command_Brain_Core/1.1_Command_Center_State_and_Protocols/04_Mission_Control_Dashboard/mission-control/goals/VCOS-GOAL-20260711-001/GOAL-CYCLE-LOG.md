@@ -85,3 +85,13 @@ Artifacts: HTTPS audit, remediation matrix, approval schema, post-auth dispatch,
 Evidence binder: review-ready
 Evaluator verdict: blocked
 Notes: No `HTTPS_CREDENTIAL_AUDIT` arrived and the feature branch remains absent. Any next step would require guessing about or mutating L2 credentials, which is not authorized.
+
+## Direct-helper test preparation — 2026-07-11 America/Toronto
+
+Wave: ingest HTTPS credential audit and isolate `helper-selector`
+Truths: 2 pass, 1 fail, 2 unknown
+Machine checks: GCM available; no proxy; selector-based noninteractive `ls-remote` times out
+Artifacts: `HTTPS-CREDENTIAL-AUDIT.md`, `HERMES-GCM-DIRECT-HELPER-TEST.md`
+Evidence binder: updated
+Evaluator verdict: continue
+Notes: Git for Windows documents `helper-selector` as the Portable Git default. A command-scoped empty-helper reset plus `manager` test will distinguish selector hang from missing credentials or deeper GCM/network failure without persisting changes.

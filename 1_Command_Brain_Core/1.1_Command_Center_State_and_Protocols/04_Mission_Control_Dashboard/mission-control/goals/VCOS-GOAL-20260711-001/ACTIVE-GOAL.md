@@ -1,6 +1,6 @@
 ---
 goal_id: VCOS-GOAL-20260711-001
-status: blocked
+status: active
 cycle: 3
 project: WEB3X100/vcos-hq
 owner: Sentinel (Codex)
@@ -95,7 +95,7 @@ lanes: [codex, hermes-l2, skeptic, evidence]
 | # | Truth | Status | Evidence | Last cycle |
 | --- | --- | --- | --- | --- |
 | 1 | complete diagnostic | PASS | L2 returned complete `TRANSPORT_DIAGNOSTIC_V2`: DNS/HTTPS pass, SSH 22 auth fails, SSH 443 blocked | 3 |
-| 2 | evidence-backed fix | BLOCKED | HTTPS credential audit not returned after three resumed continuations | 3 |
+| 2 | evidence-backed fix | UNKNOWN | audit implicates `helper-selector`; direct command-scoped `manager` test required | 3 |
 | 3 | remote SHA agreement | FAIL | GitHub still has no feature branch ref | 2 |
 | 4 | draft review surface and handoff | BLOCKED | no remote branch or PR can exist | 2 |
 | 5 | next mission draft prepared | PASS | verified one-file router-path mission in `artifacts/NEXT-MISSION-DRAFT.md` | 1 |
@@ -118,3 +118,7 @@ L2 returned `SSH_IDENTITY_AUDIT`. It has no SSH key, but `remote.origin.url` is 
 ### HTTPS audit blocker
 
 The bounded HTTPS audit, remediation matrix, approval schema, and inactive post-auth delivery dispatch are complete. L2 has not returned `HTTPS_CREDENTIAL_AUDIT`, and GitHub still has no feature branch ref. L1 cannot inspect or repair the Windows credential helper without that evidence and human participation in any authentication flow.
+
+### HTTPS credential evidence received
+
+L2 returned `HTTPS_CREDENTIAL_AUDIT`: Git 2.54.0.windows.1, GCM 2.7.3 available, no proxy, HTTPS origin, `credential.helper=helper-selector`, and noninteractive `ls-remote` timeout. Official Git for Windows notes identify `helper-selector` as the Portable Git default; official GCM configuration uses `manager`. The next safe test overrides the helper for one read-only command without changing persistent configuration.

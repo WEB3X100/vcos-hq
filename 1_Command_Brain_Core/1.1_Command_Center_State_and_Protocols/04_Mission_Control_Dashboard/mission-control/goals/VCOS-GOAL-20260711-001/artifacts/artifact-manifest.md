@@ -18,3 +18,5 @@
 | `artifacts/https-credential-audit-git-bash.sh` | Codex | resumed HTTPS correction | created | inspect then run on L2 |
 | `artifacts/HTTPS-REMEDIATION-MATRIX.md` | Sentinel | resumed HTTPS correction | created | select after audit only |
 | `dispatches/HERMES-POST-AUTH-VERIFY-AND-PUSH.md` | Sentinel | resumed HTTPS correction | created inactive | activate only with completed approval |
+| `artifacts/HTTPS-CREDENTIAL-AUDIT.md` | Hermes L2 / Sentinel | direct-helper preparation | recorded and reviewed | inspect |
+| `dispatches/HERMES-GCM-DIRECT-HELPER-TEST.md` | Sentinel | direct-helper preparation | created | run on L2 |
