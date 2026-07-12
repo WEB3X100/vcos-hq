@@ -47,3 +47,13 @@ GitHub still has no `feature/vcos-stab-03-init-docs` ref. Added `SSH-REMEDIATION
 ### Resumed Cycle 3 audit-script update
 
 Remote branch remains absent. Packaged the read-only identity audit as `ssh-identity-audit-git-bash.sh` to eliminate manual command transcription and constrain output to filenames, public fingerprints, effective host settings, and sanitized authentication trace lines.
+
+## Resumed blocked audit — 2026-07-11 America/Toronto
+
+Wave: final remote readback after three resumed turns
+Truths: 2 pass, 1 fail, 2 blocked
+Machine checks: local packet checks pass; remote feature ref fails; SHA and PR remain blocked
+Artifacts: complete diagnostic, identity audit, remediation matrix, next mission, evidence binder
+Evidence binder: review-ready
+Evaluator verdict: blocked
+Notes: No `SSH_IDENTITY_AUDIT` has arrived and the feature branch remains absent. Continuing on L1 would require guessing or changing L2 credentials/configuration without evidence, which is prohibited.

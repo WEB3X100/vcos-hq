@@ -1,6 +1,6 @@
 ---
 goal_id: VCOS-GOAL-20260711-001
-status: active
+status: blocked
 cycle: 3
 project: WEB3X100/vcos-hq
 owner: Sentinel (Codex)
@@ -95,7 +95,7 @@ lanes: [codex, hermes-l2, skeptic, evidence]
 | # | Truth | Status | Evidence | Last cycle |
 | --- | --- | --- | --- | --- |
 | 1 | complete diagnostic | PASS | L2 returned complete `TRANSPORT_DIAGNOSTIC_V2`: DNS/HTTPS pass, SSH 22 auth fails, SSH 443 blocked | 3 |
-| 2 | evidence-backed fix | UNKNOWN | read-only SSH identity audit required before proposing a change | 3 |
+| 2 | evidence-backed fix | BLOCKED | identity audit packet not returned after three resumed turns | 3 |
 | 3 | remote SHA agreement | FAIL | GitHub still has no feature branch ref | 2 |
 | 4 | draft review surface and handoff | BLOCKED | no remote branch or PR can exist | 2 |
 | 5 | next mission draft prepared | PASS | verified one-file router-path mission in `artifacts/NEXT-MISSION-DRAFT.md` | 1 |
@@ -106,3 +106,7 @@ lanes: [codex, hermes-l2, skeptic, evidence]
 - Transport remains blocked after the bounded diagnostic and one authorized fix.
 - Any request for secrets, destructive recovery, remote/auth change, merge, or external action.
 - Cycle or time budget reached.
+
+## Resumed-run blocker
+
+The read-only identity audit and diagnosis-specific remediation matrix are complete and pushed, but Windows L2 has not returned `SSH_IDENTITY_AUDIT`. GitHub still has no `feature/vcos-stab-03-init-docs` ref. No further L1 action can identify or alter the L2 SSH identity safely.
