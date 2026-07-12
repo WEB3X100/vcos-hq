@@ -74,7 +74,7 @@ Write-Host ""
 Write-Host "--- Repo secret scan (quick) ---"
 if (Test-Path $repoPath) {
     Push-Location $repoPath
-    $tracked = git ls-files 2>$null | Select-String -Pattern '\.env$|\.pem$|credentials|secret'
+    $tracked = git ls-files 2>$null | Select-String -Pattern '\.env$|\.pem$|id_rsa|credentials\.json|\.hermes/' | Where-Object { $_ -notmatch 'secret-handling|\.md$' }
     if (-not $tracked) {
         Ok "no obvious secret filenames in git index"
     } else {

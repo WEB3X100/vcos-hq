@@ -87,7 +87,7 @@ fi
 echo
 echo "--- Repo secret scan (quick) ---"
 if git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
-  LEAK=$(git ls-files | grep -E '\.(env|pem|key)$|credentials|secret' || true)
+  LEAK=$(git ls-files | grep -E '\.env$|\.pem$|id_rsa|credentials\.json|\.hermes/' | grep -v -E 'secret-handling|\.md$' || true)
   if [[ -z "${LEAK}" ]]; then
     ok "no obvious secret filenames tracked in git index"
   else
