@@ -33,6 +33,17 @@ Trigger this loop when:
 - a tracker shows a winning pattern
 - a task stalls because context, tool access, or approval rules were unclear
 - a client workflow produces reusable knowledge
+- a Hermes cron or other recurring loop fails, drifts, or trips a stop condition
+
+## Where Prevention Rules Land (Failed Hermes Crons / Loops)
+
+When a Hermes cron, heartbeat, or `/loop` run fails or stops per `loop-contract.md`:
+
+1. One-liner root cause in `1_Command_Brain_Core/1.2_Headquarters_Memory/decisions.md` (date + cron name + cause + rule).
+2. Fold the prevention rule into the cron prompt or memory seed before the next scheduled run.
+3. Re-test with one supervised run before returning the cron to unattended cadence.
+
+No new tracker or system — decisions.md one-liner plus updated cron definition is the complete loop.
 
 ## Failure Classifier
 

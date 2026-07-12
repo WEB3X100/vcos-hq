@@ -158,7 +158,7 @@ Key data location (critical to understand and back up): `~/.hermes/` (per-user).
 4. `hermes gateway setup` (messaging if approved later).
 5. Install and start persistent gateway (`hermes gateway install` + systemctl + lingering or `--system`).
 6. Seed VCOS identity (copy from Desktop seed or paste summaries + "Phase 0 read-only only" rules).
-7. Create/verify first safe cron (night brief or scanner) using reverse prompting. Confirm it appears in `hermes cron list` and runs.
+7. Create/verify first safe cron (night brief or scanner) using reverse prompting, with the loop contract block, a filled validation contract, and handoff-packet output format (templates under `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/templates/`). Confirm it appears in `hermes cron list` and runs.
 8. Reboot test + log monitoring.
 9. Backup `~/.hermes/`.
 10. Run first unattended output, review as human, log to ClickUp (AgentOSync view) + update playbook/decisions. Do not advance phase without explicit approval.
@@ -330,7 +330,7 @@ Tool sets: group related skills for complex VCOS workflows (e.g. "dealership-bri
 2. Connect SuperGrok via `hermes model` / Desktop model picker. Confirm Grok 4.3 + Imagine works in a test chat.
 3. Create the 3 starter profiles (VCOS-Brain-Grok first, then Scanner, Librarian).
 4. In VCOS-Brain-Grok: paste the memory seed block (core files + identity). Confirm it internalizes (ask it to restate priorities and ClickUp rule).
-5. Set up first cron (night brief or opportunity scanner) using reverse prompting in the right profile, with the loop contract block embedded (ceiling, stop conditions, handoff-packet output). Verify it appears in Desktop cron list.
+5. Set up first cron (night brief or opportunity scanner) using reverse prompting in the right profile, with the loop contract block embedded (ceiling, stop conditions, handoff-packet output). Before the first run, fill in `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/templates/validation-contract-template.md` for the cron, and require its output in the format of `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/01_Operating_Protocols_and_Guardrails/templates/handoff-packet-template.md`. Verify it appears in Desktop cron list.
 6. Create session folders for active lanes.
 7. Run one manual opportunity scan or night brief. Review output in Desktop. Give explicit feedback. Save the brief as draft artifact or handoff note.
 8. Drop any inspiration links into Librarian or a session; check Artifacts view.
