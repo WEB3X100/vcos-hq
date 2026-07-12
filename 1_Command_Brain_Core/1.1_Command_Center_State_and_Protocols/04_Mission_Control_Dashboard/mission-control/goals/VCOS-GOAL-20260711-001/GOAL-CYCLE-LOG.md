@@ -29,3 +29,13 @@ Artifacts: final evidence binder and blocked goal summary
 Evidence binder: review-ready
 Evaluator verdict: blocked
 Notes: The same missing L2 diagnostic and absent remote feature branch have persisted across the original goal turn and two automatic continuations. L1 has exhausted safe in-scope work; Windows execution or a transport-state change is required.
+
+## Resumed Cycle 3 — 2026-07-11 America/Toronto
+
+Wave: ingest truthful Windows transport diagnostic and prepare read-only SSH identity audit
+Truths: 2 pass, 1 fail, 2 unknown
+Machine checks: DNS and HTTPS pass; SSH authentication fails; SSH 443 blocked; remote SHA/PR blocked
+Artifacts: `TRANSPORT-DIAGNOSTIC-V2.md`, `HERMES-SSH-IDENTITY-AUDIT.md`
+Evidence binder: updated
+Evaluator verdict: continue
+Notes: The blocker is now classified as SSH authentication rather than general networking. No configuration or credential change is authorized until the read-only audit identifies the smallest fix.

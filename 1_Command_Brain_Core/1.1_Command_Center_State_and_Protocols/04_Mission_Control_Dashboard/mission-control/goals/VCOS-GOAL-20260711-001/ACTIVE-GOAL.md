@@ -1,7 +1,7 @@
 ---
 goal_id: VCOS-GOAL-20260711-001
-status: blocked
-cycle: 2
+status: active
+cycle: 3
 project: WEB3X100/vcos-hq
 owner: Sentinel (Codex)
 created: 2026-07-11 America/Toronto
@@ -94,8 +94,8 @@ lanes: [codex, hermes-l2, skeptic, evidence]
 
 | # | Truth | Status | Evidence | Last cycle |
 | --- | --- | --- | --- | --- |
-| 1 | complete diagnostic | BLOCKED | no `TRANSPORT_DIAGNOSTIC_V2` returned from L2 | 2 |
-| 2 | evidence-backed fix | BLOCKED | diagnostic evidence is prerequisite | 2 |
+| 1 | complete diagnostic | PASS | L2 returned complete `TRANSPORT_DIAGNOSTIC_V2`: DNS/HTTPS pass, SSH 22 auth fails, SSH 443 blocked | 3 |
+| 2 | evidence-backed fix | UNKNOWN | read-only SSH identity audit required before proposing a change | 3 |
 | 3 | remote SHA agreement | FAIL | GitHub still has no feature branch ref | 2 |
 | 4 | draft review surface and handoff | BLOCKED | no remote branch or PR can exist | 2 |
 | 5 | next mission draft prepared | PASS | verified one-file router-path mission in `artifacts/NEXT-MISSION-DRAFT.md` | 1 |
