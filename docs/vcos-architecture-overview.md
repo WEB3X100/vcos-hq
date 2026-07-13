@@ -1,6 +1,6 @@
 # VCOS Dual-Laptop Architecture Overview
 
-**VCOS HQ** is the canonical brain. GitHub serves as the coordination bus for all cross-laptop and multi-agent work.
+**VCOS HQ** is the canonical brain. GitHub is the coordination bus for all cross-laptop and multi-agent work.
 
 - **L1 (Mac)**: Sentinel with exclusive authority to merge to `main`. Owns orchestration, approvals, and final human gates.
 - **L2 (Windows)**: Bounded Builder. Operates exclusively on feature branches (`l2/*`), creates draft PRs, and never merges to `main` without explicit L1 approval.
