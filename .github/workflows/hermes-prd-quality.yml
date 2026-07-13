@@ -1,0 +1,43 @@
+name: Hermes PRD quality
+
+on:
+  pull_request:
+    paths:
+      - ".github/**"
+      - "AGENTS.md"
+      - "CLAUDE.md"
+      - "1_Command_Brain_Core/**/hermes-prd-*.md"
+      - "4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/hermes-prd-sprint-conductor/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out complete history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate canonical PRD
+        run: >-
+          python3
+          4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/hermes-prd-sprint-conductor/scripts/validate_prd.py
+          1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/hermes-prd-sprint-delivery-factory.md
+      - name: Prove placeholder template fails closed
+        shell: bash
+        run: |
+          if python3 \
+            4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/hermes-prd-sprint-conductor/scripts/validate_prd.py \
+            4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/hermes-prd-sprint-conductor/assets/PRD-TEMPLATE.md; then
+            echo "Untouched PRD template unexpectedly passed"
+            exit 1
+          fi
+      - name: Reject whitespace errors
+        run: git diff --check "origin/${{ github.base_ref }}...HEAD"

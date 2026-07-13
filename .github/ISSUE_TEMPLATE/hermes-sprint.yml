@@ -1,0 +1,72 @@
+name: Hermes engineering sprint
+description: Create one artifact-first, evidence-gated Hermes sprint.
+title: "[Hermes Sprint] "
+labels:
+  - hermes
+  - sprint
+body:
+  - type: markdown
+    attributes:
+      value: |
+        One issue equals one independently reviewable outcome. Do not use this form for a status-only task.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome and user value
+      description: Name the user, changed behavior, and measurable value.
+      placeholder: A specific user can do a specific thing with a measurable result.
+    validations:
+      required: true
+  - type: input
+    id: prd
+    attributes:
+      label: Approved PRD path
+      description: Repository path to the validator-passing PRD.
+      placeholder: path/to/product-prd.md
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: Paste the exact AC identifiers and observable results from the PRD.
+      placeholder: |
+        - AC-1: Given ..., when ..., then ...
+        - AC-2: Given ..., when ..., then ...
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Allowed files and non-goals
+      description: Freeze the paths this sprint may edit and state what it must not do.
+    validations:
+      required: true
+  - type: textarea
+    id: verification
+    attributes:
+      label: Verification commands
+      description: List the exact test, build, diff, and evidence commands.
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks, rollback, and approval gates
+      description: State rollback and every action that still requires a human.
+    validations:
+      required: true
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Sprint readiness
+      options:
+        - label: The PRD is approved and passes its validator.
+          required: true
+        - label: This issue represents one reviewable outcome.
+          required: true
+        - label: File ownership does not overlap another active sprint.
+          required: true
+        - label: Merge, deploy, external sends, publishing, spending, and client-system mutation remain human-gated.
+          required: true

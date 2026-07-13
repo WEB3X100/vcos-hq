@@ -33,6 +33,7 @@ Deliver a runnable VCOS skill candidate that converts an approved outcome into a
 | --- | --- | --- |
 | `AGENTS.md` | Bootstrap conductor | Add the delivery fast path and evidence rule. |
 | `CLAUDE.md` | Bootstrap conductor | Add runtime routing. |
+| `.github/ISSUE_TEMPLATE/hermes-sprint.yml`, `.github/pull_request_template.md`, `.github/workflows/hermes-prd-quality.yml` | Bootstrap conductor | Enforce the sprint contract and PRD quality in GitHub. |
 | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/hermes-*` | Bootstrap conductor | Add canonical PRD and sprint; update Hermes playbook. |
 | `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/00_Live_State_and_GSD/state.md` | Bootstrap conductor | Record the validation blocker. |
 | `1_Command_Brain_Core/1.2_Headquarters_Memory/decisions.md` | Bootstrap conductor | Record durable trust and authority decisions. |
@@ -58,6 +59,7 @@ Failure evidence -> gstack adaptation -> PRD contract -> skill and validator
 | S-3 | FR-6, FR-7, FR-8 | Completion audit, review, and fresh-verification gates | Bootstrap conductor | Skill validation | DONE |
 | S-4 | FR-9, FR-10, FR-11 | PR body, evidence rules, and circuit breaker | Bootstrap conductor | Positive/negative validator cases | DONE |
 | S-5 | FR-12 | HQ router, registry, decisions, and Hermes playbook updates | Bootstrap conductor | Link/path review | DONE |
+| S-5b | FR-13 | GitHub issue form, PR template, and PRD quality workflow | Bootstrap conductor | YAML parse and local workflow-command replay | PARTIAL — local PASS; remote CI pending draft PR |
 | S-6 | NFR-1 through NFR-6 | Final QA, local commit, and draft PR | Bootstrap conductor | `git diff --check` and adversarial review | BLOCKED — branch pushed; issue/draft PR tooling unavailable |
 
 ## Acceptance-to-Evidence Matrix
@@ -72,6 +74,7 @@ Failure evidence -> gstack adaptation -> PRD contract -> skill and validator
 | AC-6 | DONE | Checks run after the final edit. | Record commands and results in `validation-log.md`. |
 | AC-7 | PARTIAL | Draft PR contains outcome, evidence, risk, rollback, and gates. | Template passes readback; verify the created PR during publish. |
 | AC-8 | DONE | Human approval boundaries are explicit. | Readback of skill, PRD, playbook, and this contract. |
+| AC-9 | PARTIAL | GitHub validates the PRD, negative template, and diff hygiene. | YAML and commands pass locally; remote Actions run requires the draft PR. |
 
 ## Risks and Approval Gates
 
@@ -97,6 +100,7 @@ Failure evidence -> gstack adaptation -> PRD contract -> skill and validator
 | 2026-07-13 | S-1 through S-5 | PRD, skill, validator, templates, routing changes | Created; deterministic validation pending final edit |
 | 2026-07-13 | S-6 | Positive/negative validation, path audit, diff check, adversarial review | PASS; two findings corrected; commit/PR pending |
 | 2026-07-13 | S-6 | Commit and SSH branch push | PASS; issue and draft PR blocked by connector 404 plus missing `gh` |
+| 2026-07-13 | S-5b | GitHub issue form, PR template, workflow YAML, and local command replay | PASS locally; remote Actions pending draft PR |
 
 ## Sprint Exit Gate
 

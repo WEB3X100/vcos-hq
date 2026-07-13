@@ -45,6 +45,7 @@ Gstack upstream `v1.60.1.0` was reviewed from commit `7c9df1c568a9ea745508f679a3
 - One reusable `hermes-prd-sprint-conductor` skill candidate in VCOS HQ.
 - Backlog-ready PRD, sprint contract, and PR body templates.
 - A deterministic PRD structure validator.
+- A structured GitHub sprint issue form, repository PR template, and required quality workflow.
 - Routing rules in `AGENTS.md` and `CLAUDE.md`.
 - Skill registry and task-map entries.
 - Raw-evidence rules and a circuit breaker for repeated non-delivery.
@@ -99,6 +100,7 @@ Gstack upstream `v1.60.1.0` was reviewed from commit `7c9df1c568a9ea745508f679a3
 | FR-10 | Prepare a draft PR with risks, rollback, approval boundaries, and raw SHAs. | Must | Draft PR URL and body |
 | FR-11 | Reject status-only completion and fabricated/transcribed evidence. | Must | Circuit-breaker behavior and raw evidence |
 | FR-12 | Retain human authority for merge, deployment, external action, client mutation, spending, and skill installation. | Must | Approval section and no unauthorized action |
+| FR-13 | Enforce the PRD and evidence contract through GitHub issue, PR, and CI surfaces. | Must | Issue form, PR template, and passing quality workflow |
 
 ## Non-Functional Requirements
 
@@ -171,6 +173,7 @@ ClickUp owns the business outcome, priority, owner, and approval. GitHub Issues 
 - [ ] AC-6: Given a small supervised build, fresh tests and build checks pass after the final behavioral change.
 - [ ] AC-7: Given a ship-ready sprint, the draft PR contains the outcome, source PRD/issue, acceptance evidence, risks, rollback, and approval boundaries.
 - [ ] AC-8: Given no explicit human authorization, Hermes does not merge, deploy, publish, send externally, mutate client systems, spend, or install capabilities.
+- [ ] AC-9: Given a Hermes PRD or workflow pull request, GitHub CI validates the canonical PRD, proves the placeholder template fails closed, and rejects whitespace errors.
 
 ## Test Plan
 
@@ -180,6 +183,7 @@ ClickUp owns the business outcome, priority, owner, and approval. GitHub Issues 
 | Unit | Template with placeholders fails | Run validator against untouched PRD template | Non-zero exit and named placeholders |
 | Integration | Skill creates PRD and sprint from one outcome | Supervised Hermes dry run | Both artifacts exist and map to each other |
 | Integration | Evidence mismatch | Supply a deliberately incorrect reported SHA | Hermes blocks and returns raw evidence |
+| Integration | Pull request quality contract | Open or update the draft PR | GitHub runs `Hermes PRD quality` and all steps pass |
 | End-to-end | Documentation mission | Issue through branch, review, draft PR | Accepted with under 15 minutes human correction |
 | End-to-end | Small tested build | PRD through test and draft PR | Requested behavior works and tests pass |
 | End-to-end | Revenue-support artifact | Draft-only AMAX or AgentOSync-safe artifact | Useful artifact exists; no external action occurs |
@@ -227,4 +231,5 @@ The first command must pass. The untouched template must fail because it intenti
 - [ ] Documentation reflects the delivered workflow.
 - [ ] Three supervised missions meet correction and evidence targets.
 - [ ] Draft PRs contain risks, approvals, and raw evidence.
+- [ ] GitHub issue and PR templates are usable and the PRD quality workflow passes.
 - [ ] Human merge, installation, deployment, and external-action decisions remain explicit.

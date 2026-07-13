@@ -8,9 +8,10 @@
 | --- | --- | --- |
 | Skill Creator structure | PASS | `quick_validate.py`: `Skill is valid!` |
 | Validator syntax | PASS | `python3 -m py_compile` with isolated bytecode cache |
-| Complete PRD positive case | PASS | 17 headings, 8 acceptance criteria, 17 checklist items, 2,575 words |
+| Complete PRD positive case | PASS | 17 headings, 9 acceptance criteria, 19 checklist items, 2,686 words |
 | Untouched template negative case | PASS | Validator exited 1 and named placeholders, insufficient acceptance criteria, and thin content |
 | Required artifact paths | PASS | Skill, three templates, gstack adaptation, PRD, and sprint contract exist |
+| GitHub contract syntax | PASS | Issue form and workflow parse as YAML; local workflow commands replay successfully |
 | Whitespace/error scan | PASS | `git diff --check` returned no findings |
 
 Adversarial review found and corrected two issues before this record: the gstack adaptation named a nonexistent `vcos-office-hours` route, and the first draft did not explain how Hermes discovers the repo-local candidate. It now routes through `gbrain-office-hours`, uses repo-local invocation for three supervised missions, and documents the separately approved `./setup --host hermes` path for current gstack.
