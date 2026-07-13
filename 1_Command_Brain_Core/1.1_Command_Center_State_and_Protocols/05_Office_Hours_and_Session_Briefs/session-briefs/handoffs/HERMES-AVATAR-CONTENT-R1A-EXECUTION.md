@@ -6,6 +6,10 @@
 
 **PRD:** `docs/prds/hermes-supervised-avatar-content-inbound-system-v1.md`
 
+**Approved base branch:** `origin/codex/vcos-hq-canonical-r1`
+
+**Approved base SHA:** `f945b64a36075f9aa56209798d05cfff0e78adf6`
+
 **Timebox:** 120 minutes maximum; checkpoint at 45 and 90 minutes
 
 ## Outcome
@@ -17,11 +21,11 @@ This mission builds internal contracts only. It does not access social accounts,
 ## Required start sequence
 
 1. Run `git fetch origin --prune`.
-2. Record the full `origin/main` SHA.
-3. Compare it with the base SHA stated in the Telegram activation message.
+2. Record the full `origin/codex/vcos-hq-canonical-r1` SHA.
+3. Confirm it equals `f945b64a36075f9aa56209798d05cfff0e78adf6`.
 4. If it differs, stop with `BLOCKED — BASE SHA MISMATCH`.
 5. Confirm tracked worktree is clean. Protect untracked/private runtime files; do not delete or overwrite them.
-6. Create a fresh branch `l2/avatar-content-r1a-contracts` from the exact approved base.
+6. Create a fresh branch `l2/avatar-content-r1a-contracts` from the exact approved integration SHA—not from local `main`.
 7. Read `AGENTS.md`, the HQ fast path, and the PRD. Do not broad-load project or legacy folders.
 
 ## Allowed writes
