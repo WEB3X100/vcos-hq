@@ -44,6 +44,19 @@ Every agent session must start by answering internally:
 
 Do not start with broad repo scans. Do not load legacy `5_Legacy_Reference_Archive/5.1_Legacy_Reference_Singular/` or `5_Legacy_Reference_Archive/5.2_Legacy_References_Plural/` folders unless the fast path points there.
 
+## Hermes Engineering Delivery Fast Path
+
+When Hermes is asked to turn an approved outcome into a PRD, sprint, implementation, or GitHub pull request:
+
+1. Run `4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/hermes-prd-sprint-conductor/SKILL.md`.
+2. Treat chat updates as telemetry, never as the deliverable. Every non-blocked run must create or materially advance a durable PRD, sprint contract, implementation, test, review packet, or draft PR.
+3. Use the chain `Outcome -> Office Hours -> PRD -> acceptance criteria -> GitHub issue/sprint -> isolated worktree -> implementation -> completion audit -> adversarial review -> fresh verification -> draft PR`.
+4. Freeze exact file ownership before implementation. Use one branch and one isolated worktree per sprint.
+5. Stop after two consecutive status-only turns, repeated unverifiable evidence, or a correction loop that does not advance an acceptance criterion. Return `BLOCKED` with one precise human action.
+6. Keep gstack pointer-first at `6_Arsenal/repos/gstack`; do not copy its full implementation into HQ. Use its current planning, review, and shipping patterns through the VCOS conductor.
+
+Canonical product contract: `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/02_AI_OS_Architecture_and_Runtime/hermes-prd-sprint-delivery-factory.md`.
+
 When spawning an Agent Team, establish strict file ownership before work begins:
 
 - Sentinel owns orchestration, task routing, approvals, and handoffs.
@@ -108,6 +121,8 @@ When a human, Codex, Claude, or review process catches a repeated mistake:
 1. Add a negative constraint to this file or the relevant domain `README.md`.
 2. Add the decision to `1_Command_Brain_Core/1.2_Headquarters_Memory/decisions.md`.
 3. Add any active blocker to `1_Command_Brain_Core/1.1_Command_Center_State_and_Protocols/state.md`.
+
+Self-reported command summaries are not proof. For Git or delivery claims, capture machine-readable output from the repository or provider immediately before reporting it. Never invent, shorten by hand, or infer a SHA, file count, check result, or remote state.
 
 ## Browser And Session Safety
 

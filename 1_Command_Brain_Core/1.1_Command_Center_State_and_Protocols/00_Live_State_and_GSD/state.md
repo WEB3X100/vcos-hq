@@ -83,6 +83,7 @@
 
 ## Active Blockers
 
+- **2026-07-13 — Hermes artifact-delivery gap:** prior coordination optimized status reporting, transport diagnosis, and documentation polish without producing the requested PRD or implementation. The `hermes-prd-sprint-conductor` candidate must pass three supervised, acceptance-evidenced missions before Hermes receives issue-scanning automation or broader engineering authority.
 - External plugin installation status for Context Mode, Superpowers, GSD, ClaudeMem, and official Skill Creator is not yet verified in this environment.
 - Legacy references still need a careful merge and archive pass.
 - Telegram/Slack integration path for approval workflows needs selection and test.

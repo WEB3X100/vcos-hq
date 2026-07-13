@@ -42,6 +42,24 @@ Always follow the permission rule from managed-agent-runtime-evaluation.md:
 
 Before any phase advance or hardware (DGX Spark etc.): run revenue-readiness-audit.md. Prove value in active loops first.
 
+## Supervised Engineering Mission Exception
+
+Phase 0 remains the rule for unattended Hermes crons and messaging sessions. A human may explicitly approve a bounded engineering mission without granting general Phase 1 authority. In that mission Hermes must run `4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/hermes-prd-sprint-conductor/SKILL.md` and may edit only the exact paths frozen in its sprint contract.
+
+The engineering chain is:
+
+```text
+Outcome -> Office Hours -> PRD -> acceptance criteria -> GitHub issue/sprint
+        -> isolated worktree -> implementation -> completion audit
+        -> adversarial review -> fresh verification -> draft PR
+```
+
+Use the pointer-first gstack clone at `6_Arsenal/repos/gstack` for current planning, review, testing, and shipping patterns. Do not vendor its full workflow into VCOS. Installing gstack into Hermes, enabling GitHub issue automation, merging, deploying, sending externally, or expanding file authority requires separate human approval.
+
+For the first three proof missions, invoke the tracked conductor repo-locally by telling Hermes to read `AGENTS.md` and then `4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/hermes-prd-sprint-conductor/SKILL.md`. After explicit approval, gstack's current Hermes host install is `./setup --host hermes` from the Arsenal clone; verify with `hermes skills list`. Do not globally install the VCOS conductor until the three supervised missions pass.
+
+Completion is based on artifacts and machine evidence, not narration. After two consecutive status-only turns, unverifiable Git evidence, or correction churn that does not advance acceptance criteria, stop with `BLOCKED` and one precise action for Umair.
+
 ## macOS Setup (User's Machine — Draft-Only Guidance)
 
 **Recommended path (Desktop installer for macOS 12+)**:

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Hermes PRD Sprint Conductor"
+  short_description: "Turn outcomes into PRDs, sprints, and draft PRs"
+  default_prompt: "Use $hermes-prd-sprint-conductor to turn this outcome into a backlog-ready PRD and an evidence-gated GitHub sprint."

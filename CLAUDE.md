@@ -82,6 +82,10 @@ Build and run these one at a time:
 
 Current routine priority: build `content-intel-routine` first, then `sprint-closer`, then `skeptic-review`. Defer `morning-cockpit` until one focused lane needs a daily brief.
 
+## Hermes PRD-to-Sprint Routing
+
+For an approved engineering or product-delivery mission, use `4_Reusable_Systems_and_Skills/4.2_Skill_Governance_and_Candidates/candidates/hermes-prd-sprint-conductor/SKILL.md`. The required flow is outcome clarification, bounded Office Hours, code-grounded PRD, acceptance criteria, sprint contract, isolated worktree, implementation, completion audit, adversarial review, fresh verification, and draft PR. Status messages do not count as progress unless they link to a durable artifact or name a precise blocker.
+
 ## Claude Project Context
 
 When using Claude Projects, add curated Markdown packets from `1_Command_Brain_Core/1.4_Agent_Context_Packets/claude-project/` instead of attaching broad folders or stale project dumps.
