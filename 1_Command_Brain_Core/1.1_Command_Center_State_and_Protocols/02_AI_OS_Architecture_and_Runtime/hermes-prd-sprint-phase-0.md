@@ -2,7 +2,7 @@
 
 **Source PRD:** `hermes-prd-sprint-delivery-factory.md`
 
-**GitHub issue:** Create when this branch is published; link it back to this contract.
+**GitHub issue:** Pending — the private-repo connector returned 404 and this host lacks `gh`; create it with the draft PR.
 
 **Owner:** Umair / L1
 
@@ -58,7 +58,7 @@ Failure evidence -> gstack adaptation -> PRD contract -> skill and validator
 | S-3 | FR-6, FR-7, FR-8 | Completion audit, review, and fresh-verification gates | Bootstrap conductor | Skill validation | DONE |
 | S-4 | FR-9, FR-10, FR-11 | PR body, evidence rules, and circuit breaker | Bootstrap conductor | Positive/negative validator cases | DONE |
 | S-5 | FR-12 | HQ router, registry, decisions, and Hermes playbook updates | Bootstrap conductor | Link/path review | DONE |
-| S-6 | NFR-1 through NFR-6 | Final QA, local commit, and draft PR | Bootstrap conductor | `git diff --check` and adversarial review | IN PROGRESS — QA PASS; publish pending |
+| S-6 | NFR-1 through NFR-6 | Final QA, local commit, and draft PR | Bootstrap conductor | `git diff --check` and adversarial review | BLOCKED — branch pushed; issue/draft PR tooling unavailable |
 
 ## Acceptance-to-Evidence Matrix
 
@@ -96,6 +96,7 @@ Failure evidence -> gstack adaptation -> PRD contract -> skill and validator
 | --- | --- | --- | --- |
 | 2026-07-13 | S-1 through S-5 | PRD, skill, validator, templates, routing changes | Created; deterministic validation pending final edit |
 | 2026-07-13 | S-6 | Positive/negative validation, path audit, diff check, adversarial review | PASS; two findings corrected; commit/PR pending |
+| 2026-07-13 | S-6 | Commit and SSH branch push | PASS; issue and draft PR blocked by connector 404 plus missing `gh` |
 
 ## Sprint Exit Gate
 
