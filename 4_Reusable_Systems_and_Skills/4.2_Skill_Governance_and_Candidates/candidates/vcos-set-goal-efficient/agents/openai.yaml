@@ -1,0 +1,7 @@
+interface:
+  display_name: "VCOS Set Goal Efficient"
+  short_description: "Token-aware multi-agent goal execution"
+  default_prompt: "Use $vcos-set-goal-efficient to complete this goal with adaptive Sol, Terra, and Luna routing while preserving review quality."
+
+policy:
+  allow_implicit_invocation: false
