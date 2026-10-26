@@ -43,3 +43,8 @@ AgentOSync / NeuralSync acquisition content engine. Turns ICP pain into LinkedIn
 **Jun 20–23, 2026:** Maximize Higgsfield Ultimate Seedance credits. Target: 7 backlog clips drafted, 5+ rendered, 3 approved for LinkedIn queue.
 
 See `higgsfield-seedance-sprint-2026-06-20.md` and `claude-code-higgsfield-setup.md`.
+
+## OpenMausBot
+
+- Profile and field prompts: `openmausbot-profile.md`
+- Distribution repository scan: `distribution-repository-scan-2026-10-26.md`
