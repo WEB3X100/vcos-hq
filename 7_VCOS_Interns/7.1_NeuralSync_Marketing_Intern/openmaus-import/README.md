@@ -1,4 +1,4 @@
-# Nova OpenMaus import snapshot
+# NeuralSync marketing-team OpenMaus import snapshot
 
 Portable onboarding snapshot generated 2026-10-27 from the canonical private NeuralSync marketing-intern workspace.
 
@@ -18,5 +18,9 @@ If OpenMaus returns 404, verify the PR is merged and its GitHub connection can r
 4. `EMAIL-ACTIVATION.md`
 5. `SKILL.md`
 6. `ONBOARDING-PROMPT.md`
+7. `AGENT-ROSTER.md`
+8. `TEST-PROMPTS.md`
+
+The roster file links to one prompt packet per specialist. Import only the bots that exist in the target workspace and preserve the permission boundaries in each packet.
 
 This package contains no secrets, contact lists, or customer data.

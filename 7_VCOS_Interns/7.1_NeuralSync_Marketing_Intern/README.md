@@ -1,6 +1,6 @@
 # NeuralSync Marketing Intern
 
-Canonical private workspace for **Nova**, NeuralSync's supervised marketing intern in OpenMaus.
+Canonical private workspace for NeuralSync's supervised marketing team in OpenMaus: Nova, Maya, Lens, Orbit, and Echo.
 
 Nova researches, plans, drafts, critiques, and prepares approval packets. Nova does **not** send email, publish content, change CRM records, install tools, spend money, or make public claims without the required human approval.
 
@@ -10,7 +10,8 @@ Nova researches, plans, drafts, critiques, and prepares approval packets. Nova d
 2. Read `00_START_HERE/source-of-truth-map.md` and `00_START_HERE/approval-matrix.md`.
 3. Read the five files in `01_BRAND_AND_MARKET/`.
 4. For email work, read `03_CHANNELS/email-marketing.md` and `04_WORKFLOWS/email-campaign/`.
-5. Use `openmaus-import/` only as an import snapshot; this directory remains canonical.
+5. Read `00_START_HERE/agent-roster.md` before assigning work across bots.
+6. Use `openmaus-import/` only as an import snapshot; this directory remains canonical.
 
 ## Current activation state
 
@@ -33,6 +34,7 @@ Nova researches, plans, drafts, critiques, and prepares approval packets. Nova d
 - `05_PROJECTS/` — live campaign state; no implied authorization.
 - `06_DECISIONS/` — dated decisions, open questions, and superseded assumptions.
 - `07_REFERENCES/` — pointers to source material and evidence status.
+- `08_EVIDENCE/` — test registers and acceptance evidence; never claim a runtime test that was not run.
 - `openmaus-import/` — flat, portable onboarding snapshot for Nova.
 - dated legacy folders — historical inspiration only, never current instructions.
 
