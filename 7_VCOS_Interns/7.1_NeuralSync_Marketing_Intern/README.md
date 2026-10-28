@@ -1,45 +1,56 @@
-# 7.1 NeuralSync Marketing Intern
+# NeuralSync Marketing Intern
 
-AgentOSync / NeuralSync acquisition content engine. Turns ICP pain into LinkedIn vertical video, Seedance clips, and Sales Ops handoff packets.
+Canonical private workspace for NeuralSync's supervised marketing team in OpenMaus: Nova, Maya, Lens, Orbit, and Echo.
 
-## Identity
+Nova researches, plans, drafts, critiques, and prepares approval packets. Nova does **not** send email, publish content, change CRM records, install tools, spend money, or make public claims without the required human approval.
 
-- **Role:** Marketing Mini Intern (NeuralSync lane)
-- **Villain:** Phone tag, voicemail graveyards, 6-hour callback delays
-- **Hero:** AI voice agent that answers in seconds, books the meeting, sends the handoff packet
-- **Tone:** Incredulous interrogation — not corporate slop (see Writer identity in VCOS-Employee)
+## Start here
 
-## Load Order
+1. Read `AGENTS.md`.
+2. Read `00_START_HERE/source-of-truth-map.md` and `00_START_HERE/approval-matrix.md`.
+3. Read the five files in `01_BRAND_AND_MARKET/`.
+4. For email work, read `03_CHANNELS/email-marketing.md` and `04_WORKFLOWS/email-campaign/`.
+5. Read `00_START_HERE/agent-roster.md` before assigning work across bots.
+6. Use `openmaus-import/` only as an import snapshot; this directory remains canonical.
 
-1. `AGENTS.md`
-2. `creative-briefs/neural-sync-brand-brief.md`
-3. `content-backlog/week-2026-06-20-to-06-27/backlog-overview.md`
-4. Today's day file in `content-backlog/`
-5. `generation-tracker.csv` — update after every generation
-6. `higgsfield-seedance-sprint-2026-06-20.md` during the 3-day credit window
+## Current activation state
 
-## Skill Routes (HQ)
+| Area | State | Meaning |
+| --- | --- | --- |
+| Brand | Confirmed | NeuralSync is the only public-facing brand. |
+| Product | Confirmed | AI-powered operating system for businesses; supervised, evidence-led, human-controlled. |
+| Public proof | Limited | Capabilities and demos exist; verified client outcome claims do not yet exist. |
+| Email | Design/audit only | Existing stack must be audited before build-vs-buy and before any campaign launch. |
+| CTA | Confirmed direction | Request/book a NeuralSync operating-system demo; link and duration remain unresolved. |
+| Publishing/sending | Human-gated | Nova may prepare an approval packet only. |
 
-| Task | Skill / Pack |
-| --- | --- |
-| Seedance short clip | Higgsfield `seedance_2_0` via CLI |
-| Website hero loop | `seedance-loop-prompt` skill |
-| Static thumbnail / text visual | Higgsfield `nano_banana_2` |
-| Script / JSON brief | VCOS-Employee `Employee_02_Writer` |
-| Motion graphics assembly | Hyperframes candidate |
-| Pre-publish QA | `reviewer-qa` pack + human approval |
+## Folder contract
 
-## External Links
+- `00_START_HERE/` — authority, precedence, approvals, onboarding.
+- `01_BRAND_AND_MARKET/` — durable brand, ICP, voice, distribution, and tool decisions.
+- `02_OFFERS_AND_FUNNEL/` — offer and conversion design.
+- `03_CHANNELS/` — channel strategy and readiness.
+- `04_WORKFLOWS/` — repeatable, reviewable operating workflows.
+- `05_PROJECTS/` — live campaign state; no implied authorization.
+- `06_DECISIONS/` — dated decisions, open questions, and superseded assumptions.
+- `07_REFERENCES/` — pointers to source material and evidence status.
+- `08_EVIDENCE/` — test registers and acceptance evidence; never claim a runtime test that was not run.
+- `openmaus-import/` — flat, portable onboarding snapshot for Nova.
+- dated legacy folders — historical inspiration only, never current instructions.
 
-| Surface | Path / URL |
-| --- | --- |
-| Writer swipe files | `/Users/umairkhalid/VCOS-Employee/VCOS_Neural_Sync/_Shared/Swipe_Files/` |
-| Producer (Remotion) | `/Users/umairkhalid/VCOS-Employee/VCOS_Neural_Sync/Employee_01_Producer/` |
-| Higgsfield CLI | `higgsfield generate create seedance_2_0` |
-| HQ marketing pack | `4_Reusable_Systems_and_Skills/4.3_Department_Skill_Packs/marketing/` |
+## First outcome
 
-## Current Sprint
+The first outcome is **not an email send**. It is a founder-reviewable email activation packet containing:
 
-**Jun 20–23, 2026:** Maximize Higgsfield Ultimate Seedance credits. Target: 7 backlog clips drafted, 5+ rendered, 3 approved for LinkedIn queue.
+1. current-stack audit;
+2. one narrow ICP recommendation;
+3. list provenance and compliance assessment;
+4. offer/CTA recommendation;
+5. proof-safe message map;
+6. draft sequence and variants;
+7. measurement plan;
+8. explicit launch blockers and approval requests.
 
-See `higgsfield-seedance-sprint-2026-06-20.md` and `claude-code-higgsfield-setup.md`.
+## Historical assets
+
+The June 2026 Seedance sprint and old dual-brand files remain for provenance. They are not current strategy. If a historical file conflicts with this workspace, this workspace wins.

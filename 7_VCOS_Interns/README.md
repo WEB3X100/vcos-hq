@@ -10,7 +10,7 @@ Purpose: deployable Mini Intern workspaces — identity, capabilities, content p
 Every intern folder must declare:
 
 1. Owning department (from `department-capability-map.md`)
-2. Business lane (AgentOSync acquisition, client demo, internal proof)
+2. Business lane (public acquisition, client demo, internal proof)
 3. Linked employee repo path (if any)
 4. Approval gates before public spend or publish
 
@@ -18,15 +18,15 @@ Every intern folder must declare:
 
 | ID | Intern | Lane | Status |
 | --- | --- | --- | --- |
-| `7.1` | NeuralSync Marketing Intern | AgentOSync / NeuralSync public acquisition | Active — Seedance sprint Jun 20–23, 2026 |
+| `7.1` | Nova — NeuralSync Marketing Intern | NeuralSync public acquisition and email activation | Active — supervised audit/design; no send or publish authority |
 
 ## Fast Path
 
 1. Read `intern-registry.md`
 2. Open the intern's `README.md`
-3. Load `AGENTS.md` when spawning the intern in Claude Code / Grok Build
-4. Check `content-backlog/` for the current week slate
-5. Route skills through `4_Reusable_Systems_and_Skills/4.3_Department_Skill_Packs/marketing/`
+3. Load `AGENTS.md` when onboarding the intern in OpenMaus
+4. Read `00_START_HERE/` and the current `05_PROJECTS/` state
+5. Route task-specific capabilities through approved skill packs using least privilege
 
 ## Related
 
