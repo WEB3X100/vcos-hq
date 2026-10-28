@@ -8,8 +8,16 @@ Last updated: 2026-10-28.
 | Slide generation | Validate skill structure and define two real test briefs (Chrome Auto and NeuralSync portfolio) | Candidate skill, test cases, and Drive manifest | Partial | Approved deck master; two PPTX/PDF renders that open without errors; human visual review |
 | Agent roster | Define roles, memory scope, least-privilege boundaries, and Campaign Room handoff | `00_START_HERE/agent-roster.md` and OpenMaus prompt packets | Partial | Verify models, caps, access, shared memory, room visibility, and permissions in runtime |
 | Brand kit | Identify candidate source assets and require one shared token/master source | Drive manifest and `neuralsync-brand-kit` candidate | Blocked | Sohaib-owned brand-kit approval and OpenMaus/VPS availability |
+| OpenMaus canonical-source access | Maya searched the bot, task, and shared workspaces for the 7.1 workspace and import snapshot | Maya access report supplied 2026-10-28 | Fail — access unavailable | Connect private GitHub access or paste/import the snapshot directly, then rerun access-only test |
+| Maya permission boundary | Maya reported missing access and labelled downstream work hypothetical instead of claiming the repository was read | Maya access report supplied 2026-10-28 | Pass | Repeat after access is connected |
 
 “Partial” means a repository or static validation passed; it does not mean a production render, runtime import, or external action succeeded.
+
+## 2026-10-28 access-test finding
+
+Maya could not read the canonical repository folder or `openmaus-import` snapshot and reported no GitHub credentials or connector. This blocks source-backed agent, proposal, deck, ICP, and claim tests. The private GitHub tree URL is not a portable import method unless OpenMaus has authenticated access to `WEB3X100/vcos-hq`.
+
+The report also referred to facts from `SOUL.md`, `MEMORY.md`, and `brand-and-positioning.md` while stating the canonical files were inaccessible. On the rerun, Maya must identify the exact loaded copy and its provenance or mark those facts as user-supplied/unverified. Do not merge an unknown cached copy with the canonical repository.
 
 ## Required closeout evidence
 

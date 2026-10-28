@@ -20,6 +20,7 @@ If OpenMaus returns 404, verify the PR is merged and its GitHub connection can r
 6. `ONBOARDING-PROMPT.md`
 7. `AGENT-ROSTER.md`
 8. `TEST-PROMPTS.md`
+9. `ACCESS-RECOVERY-PROMPT.md`
 
 The roster file links to one prompt packet per specialist. Import only the bots that exist in the target workspace and preserve the permission boundaries in each packet.
 
