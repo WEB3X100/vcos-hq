@@ -19,5 +19,6 @@ Promote a SOP only after 3 successful uses with clear value.
 Current NeuralSync generation candidates:
 
 - `neuralsync-brand-kit/` — shared brand resolver and approval contract.
+- `neuralsync-proposal-pdf/` — source-grounded proposal PDF renderer with geometry, content, and visual QA gates.
 - `neuralsync-proposal-generation/` — evidence- and pricing-safe PDF proposal workflow.
 - `neuralsync-slide-deck-generation/` — editable PPTX/PDF deck workflow with two-brief acceptance gate.

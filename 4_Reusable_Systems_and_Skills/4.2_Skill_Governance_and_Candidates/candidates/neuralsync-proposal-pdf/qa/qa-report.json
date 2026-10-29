@@ -1,0 +1,30 @@
+{
+  "file": "/mnt/data/Chrome-Auto-Condensed-Proposal-DRAFT-v6-2026-10-28.pdf",
+  "checks": {
+    "letter_pages": true,
+    "page_count": true,
+    "footer_and_draft": true,
+    "pricing_segregation": true,
+    "geometry": true,
+    "commercial_arithmetic": true
+  },
+  "pages": [
+    {
+      "page": 1,
+      "text_spans": 36,
+      "image_count": 1
+    },
+    {
+      "page": 2,
+      "text_spans": 37,
+      "image_count": 0
+    },
+    {
+      "page": 3,
+      "text_spans": 47,
+      "image_count": 0
+    }
+  ],
+  "status": "PASS",
+  "failures": []
+}
