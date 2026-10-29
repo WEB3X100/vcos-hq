@@ -1,0 +1,250 @@
+{
+  "schema_version": "1.0",
+  "document": {
+    "client": "Chrome Auto",
+    "title": "Chrome Auto Dealership Operating System",
+    "subtitle": "A three-month foundation, with a phased path to the complete vision",
+    "date": "28 October 2026",
+    "author": "NeuralSync Canada — Sohaib Sajid",
+    "prepared_for": "Chrome Auto and Chris",
+    "status": "DRAFT FOR REVIEW",
+    "version": "6",
+    "source_note": "Source: Chrome Auto Next Decade Proposals, 28 October 2026, condensed for review.",
+    "logo_file": "assets/neuralsync-logo-recovered-from-v5.png",
+    "logo_provenance": "High-resolution PNG embedded in user-provided v5 PDF; original ns-logo-color__1.pdf not separately attached. No crop/recolor/redraw applied.",
+    "spelling_footnote": "*The source proposal lists ‘Shoaib Sajid’; NeuralSync records list ‘Sohaib Sajid’. Confirm spelling before issue.",
+    "footer": "DRAFT FOR REVIEW — confirm retainer, names, and decision date before sending. Final agreement governs.",
+    "max_pages": 3,
+    "pricing_page": 3,
+    "payment_check": {
+      "component_rows": [
+        1,
+        2,
+        3
+      ],
+      "total_row": 4
+    }
+  },
+  "pages": [
+    [
+      {
+        "type": "cover"
+      },
+      {
+        "type": "heading",
+        "text": "01  THE OFFER"
+      },
+      {
+        "type": "p",
+        "text": "One place to see what came in, who owns it, what happened next, what each vehicle costs, whether a deal is funded, and where management must intervene."
+      },
+      {
+        "type": "p",
+        "text": "The three-month foundation starts with the daily dealership workflows. Vehicle costs and funding controls follow only in separately approved phases. Current revenue-producing systems stay live."
+      },
+      {
+        "type": "heading",
+        "text": "02  WHY THIS IS LOW-RISK"
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "Pay nothing before the phone proof.",
+          "Paid build begins only after you approve the phone plan.",
+          "Current systems stay live until you approve a transition in writing.",
+          "Monthly service starts only after Phase 1 acceptance."
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "03  PHASE 1 IN 90 DAYS"
+      },
+      {
+        "type": "table",
+        "widths": [
+          64,
+          248,
+          212
+        ],
+        "headers": [
+          "Month",
+          "What happens",
+          "Test Chris can run"
+        ],
+        "rows": [
+          [
+            "1",
+            "Connect approved lead and inventory sources; build the first dashboard.",
+            "Trace a lead, vehicle and call to the assigned owner."
+          ],
+          [
+            "2",
+            "Run core workflows with selected staff on desktop and phone browser.",
+            "Review live or approved test activity in the weekly session."
+          ],
+          [
+            "3",
+            "Stabilize, train, document and complete acceptance.",
+            "Check priority issues are closed or accepted with a written plan."
+          ]
+        ]
+      }
+    ],
+    [
+      {
+        "type": "heading",
+        "text": "04  WHAT PHASE 1 INCLUDES"
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "Owner and manager dashboard on desktop and phone browser.",
+          "Leads with original source and vehicle context preserved.",
+          "CarsForSale inventory, subject to approved access and data quality.",
+          "Calls, messages, appointments and follow-up in one place.",
+          "Manager visibility into missed follow-up, ownership and exceptions.",
+          "Approved contact frequency, opt-out and stop rules."
+        ]
+      },
+      {
+        "type": "label_p",
+        "label": "NOT IN PHASE 1",
+        "text": "Native app; vehicle cost accounting; mechanic approvals; finance or lender records; second rooftop; buying agent; full 360 rollout; social automation; or unlimited development."
+      },
+      {
+        "type": "heading",
+        "text": "05  ROADMAP MAP"
+      },
+      {
+        "type": "intro",
+        "text": "Each later phase is scoped and approved separately, only after reviewing prior results. No later phase is authorized by Phase 1."
+      },
+      {
+        "type": "table",
+        "widths": [
+          76,
+          348,
+          100
+        ],
+        "headers": [
+          "When",
+          "What would be added",
+          "Decision gate"
+        ],
+        "rows": [
+          [
+            "Phase 2",
+            "Vehicle costs, mechanic updates, approvals and profit per unit.",
+            "After Phase 1"
+          ],
+          [
+            "Phase 3",
+            "Cash or financed, lender, funded status and restricted finance access.",
+            "After Phase 2"
+          ],
+          [
+            "Phase 4",
+            "Media pilot on a few vehicles, next-rooftop pilot and native-app decision.",
+            "After prior results"
+          ],
+          [
+            "Future",
+            "Buying agent, full 360 rollout and social automation.",
+            "Separate approval"
+          ]
+        ]
+      },
+      {
+        "type": "heading",
+        "text": "06  HOW WE WORK TOGETHER"
+      },
+      {
+        "type": "bullets",
+        "items": [
+          "A 30-minute weekly review of working evidence, blockers and next actions.",
+          "One shared issue log with an owner, priority and closure evidence.",
+          "Chrome Auto retains its data, with agreed exports and transition documentation.",
+          "Sensitive finance and identity data is not stored as ordinary message text."
+        ]
+      }
+    ],
+    [
+      {
+        "type": "heading",
+        "text": "07  PRICE — WHAT YOU PAY AND WHAT YOU GET"
+      },
+      {
+        "type": "table",
+        "widths": [
+          127,
+          148,
+          249
+        ],
+        "headers": [
+          "You pay",
+          "When",
+          "What you get in return"
+        ],
+        "rows": [
+          [
+            "$0",
+            "Before the build",
+            "Phone proof: call route, human transfer, fallback plan and written recommendation."
+          ],
+          [
+            "$1,500",
+            "After phone-plan approval",
+            "Month 1: first dashboard, connected lead and inventory sources, and a lead / vehicle / call you can trace."
+          ],
+          [
+            "$1,750",
+            "After Month 2 review",
+            "Month 2: core workflows live with selected staff, on desktop and phone browser."
+          ],
+          [
+            "$1,750",
+            "After acceptance",
+            "Month 3: stabilized system, training, documentation and transition decision."
+          ],
+          [
+            "$5,000  Phase 1 total",
+            "Full three-month foundation",
+            "All three Phase 1 months above."
+          ],
+          [
+            "$750/month + provider usage",
+            "Monthly, after acceptance",
+            "Monitoring, support, maintenance and operating review. Provider usage: $200–$300/month planning range, billed at actual cost and shown monthly. New modules and integrations are separate."
+          ]
+        ]
+      },
+      {
+        "type": "label_p",
+        "label": "COMMERCIAL BOUNDARY",
+        "text": "No later module is included in the Phase 1 total. Signing Phase 1 does not approve later work. Currency, retainer scope and applicable taxes require confirmation in the final agreement."
+      },
+      {
+        "type": "heading",
+        "text": "08  NEXT STEP"
+      },
+      {
+        "type": "numbered",
+        "items": [
+          "Confirm scope, phone proof and named reviewers.",
+          "NeuralSync demonstrates the proposed phone route and fallback.",
+          "Chrome Auto approves the phone plan or declines. If declined, the paid build does not begin.",
+          "If approved, start Month 1 under the terms in the price table."
+        ]
+      },
+      {
+        "type": "decision",
+        "text": "Decision date: ________________________"
+      },
+      {
+        "type": "signatures",
+        "left": "NeuralSync Canada — Sohaib Sajid",
+        "right": "Chrome Auto — Chris"
+      }
+    ]
+  ]
+}
